@@ -2,21 +2,21 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link href="/">
-            <a>Home</a>
+    <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <ul style={{ listStyle: 'none', display: 'flex', color: 'black' }}>
+        <li style={{ margin: '0 10px' }}>
+          <Link href="/" passHref>
+            Home
           </Link>
         </li>
-        <li>
-          <Link href="/about">
-            <a>About</a>
+        <li style={{ margin: '0 10px' }}>
+          <Link href="/about" passHref>
+            About
           </Link>
         </li>
-        <li>
-          <Link href="/contact">
-            <a>Contact</a>
+        <li style={{ margin: '0 10px' }}>
+          <Link href="/contact" passHref>
+            Contact
           </Link>
         </li>
       </ul>
@@ -25,4 +25,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
