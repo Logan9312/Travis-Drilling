@@ -9,7 +9,7 @@ const Home = () => {
         <Navbar />
       </div>
       <h1>Welcome to my website!</h1>
-      <p>This is a simple Next.js homepage with a navigation bar and a company logo.</p>
+      <p>Water well drilling and maintenance</p>
     </div>
   );
 };
