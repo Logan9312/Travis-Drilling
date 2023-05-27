@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
+import Navbar from '../../components/Navbar';
 
 const Form = styled.form`
   display: flex;
@@ -26,9 +27,6 @@ const TextArea = styled.textarea`
 `;
 
 const Button = styled.button`
-  margin: 10px;
-  padding: 10px;
-  border: none;
   border-radius: 5px;
   background-color: #0077ff;
   color: white;
@@ -47,32 +45,41 @@ export default function Contact() {
 
   return (
     <div>
-      <img src="/logo.png" alt="Company Logo" style={{ width: '100px', marginRight: '20px' }} />
-      <h1>Contact Us</h1>
-      <Form onSubmit={handleSubmit}>
-        <Input
-          type="text"
-          placeholder="Name"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          required
-        />
-        <Input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          required
-        />
-        <TextArea
-          placeholder="Message"
-          rows={4}
-          value={message}
-          onChange={(event) => setMessage(event.target.value)}
-          required
-        />
-        <Button type="submit">Send</Button>
-      </Form>
+
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        <img src="/logo.png" alt="Company Logo" style={{ width: '100px', marginRight: '20px' }} />
+        <Navbar />
+      </div>
+
+      <div>
+        <h1>Contact Us</h1>
+      </div>
+      <div>
+        <Form onSubmit={handleSubmit}>
+          <Input
+            type="text"
+            placeholder="Name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            required
+          />
+          <Input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
+          />
+          <TextArea
+            placeholder="Message"
+            rows={4}
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+            required
+          />
+          <Button onClick={handleSubmit}>Submit</Button>
+        </Form>
+      </div>
     </div>
   );
 }
