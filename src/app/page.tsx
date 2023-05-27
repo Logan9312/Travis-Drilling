@@ -1,5 +1,5 @@
 import Navbar from '../../components/Navbar';
-import Logo from '../../components/Logo';
+import BottomInfoBar from 'components/infobar';
 
 const Home = () => {
   return (
@@ -10,7 +10,9 @@ const Home = () => {
       </div>
       <h1>Travis Drilling</h1>
       <p>Water well drilling and maintenance</p>
+      <BottomInfoBar />
     </div>
+
   );
 };
 
