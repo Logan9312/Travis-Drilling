@@ -1,15 +1,17 @@
-import Link from 'next/link'; 
-import Image from 'next/image'; 
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar: React.FC = () => {
   return (
-    <header className="flex items-center justify-between p-5">
-      <Image
-        src="/logo.png"
-        alt="Travis Drilling Logo"
-        width={100}
-        height={100}
-      />
+    <header className="flex items-center justify-start p-5">
+      <Link href="/" passHref>
+        <Image
+          src="/logo.png"
+          alt="Travis Drilling Logo"
+          width={100}
+          height={100}
+        />
+      </Link>
 
       <nav>
         <ul className="flex ml-auto space-x-4">

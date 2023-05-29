@@ -9,7 +9,7 @@ const Home: React.FC = () => {
       <div className="flex-1 flex flex-col justify-center items-center">
         <h1 className="text-4xl font-bold mb-20">Travis Drilling</h1>
         <p className="text-2xl text-center">Water well drilling and maintenance</p>
-        <p className="text-sm text-center">Website Under Development</p>
+        <p className="text-sm text-center"></p>
       </div>
       <BottomInfoBar />
     </div>
