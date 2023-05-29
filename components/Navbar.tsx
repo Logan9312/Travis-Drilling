@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
       />
 
       <nav>
-        <ul className="flex space-x-4">
+        <ul className="flex ml-auto space-x-4">
           <li>
             <Link href="/" passHref>
               <span className="cursor-pointer text-black">Home</span>
