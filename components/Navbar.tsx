@@ -4,7 +4,7 @@ const Navbar: React.FC = () => {
   return (
 
     <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
-      <img src="/logo.png" alt="Company Logo" style={{ width: '100px', marginRight: '20px' }} />
+      <img src="../logo.png" alt="Company Logo" style={{ width: '100px', marginRight: '20px' }} />
 
       <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         <ul style={{ listStyle: 'none', display: 'flex', color: 'black' }}>
