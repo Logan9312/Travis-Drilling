@@ -18,10 +18,5 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
-  images: {
-    domains: [
-      'www.travisdrilling.ca',
-    ]
-  },
 };
 export default config;
