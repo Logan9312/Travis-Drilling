@@ -2,13 +2,18 @@ import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   return (
-    <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <ul style={{ listStyle: 'none', display: 'flex', color: 'black' }}>
-        <NavItem href="/">Home</NavItem>
-        <NavItem href="/about">About</NavItem>
-        <NavItem href="/contact">Contact</NavItem>
-      </ul>
-    </nav>
+
+    <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
+      <img src="/logo.png" alt="Company Logo" style={{ width: '100px', marginRight: '20px' }} />
+
+      <nav style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <ul style={{ listStyle: 'none', display: 'flex', color: 'black' }}>
+          <NavItem href="/">Home</NavItem>
+          <NavItem href="/about">About</NavItem>
+          <NavItem href="/contact">Contact</NavItem>
+        </ul>
+      </nav>
+    </div>
   );
 };
 
