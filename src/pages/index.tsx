@@ -1,5 +1,5 @@
 import Navbar from '../../components/Navbar';
-import BottomInfoBar from 'my-t3-app/components/infobar';
+import BottomInfoBar from '../../components/infobar';
 
 const Home: React.FC = () => {
   return (

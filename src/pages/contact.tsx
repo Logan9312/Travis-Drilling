@@ -1,5 +1,5 @@
-import Navbar from "my-t3-app/components/Navbar";
-import BottomInfoBar from "my-t3-app/components/infobar";
+import Navbar from "../../components/Navbar";
+import BottomInfoBar from "../../components/infobar";
 
 const Contact: React.FC = () => {
 
