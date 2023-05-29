@@ -1,7 +1,7 @@
 import Navbar from '../../components/Navbar';
 import BottomInfoBar from 'components/infobar';
 
-const Home = () => {
+export default function Home() {
   return (
 
     <div style={{ color: 'black', backgroundColor: 'white', minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
@@ -15,5 +15,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
