@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
 
     <div style={{ display: 'flex', alignItems: 'center', padding: '20px' }}>
       <Image
-        src="/logo.png"
+        src="/Logo.png"
         alt="Travis Drilling Logo"
         width={100}
         height={100}
