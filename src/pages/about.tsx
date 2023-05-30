@@ -6,10 +6,11 @@ const About: React.FC = () => {
         <div className="bg-white min-h-screen flex flex-col">
             <Navbar />
             <div className="flex-1 flex flex-col justify-center items-center">
-                <p className="text-black">About Page</p>
+                <p className="text-black">Travis Drilling Ltd. is a locally owned and operated business in Alberta, Canada.</p>
             </div>
             <BottomInfoBar />
         </div>
+        
     )
 };
 

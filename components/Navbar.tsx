@@ -13,8 +13,8 @@ const Navbar: React.FC = () => {
         />
       </Link>
 
-      <nav>
-        <ul className="flex ml-auto space-x-4">
+      <nav className="flex ml-auto">
+        <ul className="flex ml-auto space-x-4 justify-center">
           <li>
             <Link href="/" passHref>
               <span className="cursor-pointer text-black">Home</span>
@@ -34,6 +34,6 @@ const Navbar: React.FC = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Navbar;
