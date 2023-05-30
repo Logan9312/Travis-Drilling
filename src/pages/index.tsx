@@ -13,7 +13,7 @@ const Home: React.FC = () => {
         <p className="text-sm text-center"></p>
       </div>
       <div className="flex-1 flex flex-col items-center">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">test</button>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">test 2</button>
       </div>
       <BottomInfoBar />
     </div>
