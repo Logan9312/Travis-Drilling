@@ -126,14 +126,14 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
           Working with us is a pleasure
         </h3>
         <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-          Don't let your uses guess by attaching tooltips and popoves
+          Don&apos;t let your uses guess by attaching tooltips and popoves
           to any element. Just make sure you enable them first via
           JavaScript.
         </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
           The kit comes with three pre-built pages to help you get
           started faster. You can change the text and images and
-          you're good to go. Just make sure you enable them first via
+          you&apos;re good to go. Just make sure you enable them first via
           JavaScript.
         </p>
         <Link
@@ -151,31 +151,31 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
             src={"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"}
             className="w-full align-middle rounded-t-lg"
           ></Image>
-            <blockquote className="relative p-8 mb-4">
-              <svg
-                preserveAspectRatio="none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 583 95"
-                className="absolute left-0 w-full block"
-                style={{
-                  height: "95px",
-                  top: "-94px"
-                }}
-              >
-                <polygon
-                  points="-30,95 583,95 583,65"
-                  className="text-pink-600 fill-current"
-                ></polygon>
-              </svg>
-              <h4 className="text-xl font-bold text-white">
-                Top Notch Services
-              </h4>
-              <p className="text-md font-light mt-2 text-white">
-                The Arctic Ocean freezes every winter and much of the
-                sea-ice then thaws every summer, and that process will
-                continue whatever happens.
-              </p>
-            </blockquote>
+          <blockquote className="relative p-8 mb-4">
+            <svg
+              preserveAspectRatio="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 583 95"
+              className="absolute left-0 w-full block"
+              style={{
+                height: "95px",
+                top: "-94px"
+              }}
+            >
+              <polygon
+                points="-30,95 583,95 583,65"
+                className="text-pink-600 fill-current"
+              ></polygon>
+            </svg>
+            <h4 className="text-xl font-bold text-white">
+              Top Notch Services
+            </h4>
+            <p className="text-md font-light mt-2 text-white">
+              The Arctic Ocean freezes every winter and much of the
+              sea-ice then thaws every summer, and that process will
+              continue whatever happens.
+            </p>
+          </blockquote>
         </div>
       </div>
 
@@ -224,7 +224,7 @@ const Featured = () => <section className="relative py-20">
           <p className="mt-4 text-lg leading-relaxed text-gray-600">
             The extension comes with three pre-built pages to help you
             get started faster. You can change the text and images and
-            you're good to go.
+            you&apos;re good to go.
           </p>
           <ul className="list-none mt-6">
             <li className="py-2">
@@ -291,7 +291,7 @@ const Team = () => <section className="pt-20 pb-48">
         <div className="px-6">
           <Image
             alt="..."
-            src={require('../assets/Image/team-1-800x800.jpg')}
+            src={'../assets/Image/team-1-800x800.jpg'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -329,7 +329,7 @@ const Team = () => <section className="pt-20 pb-48">
         <div className="px-6">
           <Image
             alt="..."
-            src={require('../assets/Image/team-2-800x800.jpg')}
+            src={'../assets/Image/team-2-800x800.jpg'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -361,7 +361,7 @@ const Team = () => <section className="pt-20 pb-48">
         <div className="px-6">
           <Image
             alt="..."
-            src={require('../assets/Image/team-3-800x800.jpg')}
+            src={'../assets/Image/team-3-800x800.jpg'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -399,7 +399,7 @@ const Team = () => <section className="pt-20 pb-48">
         <div className="px-6">
           <Image
             alt="..."
-            src={require('../assets/Image/team-4-470x470.png')}
+            src={'../assets/Image/team-4-470x470.png'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -486,7 +486,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
         </h6>
         <p className="mt-2 mb-4 text-gray-500">
           Some quick example text to build on the card title and make up
-          the bulk of the card's content.
+          the bulk of the card&apos;s content.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -498,7 +498,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
           Some quick example text to build on the card title and make up
-          the bulk of the card's content.
+          the bulk of the card&apos;s content.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -510,7 +510,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
           Some quick example text to build on the card title and make up
-          the bulk of the card's content.
+          the bulk of the card&apos;s content.
         </p>
       </div>
     </div>
