@@ -1,5 +1,4 @@
-import Navbar from "../../components/Navbar";
-import BottomInfoBar from "../../components/infobar";
+import Navbar from "../components/Navbar";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
 const Contact: React.FC = () => {
@@ -22,7 +21,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-      <BottomInfoBar />
+
     </div>
   );
 };

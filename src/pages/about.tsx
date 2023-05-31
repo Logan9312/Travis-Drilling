@@ -1,5 +1,5 @@
-import Navbar from "../../components/Navbar";
-import BottomInfoBar from "../../components/infobar";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const About: React.FC = () => {
     return (
@@ -8,9 +8,9 @@ const About: React.FC = () => {
             <div className="flex-1 flex flex-col justify-center items-center">
                 <p className="text-black">Travis Drilling Ltd. is a locally owned and operated business in Alberta, Canada.</p>
             </div>
-            <BottomInfoBar />
+            <Footer />
         </div>
-        
+
     )
 };
 

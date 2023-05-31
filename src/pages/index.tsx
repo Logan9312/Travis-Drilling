@@ -1,5 +1,5 @@
-import Navbar from '../../components/Navbar';
-import BottomInfoBar from '../../components/infobar';
+import Navbar from '../components/Navbar';
+
 
 const Home: React.FC = () => {
   return (
@@ -15,7 +15,6 @@ const Home: React.FC = () => {
       <div className="flex-1 flex flex-col items-center">
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">test 2</button>
       </div>
-      <BottomInfoBar />
     </div>
   );
 };
