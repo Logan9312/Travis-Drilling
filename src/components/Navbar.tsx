@@ -1,10 +1,10 @@
-import React, { ReactElement, useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 interface Props {
   transparent?: boolean
 }
 
-function Navbar(props: Props): ReactElement {
+function Navbar(props: Props) {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav
