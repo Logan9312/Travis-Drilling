@@ -1,7 +1,8 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
+
 import Link from 'next/link'
 
-function Footer(): ReactElement {
+function Footer() {
   return (
     <footer className="relative bg-gray-300 pt-8 pb-6">
       <div
