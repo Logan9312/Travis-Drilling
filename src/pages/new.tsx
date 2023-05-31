@@ -1,4 +1,6 @@
 import Layout from '../components/Layout'
+import Image from 'next/image'
+import Link from 'next/link'
 
 const IndexPage = () => (
   <Layout title="Home | Next.js + TypeScript Example">
@@ -134,46 +136,46 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
           you're good to go. Just make sure you enable them first via
           JavaScript.
         </p>
-        <a
+        <Link
           href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
           className="font-bold text-gray-800 mt-8"
         >
           Check Tailwind Starter Kit!
-        </a>
+        </Link>
       </div>
 
       <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
         <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-600">
-          <img
+          <Image
             alt="..."
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+            src={"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"}
             className="w-full align-middle rounded-t-lg"
-          />
-          <blockquote className="relative p-8 mb-4">
-            <svg
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 583 95"
-              className="absolute left-0 w-full block"
-              style={{
-                height: "95px",
-                top: "-94px"
-              }}
-            >
-              <polygon
-                points="-30,95 583,95 583,65"
-                className="text-pink-600 fill-current"
-              ></polygon>
-            </svg>
-            <h4 className="text-xl font-bold text-white">
-              Top Notch Services
-            </h4>
-            <p className="text-md font-light mt-2 text-white">
-              The Arctic Ocean freezes every winter and much of the
-              sea-ice then thaws every summer, and that process will
-              continue whatever happens.
-            </p>
-          </blockquote>
+          >
+            <blockquote className="relative p-8 mb-4">
+              <svg
+                preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 583 95"
+                className="absolute left-0 w-full block"
+                style={{
+                  height: "95px",
+                  top: "-94px"
+                }}
+              >
+                <polygon
+                  points="-30,95 583,95 583,65"
+                  className="text-pink-600 fill-current"
+                ></polygon>
+              </svg>
+              <h4 className="text-xl font-bold text-white">
+                Top Notch Services
+              </h4>
+              <p className="text-md font-light mt-2 text-white">
+                The Arctic Ocean freezes every winter and much of the
+                sea-ice then thaws every summer, and that process will
+                continue whatever happens.
+              </p>
+            </blockquote>
         </div>
       </div>
 
@@ -205,7 +207,7 @@ const Featured = () => <section className="relative py-20">
   <div className="container mx-auto px-4">
     <div className="items-center flex flex-wrap">
       <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
-        <img
+        <Image
           alt="..."
           className="max-w-full rounded-lg shadow-lg"
           src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
@@ -287,9 +289,9 @@ const Team = () => <section className="pt-20 pb-48">
     <div className="flex flex-wrap">
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
-          <img
+          <Image
             alt="..."
-            src={require('../assets/img/team-1-800x800.jpg')}
+            src={require('../assets/Image/team-1-800x800.jpg')}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -325,9 +327,9 @@ const Team = () => <section className="pt-20 pb-48">
       </div>
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
-          <img
+          <Image
             alt="..."
-            src={require('../assets/img/team-2-800x800.jpg')}
+            src={require('../assets/Image/team-2-800x800.jpg')}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -357,9 +359,9 @@ const Team = () => <section className="pt-20 pb-48">
       </div>
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
-          <img
+          <Image
             alt="..."
-            src={require('../assets/img/team-3-800x800.jpg')}
+            src={require('../assets/Image/team-3-800x800.jpg')}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -395,9 +397,9 @@ const Team = () => <section className="pt-20 pb-48">
       </div>
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
-          <img
+          <Image
             alt="..."
-            src={require('../assets/img/team-4-470x470.png')}
+            src={require('../assets/Image/team-4-470x470.png')}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
