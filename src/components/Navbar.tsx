@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
 interface Props {
   transparent?: boolean
 }
@@ -10,13 +12,23 @@ function Navbar(props: Props) {
     <nav
       className={
         (props.transparent
-          ? "top-0 absolute z-50 w-full"
-          : "relative bg-white shadow-lg") +
+          ? "top-0 absolute z-50 w-full" : "relative bg-white shadow-lg") +
         " flex flex-wrap items-center justify-between px-2 py-3 "
       }
     >
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
+          <Link
+            href="/">
+
+            <Image
+              src={(props.transparent ? "/logo_white.png" : "/logo.png")}
+              width={100}
+              height={100}
+              alt="Travis Drilling Logo"
+              className=" font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+            />
+          </Link>
           <Link
             className={
               (props.transparent ? "text-white" : "text-gray-800") +
@@ -33,8 +45,7 @@ function Navbar(props: Props) {
           >
             <i
               className={
-                (props.transparent ? "text-white" : "text-gray-800") +
-                " fas fa-bars"
+                (props.transparent ? "text-white" : "text-gray-800")
               }
             ></i>
           </button>

@@ -148,8 +148,10 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
         <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-600">
           <Image
             alt="..."
-            src={"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"}
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
             className="w-full align-middle rounded-t-lg"
+            width="100"
+            height="100"
           ></Image>
           <blockquote className="relative p-8 mb-4">
             <svg
@@ -208,6 +210,8 @@ const Featured = () => <section className="relative py-20">
     <div className="items-center flex flex-wrap">
       <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
         <Image
+          width="100"
+          height="100"
           alt="..."
           className="max-w-full rounded-lg shadow-lg"
           src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
@@ -290,8 +294,10 @@ const Team = () => <section className="pt-20 pb-48">
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
           <Image
+            width="100"
+            height="100"
             alt="..."
-            src={'../assets/Image/team-1-800x800.jpg'}
+            src={'/img/team-1-800x800.jpg'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -328,8 +334,10 @@ const Team = () => <section className="pt-20 pb-48">
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
           <Image
+            width="100"
+            height="100"
             alt="..."
-            src={'../assets/Image/team-2-800x800.jpg'}
+            src={'/img/team-2-800x800.jpg'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -360,8 +368,10 @@ const Team = () => <section className="pt-20 pb-48">
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
           <Image
+            width="100"
+            height="100"
             alt="..."
-            src={'../assets/Image/team-3-800x800.jpg'}
+            src='/img/team-3-800x800.jpg'
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
@@ -398,8 +408,10 @@ const Team = () => <section className="pt-20 pb-48">
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
           <Image
+            width="100"
+            height="100"
             alt="..."
-            src={'../assets/Image/team-4-470x470.png'}
+            src={'/img/team-4-470x470.png'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
