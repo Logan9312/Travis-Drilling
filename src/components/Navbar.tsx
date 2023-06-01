@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { Bars3Icon } from '@heroicons/react/24/solid'
 
 interface Props {
   transparent?: boolean
@@ -35,20 +36,16 @@ function Navbar(props: Props) {
               " title-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             }
             href="/"
-          >
-            Travis Drilling LTD.
-          </Link>
+          />
           <button
             className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
             type="button"
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
-            <i
-              className={
-                (props.transparent ? "text-white" : "text-gray-800")
-              }
-            ></i>
+            <Bars3Icon className={(props.transparent ? "text-white" : "text-gray-800") + " h-6 w-6"} />
           </button>
+
+
         </div>
         <div
           className={
