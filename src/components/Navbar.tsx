@@ -103,27 +103,6 @@ function Navbar(props: Props) {
                 <span className="inline-block ml-2">Contact</span>
               </Link>
             </li>
-            <li className="flex items-center">
-              <Link
-                className={
-                  (props.transparent
-                    ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
-                    : "text-gray-800 hover:text-gray-600") +
-                  " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                }
-                href="/new"
-              >
-                <i
-                  className={
-                    (props.transparent
-                      ? "lg:text-gray-300 text-gray-500"
-                      : "text-gray-500") +
-                    " fab fa-github text-lg leading-lg "
-                  }
-                />
-                <span className="inline-block ml-2">Test Page</span>
-              </Link>
-            </li>
           </ul>
         </div>
       </div>
