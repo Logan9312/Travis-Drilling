@@ -341,26 +341,6 @@ const Team = () => <section className="pt-20 pb-48">
           </div>
         </div>
       </div>
-      <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-        <div className="px-6">
-          <Image
-            width="100"
-            height="100"
-            alt="..."
-            src={'/img/blank.png'}
-            className="shadow-lg rounded-full max-w-full mx-auto"
-            style={{ maxWidth: "120px" }}
-          />
-          <div className="pt-6 text-center">
-            <h5 className="text-xl font-bold">
-              Logan Travis
-            </h5>
-            <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-              Developer
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
