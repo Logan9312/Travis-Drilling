@@ -21,7 +21,6 @@ function Navbar(props: Props) {
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <Link
             href="/">
-
             <Image
               src={(props.transparent ? "/logo_white.png" : "/logo.png")}
               width={100}
@@ -44,8 +43,6 @@ function Navbar(props: Props) {
           >
             <Bars3Icon className={(props.transparent ? "text-white" : "text-gray-800") + " h-6 w-6"} />
           </button>
-
-
         </div>
         <div
           className={
