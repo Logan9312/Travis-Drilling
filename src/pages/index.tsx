@@ -22,7 +22,7 @@ const Hero = () => (<div className="relative pt-16 pb-32 flex content-center ite
   style={{
     minHeight: "75vh"
   }}>
-  <div className="absolute top-0 w-full h-full bg-center bg-cover bg-[url('/backdrop.png')]">
+  <div className="absolute top-0 w-full h-full bg-center bg-cover bg-[url('/rig.jpg')]">
     <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
   </div>
   <div className="container relative mx-auto">
