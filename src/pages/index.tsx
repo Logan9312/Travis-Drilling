@@ -72,7 +72,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
             </div>
             <h6 className="text-xl font-semibold">Service, Repair, Testing</h6>
             <p className="mt-2 mb-4 text-gray-600">
-
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               Abandonment, Shocking
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             </p>
           </div>
         </div>
@@ -104,7 +104,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               Backhoe Services
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             </p>
           </div>
         </div>
@@ -370,11 +370,10 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
     <div className="flex flex-wrap text-center justify-center">
       <div className="w-full lg:w-6/12 px-4">
         <h2 className="text-4xl font-semibold text-white">
-          Build something
+          Our Services
         </h2>
         <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-          Put the potentially record low maximum sea ice extent tihs year down to low ice.
-          According to the National Oceanic and Atmospheric Administration, Ted, Scambos.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
     </div>
@@ -387,8 +386,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Excelent Services
         </h6>
         <p className="mt-2 mb-4 text-gray-500">
-          Some quick example text to build on the card title and make up
-          the bulk of the card&apos;s content.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -399,8 +397,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Grow your market
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          Some quick example text to build on the card title and make up
-          the bulk of the card&apos;s content.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -411,8 +408,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Launch time
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          Some quick example text to build on the card title and make up
-          the bulk of the card&apos;s content.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
     </div>
