@@ -28,95 +28,34 @@ function Footer() {
         <div className="flex flex-wrap">
           <div className="w-full lg:w-6/12 px-4">
             <h4 className="text-3xl font-semibold">
-              Get a Quote!
+              Get a Quote
             </h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-700">
-              Email us at contact@travisdrilling.com
+              Email us: {" "}
+              <Link href="mailto:contact@travisdrilling.ca" className="underline">contact@travisdrilling.ca</Link>
             </h5>
             <div className="mt-6">
-              <button
-                className="bg-white text-blue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                type="button"
-              >
-                <i className="flex fab fa-twitter"></i>
-              </button>
-              <button
-                className="bg-white text-blue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                type="button"
-              >
-                <i className="flex fab fa-facebook-square"></i>
-              </button>
-              <button
-                className="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                type="button"
-              >
-                <i className="flex fab fa-dribbble"></i>
-              </button>
-              <button
-                className="bg-white text-gray-900 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3"
-                type="button"
-              >
-                <i className="flex fab fa-github"></i>
-              </button>
+
             </div>
           </div>
           <div className="w-full lg:w-6/12 px-4">
             <div className="flex flex-wrap items-top mb-6">
               <div className="w-full lg:w-4/12 px-4 ml-auto">
-                <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
+                <span className="block uppercase text-gray-600 text-sm font-bold mb-2">
                   Useful Links
                 </span>
                 <ul className="list-unstyled">
                   <li>
                     <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/presentation">About Us
+                      href="/about">About Us
                     </Link>
                   </li>
                   <li>
                     <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://blog.creative-tim.com">Blog
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://www.github.com/creativetimofficial">Github
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://www.creative-tim.com/bootstrap-themes/free">Free Products
-                    </Link>
-                  </li>
-
-                </ul>
-              </div>
-              <div className="w-full lg:w-4/12 px-4">
-                <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
-                  Other Resources
-                </span>
-                <ul className="list-unstyled">
-                  <li>
-                    <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT License
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/terms">Terms & Conditions
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/privacy">Privacy Policy
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                      href="https://creative-tim.com/contact-us">Contact Us
+                      href="/contact">Contact Us
                     </Link>
                   </li>
                 </ul>
-
               </div>
             </div>
           </div>
@@ -125,6 +64,7 @@ function Footer() {
         <div className="flex flex-wrap items-center md:justify-between justify-center">
           <div className="w-full md:w-4/12 px-4 mx-auto text-center">
             <div className="text-sm text-gray-600 font-semibold py-1">
+
               Copyright © {new Date().getFullYear()}{" "} by {" "}
               <Link
                 href="https://github.com/Logan9312/Travis-Drilling"
@@ -132,6 +72,11 @@ function Footer() {
               >
                 Logan Travis
               </Link>.
+            </div>
+            <div className=" text-gray-600 font-semibold py-1 ">
+              <Link href="https://github.com/Logan9312/Travis-Drilling" passHref target="_blank" className="hover:text-gray-900">
+                <i className="flex fab fa-github fa-xl"></i>
+              </Link>
             </div>
           </div>
         </div>
