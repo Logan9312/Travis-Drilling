@@ -29,6 +29,7 @@ function Navbar(props: Props) {
               className=" font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
             />
           </Link>
+
           <Link
             className={
               (props.transparent ? "text-white" : "text-gray-800") +
@@ -58,7 +59,28 @@ function Navbar(props: Props) {
                   (props.transparent
                     ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                     : "text-gray-800 hover:text-gray-600") +
-                  " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  " px-4 py-4 lg:py-4 flex items-center text-xs uppercase font-bold"
+                }
+                href="/"
+              >
+                <i
+                  className={
+                    (props.transparent
+                      ? "lg:text-gray-300 text-gray-500"
+                      : "text-gray-500") +
+                    " fas fa-house text-lg leading-lg mr-2"
+                  }
+                />{" "}
+                Home
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link
+                className={
+                  (props.transparent
+                    ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
+                    : "text-gray-800 hover:text-gray-600") +
+                  " px-4 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 }
                 href="/about"
               >
@@ -79,7 +101,7 @@ function Navbar(props: Props) {
                   (props.transparent
                     ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                     : "text-gray-800 hover:text-gray-600") +
-                  " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  " px-4 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 }
                 href="/contact"
               >
@@ -100,7 +122,7 @@ function Navbar(props: Props) {
                   (props.transparent
                     ? "lg:text-white lg:hover:text-gray-300 text-gray-800"
                     : "text-gray-800 hover:text-gray-600") +
-                  " px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  " px-4 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 }
                 href="/resources"
               >
