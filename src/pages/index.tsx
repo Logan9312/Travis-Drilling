@@ -1,3 +1,4 @@
+import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import Layout from '../components/Layout'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -17,10 +18,7 @@ const IndexPage = () => (
 export default IndexPage
 
 /// Page Sections
-const Hero = () => (<div className="relative lg:pt-16 pb-32 flex content-center items-center justify-center"
-  style={{
-    minHeight: "75vh"
-  }}>
+const Hero = () => (<div className="relative flex content-center items-center justify-center md:min-h-[75vh] min-h-[50vh]">
   <div className="absolute top-0 w-full h-full bg-bottom bg-cover bg-no-repeat lg:bg-[url('/rig.jpg')] bg-[url('/rig_cropped.jpg')]" >
     <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-black"></span>
   </div>
@@ -34,19 +32,14 @@ const Hero = () => (<div className="relative lg:pt-16 pb-32 flex content-center 
           Water Well Drilling and Service
         </p>
       </div>
-
     </div>
-  </div>
-  <div
-    className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-  >
   </div>
 </div>)
 
 const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
   <div className="container mx-auto px-4">
-    <div className="flex flex-wrap">
-      <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+    <div className="flex flex-wrap items-end">
+      <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center ">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
@@ -86,7 +79,7 @@ const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
               Backhoe Services
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              We offer some backhoe services, including: trenching, water line installation, underground water line repair, and more.
             </p>
           </div>
         </div>
@@ -94,7 +87,7 @@ const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
     </div>
 
 
-    <div className="flex flex-wrap items-center mt-32">
+    <div className="flex flex-wrap items-center mt-20">
       <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
         <h3 className="text-3xl mb-2 font-semibold leading-normal">
           More Information
@@ -103,14 +96,16 @@ const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
 
         </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-          For more information about our services, please contact Jason Travis at 780-974-3184
+          To discuss your drilling needs or get a quote on services, you can contact us at the following:
         </p>
-        <Link
-          href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-          className="font-bold text-gray-800 mt-8"
-        >
-          Check Tailwind Starter Kit!
-        </Link>
+        <p className="text-gray-800 flex items-center">
+          <EnvelopeIcon className="w-5 h-5 mr-2" />
+          <span className="font-bold mr-1">Email: </span> contact@travisdrilling.ca
+        </p>
+        <p className="text-gray-800 flex items-center">
+          <PhoneIcon className="w-5 h-5 mr-2" />
+          <Link href="tel:780-974-3184"><span className="font-bold mr-1">Phone: </span> (780) 974 - 3184 </Link>
+        </p>
       </div>
 
       <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
@@ -246,11 +241,11 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
     </svg>
   </div>
 
-  <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
+  <div className="container mx-auto px-4 pt-20 lg:pb-20">
     <div className="flex flex-wrap text-center justify-center">
       <div className="w-full lg:w-6/12 px-4">
         <h2 className="text-4xl font-semibold text-white">
-          Our Services
+          Why Travis Drilling?
         </h2>
         <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -263,10 +258,10 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           <i className="fas fa-medal text-xl"></i>
         </div>
         <h6 className="text-xl mt-5 font-semibold text-white">
-          Excelent Services
+          Locally Owned
         </h6>
         <p className="mt-2 mb-4 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          We are a locally operated business working out of Onoway, Alberta.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -274,10 +269,10 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           <i className="fas fa-poll text-xl"></i>
         </div>
         <h5 className="text-xl mt-5 font-semibold text-white">
-          Grow your market
+          Support
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          We will work with you to produce results that you are looking for.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -285,10 +280,10 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           <i className="fas fa-lightbulb text-xl"></i>
         </div>
         <h5 className="text-xl mt-5 font-semibold text-white">
-          Launch time
+          Reputation
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          Our business has grown through word of mouth, and positive recommendations.
         </p>
       </div>
     </div>
