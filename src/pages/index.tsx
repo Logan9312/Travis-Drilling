@@ -107,20 +107,6 @@ const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
           <Link href="tel:780-974-3184"><span className="font-bold mr-1">Phone: </span> (780) 974 - 3184 </Link>
         </p>
       </div>
-
-      <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-        <div className="relative flex flex-col min-w-0 break-words  w-full mb-6 shadow-lg rounded-lg bg-pink-600">
-          <Image
-            alt="..."
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
-            className="w-full align-middle rounded-t-lg"
-            width="100"
-            height="100"
-          ></Image>
-
-        </div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -152,7 +138,7 @@ const Team = () => <section className="pt-10 pb-48">
     <div className="flex flex-wrap justify-center text-center mb-24">
       <div className="w-full lg:w-6/12 px-4">
         <h2 className="text-4xl font-semibold">
-          Our Business
+          Our Team
         </h2>
       </div>
     </div>
@@ -245,10 +231,10 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
     <div className="flex flex-wrap text-center justify-center">
       <div className="w-full lg:w-6/12 px-4">
         <h2 className="text-4xl font-semibold text-white">
-          Why Travis Drilling?
+          Why Us?
         </h2>
         <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          We are dedicated to providing the best service to you, we appreciate your business and we hope to continue to work with you for years to come.
         </p>
       </div>
     </div>
@@ -272,7 +258,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Support
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-          We will work with you to produce results that you are looking for.
+          We will support and discuss options with you to produce results that you are looking for.
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
