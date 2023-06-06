@@ -2,6 +2,9 @@ import React from 'react'
 
 import Link from 'next/link'
 
+
+
+
 function Footer() {
   return (
     <footer className="relative bg-gray-300 pt-8 pb-6">
@@ -34,9 +37,7 @@ function Footer() {
               Email us: {" "}
               <Link href="mailto:contact@travisdrilling.ca" className="underline">contact@travisdrilling.ca</Link>
             </h5>
-            <div className="mt-6">
-
-            </div>
+            
           </div>
           <div className="w-full lg:w-6/12 px-4">
             <div className="flex flex-wrap items-top mb-6">
