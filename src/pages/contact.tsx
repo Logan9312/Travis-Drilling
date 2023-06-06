@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
+import Footer from "~/components/Footer";
 
 const Contact: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-
+      <Footer />
     </div>
   );
 };

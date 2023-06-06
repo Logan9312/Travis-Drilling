@@ -1,3 +1,4 @@
+import Footer from "~/components/Footer";
 import Navbar from "../components/Navbar";
 
 const Resources: React.FC = () => {
@@ -9,7 +10,7 @@ const Resources: React.FC = () => {
                     Page Under Construction. Business Resources will be added here.
                 </div>
             </div>
-
+            <Footer />
         </div>
     );
 };
