@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 
@@ -16,7 +17,7 @@ const Contact: React.FC = () => {
             </p>
             <p className="text-gray-800 flex items-center">
               <PhoneIcon className="w-5 h-5 mr-2" />
-              <span className="font-bold mr-1">Phone: </span> (780) 967 - 5620
+              <Link href="tel:780-887-3498"><span className="font-bold mr-1">Phone: </span> (780) 974 - 3184 </Link>
             </p>
           </div>
         </div>

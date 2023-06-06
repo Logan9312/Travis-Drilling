@@ -1,7 +1,6 @@
 import Layout from '../components/Layout'
 import Image from 'next/image'
 import Link from 'next/link'
-import { SocialIcon } from 'react-social-icons';
 
 const IndexPage = () => (
   <Layout title="Travis Drilling">
@@ -18,50 +17,33 @@ const IndexPage = () => (
 export default IndexPage
 
 /// Page Sections
-const Hero = () => (<div className="relative pt-16 pb-32 flex content-center items-center justify-center"
+const Hero = () => (<div className="relative lg:pt-16 pb-32 flex content-center items-center justify-center"
   style={{
     minHeight: "75vh"
   }}>
-  <div className="absolute top-0 w-full h-full bg-center bg-cover bg-[url('/rig.jpg')]">
-    <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
+  <div className="absolute top-0 w-full h-full bg-bottom bg-cover bg-no-repeat lg:bg-[url('/rig.jpg')] bg-[url('/rig_cropped.jpg')]" >
+    <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-black"></span>
   </div>
   <div className="container relative mx-auto">
     <div className="items-center flex flex-wrap">
       <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-        <div className="pr-12">
-          <h1 className="text-white font-semibold text-5xl">
-            Travis Drilling LTD.
-          </h1>
-          <p className="mt-4 text-lg text-gray-300">
-            Water Well Drilling and Service
-          </p>
-        </div>
+        <h1 className=" text-white font-semibold text-4xl lg:text-5xl">
+          Travis Drilling LTD.
+        </h1>
+        <p className="mt-4 text-xl text-gray-300">
+          Water Well Drilling and Service
+        </p>
       </div>
 
     </div>
   </div>
   <div
     className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-    style={{ height: "70px" }}
   >
-    <svg
-      className="absolute bottom-0 overflow-hidden"
-      xmlns="http://www.w3.org/2000/svg"
-      preserveAspectRatio="none"
-      version="1.1"
-      viewBox="0 0 2560 100"
-      x="0"
-      y="0"
-    >
-      <polygon
-        className="text-gray-300 fill-current"
-        points="2560 0 2560 100 0 100"
-      ></polygon>
-    </svg>
   </div>
 </div>)
 
-const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
+const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
   <div className="container mx-auto px-4">
     <div className="flex flex-wrap">
       <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -72,13 +54,13 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
             </div>
             <h6 className="text-xl font-semibold">Service, Repair, Testing</h6>
             <p className="mt-2 mb-4 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              We can do service calls to repair your well, pump, or pressure system. We also offer water testing services to ensure your water is safe to drink.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="w-full md:w-4/12 px-4 text-center">
+      <div className=" pt-6 w-full md:w-4/12 px-4 text-center">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400">
@@ -88,13 +70,13 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               Abandonment, Shocking
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              If you have an old well that you need abandoned, we can seal it up safely and properly. We also offer well shocking services to help clean out your well and get rid of any bacteria that may be present.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="pt-6 w-full md:w-4/12 px-4 text-center">
+      <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-yellow-400">
@@ -104,7 +86,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
               Backhoe Services
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
             </p>
           </div>
         </div>
@@ -114,22 +96,14 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
 
     <div className="flex flex-wrap items-center mt-32">
       <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-        <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-          <i className="fas fa-user-friends text-xl"></i>
-        </div>
         <h3 className="text-3xl mb-2 font-semibold leading-normal">
-          Working with us is a pleasure
+          More Information
         </h3>
         <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-          Don&apos;t let your uses guess by attaching tooltips and popoves
-          to any element. Just make sure you enable them first via
-          JavaScript.
+
         </p>
         <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
-          The kit comes with three pre-built pages to help you get
-          started faster. You can change the text and images and
-          you&apos;re good to go. Just make sure you enable them first via
-          JavaScript.
+          For more information about our services, please contact Jason Travis at 780-974-3184
         </p>
         <Link
           href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
@@ -148,31 +122,7 @@ const Services = () => <section className="pb-20 bg-gray-300 -mt-24">
             width="100"
             height="100"
           ></Image>
-          <blockquote className="relative p-8 mb-4">
-            <svg
-              preserveAspectRatio="none"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 583 95"
-              className="absolute left-0 w-full block"
-              style={{
-                height: "95px",
-                top: "-94px"
-              }}
-            >
-              <polygon
-                points="-30,95 583,95 583,65"
-                className="text-pink-600 fill-current"
-              ></polygon>
-            </svg>
-            <h4 className="text-xl font-bold text-white">
-              Top Notch Services
-            </h4>
-            <p className="text-md font-light mt-2 text-white">
-              The Arctic Ocean freezes every winter and much of the
-              sea-ice then thaws every summer, and that process will
-              continue whatever happens.
-            </p>
-          </blockquote>
+
         </div>
       </div>
 
@@ -203,7 +153,7 @@ const Featured = () => <section className="relative py-10">
 </section>
 
 const Team = () => <section className="pt-10 pb-48">
-  <div className="container mx-auto px-4">
+  <div className="justify-center container mx-auto px-4">
     <div className="flex flex-wrap justify-center text-center mb-24">
       <div className="w-full lg:w-6/12 px-4">
         <h2 className="text-4xl font-semibold">
@@ -211,7 +161,7 @@ const Team = () => <section className="pt-10 pb-48">
         </h2>
       </div>
     </div>
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap justify-center">
       <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
         <div className="px-6">
           <Image
@@ -247,7 +197,6 @@ const Team = () => <section className="pt-10 pb-48">
               Christy Travis
             </h5>
             <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-              Accountant
             </p>
           </div>
         </div>
@@ -267,7 +216,7 @@ const Team = () => <section className="pt-10 pb-48">
               Hayden Borle
             </h5>
             <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
-              Worker
+
             </p>
           </div>
         </div>
@@ -304,7 +253,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Our Services
         </h2>
         <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
     </div>
@@ -317,7 +266,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Excelent Services
         </h6>
         <p className="mt-2 mb-4 text-gray-500">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -328,7 +277,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Grow your market
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
       <div className="w-full lg:w-3/12 px-4 text-center">
@@ -339,7 +288,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
           Launch time
         </h5>
         <p className="mt-2 mb-4 text-gray-500">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
         </p>
       </div>
     </div>
