@@ -194,7 +194,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
         <h2 className="text-4xl font-semibold text-white">
           Why Us?
         </h2>
-        <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+        <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-400">
           We are dedicated to providing the best service to you, we appreciate your business and we hope to continue to work with you for years to come.
         </p>
       </div>
@@ -207,7 +207,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
         <h6 className="text-xl mt-5 font-semibold text-white">
           Locally Owned
         </h6>
-        <p className="mt-2 mb-4 text-gray-500">
+        <p className="mt-2 mb-4 text-gray-400">
           We are a locally operated business working out of Onoway, Alberta.
         </p>
       </div>
@@ -218,7 +218,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
         <h5 className="text-xl mt-5 font-semibold text-white">
           Support
         </h5>
-        <p className="mt-2 mb-4 text-gray-500">
+        <p className="mt-2 mb-4 text-gray-400">
           We will support and discuss options with you to produce results that you are looking for.
         </p>
       </div>
@@ -229,7 +229,7 @@ const Finisher = () => <section className="pb-20 relative block bg-gray-900">
         <h5 className="text-xl mt-5 font-semibold text-white">
           Reputation
         </h5>
-        <p className="mt-2 mb-4 text-gray-500">
+        <p className="mt-2 mb-4 text-gray-400">
           Our business has grown through word of mouth, and positive recommendations.
         </p>
       </div>
