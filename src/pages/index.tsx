@@ -163,7 +163,7 @@ const Team = () => <section className="pt-10 pb-48">
             width="100"
             height="100"
             alt="..."
-            src={'/img/Jason.jpg'}
+            src={'/img/JasonIcon.jpg'}
             className="shadow-lg rounded-full max-w-full mx-auto"
             style={{ maxWidth: "120px" }}
           />
