@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
           <div className="mt-4">
             <p className="text-gray-800 flex items-center">
               <EnvelopeIcon className="w-5 h-5 mr-2" />
-              <span className="font-bold mr-1">Email: </span> contact@travisdrilling.ca
+              <Link href="mailto:contact@travisdrilling.ca"><span className="font-bold mr-1">Email: </span> contact@travisdrilling.ca</Link>
             </p>
             <p className="text-gray-800 flex items-center">
               <PhoneIcon className="w-5 h-5 mr-2" />
