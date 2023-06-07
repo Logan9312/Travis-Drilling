@@ -19,7 +19,7 @@ const Layout = (props: PropsWithChildren<Props>) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta lang="en" />
-        <link href="/logo.png" rel="icon" />
+        <link href="/favicon.ico" rel="icon" />
       </Head>
       <Script src="https://kit.fontawesome.com/e6ae3fbb74.js" crossOrigin="anonymous"></Script>
       <header>
