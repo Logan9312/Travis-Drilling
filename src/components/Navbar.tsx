@@ -116,7 +116,8 @@ function Navbar(props: Props) {
                 <span className="inline-block ml-2">Contact</span>
               </Link>
             </li>
-            <li className="flex items-center">
+
+            {/*<li className="flex items-center">
               <Link
                 className={
                   (props.transparent
@@ -136,7 +137,7 @@ function Navbar(props: Props) {
                 />
                 <span className="inline-block ml-2">Resources</span>
               </Link>
-            </li>
+            </li>*/}
           </ul>
           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
             {/* right side navbar items */}
