@@ -40,15 +40,15 @@ const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
   <div className="container mx-auto px-4">
 
     <div className="flex flex-wrap items-end">
-      <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center ">
+      <div className="pt-6 w-full md:w-4/12 px-4 text-center ">
         <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
           <div className="px-4 py-5 flex-auto">
-            <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
+            <div className="text-white p-3 text-center inline-flex items-center justify-center w-12  mb-5 shadow-lg rounded-full bg-red-400">
               <i className="fas fa-screwdriver-wrench"></i>
             </div>
             <h6 className="text-xl font-semibold">Service, Repair, Testing</h6>
             <p className="mt-2 mb-4 text-gray-600">
-              We can do service calls to repair your well, pump, or pressure system. We also offer water testing services to ensure your water is safe to drink.
+              We can repair your well, pump, or pressure system through service calls. We also have water testing services to ensure the safety of your drinking water.
             </p>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
               Backhoe Services
             </h6>
             <p className="mt-2 mb-4 text-gray-600">
-              We offer some backhoe services, including: trenching, water line installation, underground water line repair, and more.
+              Our backhoe services include trenching, installation and repair of underground water lines, and more. Call us to discuss if we can do what you need.
             </p>
           </div>
         </div>
