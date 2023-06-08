@@ -22,7 +22,7 @@ function Navbar(props: Props) {
           <Link
             href="/">
             <Image
-              src={(props.transparent ? "/logo_white.png" : "/logo.png")}
+              src={(props.transparent ? "/img/logo_white.png" : "/img/logo.png")}
               width={100}
               height={100}
               alt="Travis Drilling Logo"

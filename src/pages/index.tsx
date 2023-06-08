@@ -19,7 +19,7 @@ export default IndexPage
 
 /// Page Sections
 const Hero = () => (<div className="relative flex content-center items-center justify-center md:min-h-[75vh] min-h-[50vh]">
-  <div className="absolute top-0 w-full h-full bg-bottom bg-cover bg-no-repeat lg:bg-[url('/rig.jpg')] bg-[url('/rig_cropped.jpg')]" >
+  <div className="absolute top-0 w-full h-full bg-bottom bg-cover bg-no-repeat lg:bg-[url('/img/rig.jpg')] bg-[url('/img/rig_cropped.jpg')]" >
     <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-black"></span>
   </div>
   <div className="container relative mx-auto">
