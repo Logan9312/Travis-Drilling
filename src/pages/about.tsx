@@ -1,23 +1,25 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Image from "next/image";
+import Layout from "../components/Layout";
 
 const About: React.FC = () => {
     return (
-        <div className="bg-white min-h-screen flex flex-col">
-            <Navbar />
-            <div className="flex-1 flex flex-col justify-center items-center">
-                <p className="text-black">Travis Drilling Ltd. is a locally owned and operated business in Alberta, Canada.</p>
-                <Image
-                    src={"/img/rig.jpg"}
-                    alt={"Drilling Rigs"}
-                    width={1000}
-                    height={500}
-                />
-            </div>
-            <Footer />
-        </div>
+        <Layout title="Travis Drilling" transparent={false}>
+            <div className="bg-white min-h-screen flex flex-col">
 
+                <div className="flex-1 flex flex-col justify-center items-center">
+                    <h3 className="text-3xl mb-2 font-semibold leading-normal text-center">
+                        About Travis Drilling
+                    </h3>
+                    <p className="text-lg font-light text-center mt-4 mb-4 text-gray-700">
+                        Travis Drilling is a locally owned business operating out of Onoway, Alberta. 
+                    </p>
+                </div>
+
+
+            </div>
+        </Layout>
     )
 };
 

@@ -74,7 +74,7 @@ function Navbar(props: Props) {
                 Home
               </Link>
             </li>
-            <li className="flex items-center">
+            {/* <li className="flex items-center">
               <Link
                 className={
                   (props.transparent
@@ -94,7 +94,7 @@ function Navbar(props: Props) {
                 />{" "}
                 About
               </Link>
-            </li>
+                </li>*/}
             <li className="flex items-center">
               <Link
                 className={

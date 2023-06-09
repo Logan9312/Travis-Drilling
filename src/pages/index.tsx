@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const IndexPage = () => (
-  <Layout title="Travis Drilling">
+  <Layout title="Travis Drilling" transparent>
 
     <Hero />
     <Services />
@@ -18,23 +18,24 @@ const IndexPage = () => (
 export default IndexPage
 
 /// Page Sections
-const Hero = () => (<div className="relative flex content-center items-center justify-center md:min-h-[75vh] min-h-[50vh]">
-  <div className="absolute top-0 w-full h-full bg-bottom bg-cover bg-no-repeat lg:bg-[url('/img/rig.jpg')] bg-[url('/img/rig_cropped.jpg')]" >
-    <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-black"></span>
-  </div>
-  <div className="container relative mx-auto">
-    <div className="items-center flex flex-wrap">
-      <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-        <h1 className=" text-white font-semibold text-4xl lg:text-5xl">
-          Travis Drilling LTD.
-        </h1>
-        <p className="mt-4 text-xl text-gray-300">
-          Water Well Drilling and Service
-        </p>
+const Hero = () => (
+  <div className="relative flex content-center items-center justify-center md:min-h-[75vh] min-h-[50vh]">
+    <div className="absolute top-0 w-full h-full bg-bottom bg-cover bg-no-repeat lg:bg-[url('/img/rig.jpg')] bg-[url('/img/rig_cropped.jpg')]" >
+      <span id="blackOverlay" className="w-full h-full absolute opacity-40 bg-black"></span>
+    </div>
+    <div className="container relative mx-auto">
+      <div className="items-center flex flex-wrap">
+        <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <h1 className=" text-white font-semibold text-4xl lg:text-5xl">
+            Travis Drilling LTD.
+          </h1>
+          <p className="mt-4 text-xl text-gray-300">
+            Water Well Drilling and Service
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-</div>)
+  </div>)
 
 const Services = () => <section className="pb-20 bg-gray-300 lg:-mt-24 -mt-12">
   <div className="container mx-auto px-4">

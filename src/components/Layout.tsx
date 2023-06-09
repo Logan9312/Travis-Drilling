@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Layout = (props: PropsWithChildren<Props>) => {
-
+  const { transparent } = props;
   return (
 
     <div>
@@ -29,7 +29,7 @@ const Layout = (props: PropsWithChildren<Props>) => {
       </Head>
       <Script src="https://kit.fontawesome.com/e6ae3fbb74.js" crossOrigin="anonymous"></Script>
       <header>
-        <Navbar transparent={true} />
+        <Navbar transparent={transparent} />
       </header>
       <main>
         {props.children}
