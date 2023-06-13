@@ -1,6 +1,3 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Image from "next/image";
 import Layout from "../components/Layout";
 
 const About: React.FC = () => {
@@ -16,8 +13,6 @@ const About: React.FC = () => {
                         Travis Drilling is a locally owned business operating out of Onoway, Alberta. 
                     </p>
                 </div>
-
-
             </div>
         </Layout>
     )
