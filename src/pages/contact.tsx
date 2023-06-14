@@ -5,20 +5,27 @@ import Footer from "~/components/Footer";
 
 const Contact: React.FC = () => {
   return (
-    <div className="bg-white min-h-screen flex flex-col">
+    <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
-      <div className="flex-1 flex flex-col justify-center items-center">
+      <div className="flex flex-1 flex-col items-center justify-center">
         <div className="mt-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-          <p className="text-gray-600">For inquiries, please reach out to us:</p>
+          <h2 className="mb-4 text-2xl font-bold">Contact Information</h2>
+          <p className="text-gray-600">
+            For inquiries, please reach out to us:
+          </p>
           <div className="mt-4">
-            <p className="text-gray-800 flex items-center">
-              <EnvelopeIcon className="w-5 h-5 mr-2" />
-              <Link href="mailto:contact@travisdrilling.ca"><span className="font-bold mr-1">Email: </span> contact@travisdrilling.ca</Link>
+            <p className="flex items-center text-gray-800">
+              <EnvelopeIcon className="mr-2 h-5 w-5" />
+              <Link href="mailto:contact@travisdrilling.ca">
+                <span className="mr-1 font-bold">Email: </span>{" "}
+                contact@travisdrilling.ca
+              </Link>
             </p>
-            <p className="text-gray-800 flex items-center">
-              <PhoneIcon className="w-5 h-5 mr-2" />
-              <Link href="tel:780-887-3498"><span className="font-bold mr-1">Phone: </span> (780) 974 - 3184 </Link>
+            <p className="flex items-center text-gray-800">
+              <PhoneIcon className="mr-2 h-5 w-5" />
+              <Link href="tel:780-887-3498">
+                <span className="mr-1 font-bold">Phone: </span> (780) 974 - 3184{" "}
+              </Link>
             </p>
           </div>
         </div>
@@ -29,4 +36,3 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
-
