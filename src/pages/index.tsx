@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const IndexPage = () => (
-  <Layout title="Travis Drilling" transparent>
+  <Layout transparent>
     <Hero />
     <Services />
 

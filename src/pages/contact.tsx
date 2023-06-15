@@ -2,11 +2,11 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import Footer from "~/components/Footer";
+import Layout from "~/components/Layout";
 
 const Contact: React.FC = () => {
   return (
-    <div className="flex min-h-screen flex-col bg-white">
-      <Navbar />
+    <Layout transparent={false}>
       <div className="flex flex-1 flex-col items-center justify-center">
         <div className="mt-8 text-center">
           <h2 className="mb-4 text-2xl font-bold">Contact Information</h2>
@@ -30,8 +30,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

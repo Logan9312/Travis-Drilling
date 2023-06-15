@@ -1,9 +1,10 @@
 import Footer from "~/components/Footer";
 import Navbar from "../components/Navbar";
+import Layout from "~/components/Layout";
 
 const Resources: React.FC = () => {
   return (
-    <div className="flex min-h-screen flex-col bg-white">
+    <Layout transparent={false}>
       <Navbar />
       <div className="flex flex-1 flex-col items-center justify-center">
         <div className="mt-8 text-center">
@@ -11,7 +12,7 @@ const Resources: React.FC = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </Layout>
   );
 };
 

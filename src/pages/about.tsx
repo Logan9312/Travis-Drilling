@@ -2,7 +2,7 @@ import Layout from "../components/Layout";
 
 const About: React.FC = () => {
   return (
-    <Layout title="Travis Drilling" transparent={false}>
+    <Layout transparent={false}>
       <div className="flex min-h-screen flex-col bg-white">
         <div className="flex flex-1 flex-col items-center justify-center">
           <h3 className="mb-2 text-center text-3xl font-semibold leading-normal">
