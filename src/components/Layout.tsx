@@ -9,7 +9,6 @@ interface Props {
 }
 
 const Layout = (props: PropsWithChildren<Props>) => {
-  const { transparent } = props;
   return (
     <div>
       <Head>
