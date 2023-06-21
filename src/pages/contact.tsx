@@ -1,7 +1,5 @@
 import Link from "next/link";
-import Navbar from "../components/Navbar";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import Footer from "~/components/Footer";
 import Layout from "~/components/Layout";
 
 const Contact: React.FC = () => {
