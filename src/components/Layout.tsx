@@ -13,12 +13,11 @@ const Layout = (props: PropsWithChildren<Props>) => {
     <div>
       <Head>
         <title>
-          Travis Drilling LTD. | Water Well Drilling and Service | Alberta,
-          Canada
+          Travis Drilling LTD. | Water Well Drilling and Service | Alberta
         </title>
         <meta
           name="description"
-          content="Locally owned water well drilling and servicing. We handle servicing, repairing, and testing wells. We can drill new wells and install pumps or abandon or shock old wells. Travis Drilling is located in Onoway, Alberta, Canada."
+          content="Locally owned water well drilling, servicing, repairing, testing, pump installation, abandonment and shocking."
         />
         <meta property="og:title" content="Travis Drilling LTD." />
         <meta
