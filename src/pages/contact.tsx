@@ -5,7 +5,7 @@ import Layout from "~/components/Layout";
 const Contact: React.FC = () => {
   return (
     <Layout transparent={false}>
-      <div className="flex flex-1 flex-col items-center justify-center">
+      <div className="flex flex-1 py-10 flex-col items-center justify-center align-middle ">
         <div className="mt-8 text-center">
           <h2 className="mb-4 text-2xl font-bold">Contact Information</h2>
           <p className="text-gray-600">
