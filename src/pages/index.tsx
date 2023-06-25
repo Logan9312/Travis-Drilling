@@ -139,7 +139,7 @@ const Team = () => (
               width="100"
               height="100"
               alt="..."
-              src={"/img/Jason.jpg"}
+              src={"/img/blank.png"}
               className="mx-auto max-w-full rounded-full shadow-lg"
               style={{ maxWidth: "120px" }}
             />
