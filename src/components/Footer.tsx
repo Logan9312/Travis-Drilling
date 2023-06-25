@@ -8,7 +8,7 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full px-4 lg:w-6/12">
-            <h4 className="text-3xl font-semibold">Get a Quote</h4>
+            <h4 className="text-3xl font-semibold">Get an estimate</h4>
             <h5 className="mb-2 mt-0 text-lg text-gray-700">
               Email us:{" "}
               <Link

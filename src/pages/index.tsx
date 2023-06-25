@@ -102,7 +102,7 @@ const Services = () => (
           </h3>
           <p className="mb-4 mt-4 text-lg font-light leading-relaxed text-gray-700"></p>
           <p className="mb-4 mt-0 text-lg font-light leading-relaxed text-gray-700">
-            To discuss your drilling needs or get a quote on services, you can
+            To discuss your drilling needs or get an estimate on services, you can
             contact us at the following:
           </p>
           <p className="flex items-center text-gray-800">
