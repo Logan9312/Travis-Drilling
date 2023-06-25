@@ -57,7 +57,7 @@ const Layout = (props: PropsWithChildren<Props>) => {
         src="https://kit.fontawesome.com/e6ae3fbb74.js"
         crossOrigin="anonymous"
       ></Script>
-      <header>
+      <header className="mb-4">
         <Navbar transparent={props.transparent} />
       </header>
       <main>{props.children}</main>
