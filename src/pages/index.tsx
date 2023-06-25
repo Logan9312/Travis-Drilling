@@ -28,7 +28,7 @@ const Hero = () => (
       <div className="flex flex-wrap items-center">
         <div className="ml-auto mr-auto w-full px-4 text-center lg:w-6/12">
           <h1 className=" text-4xl font-semibold text-white lg:text-5xl">
-            Travis Drilling LTD.
+            Travis Drilling Ltd.
           </h1>
           <p className="mt-4 text-xl text-gray-300">
             Water Well Drilling and Service
