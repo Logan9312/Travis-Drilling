@@ -26,7 +26,7 @@ const Hero = () => (
     </div>
     <div className="container relative mx-auto">
       <div className="flex flex-wrap items-center">
-        <div className="ml-auto mr-auto w-full px-4 text-center lg:w-6/12">
+        <div className="ml-auto mr-auto w-full px-4 py-4 text-center lg:w-6/12">
           <h1 className=" text-4xl font-semibold text-white lg:text-5xl">
             Travis Drilling Ltd.
           </h1>
