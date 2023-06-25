@@ -46,7 +46,7 @@ const Services = () => (
         <div className="w-full px-4 pt-6 text-center md:w-4/12 ">
           <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
             <div className="flex-auto px-4 py-5">
-              <div className="mb-5 inline-flex w-12 items-center justify-center rounded-full bg-red-400  p-3 text-center text-white shadow-lg">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-400  p-3 text-center text-white shadow-lg">
                 <i className="fas fa-wrench"></i>
               </div>
               <h6 className="text-xl font-semibold">
@@ -83,10 +83,15 @@ const Services = () => (
         <div className="w-full px-4 pt-6 text-center md:w-4/12 lg:pt-12">
           <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
             <div className="flex-auto px-4 py-5">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 p-3 text-center text-white shadow-lg">
-                <i className="fas fa-shovel"></i>{" "}
-                {/*TODO change to backhoe icon*/}
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full p-3 bg-yellow-400 text-center text-white shadow-lg">
+                <Image
+                  src={"/icons/shovel.png"}
+                  alt={""}
+                  width={500}
+                  height={500}
+                />
               </div>
+
               <h6 className="text-xl font-semibold">Backhoe Services</h6>
               <p className="mb-4 mt-2 text-gray-600">
                 Our backhoe service is available for trenching, installation and
@@ -195,8 +200,8 @@ const Finisher = () => (
           <p className="mb-4 mt-4 text-lg leading-relaxed text-gray-400">
             Travis Drilling is a locally owned business operating in the Onoway
             area, dedicated to providing the best service possible. We
-            appreciate your business and hope to continue working with you
-            for years to come.
+            appreciate your business and hope to continue working with you for
+            years to come.
           </p>
         </div>
       </div>
