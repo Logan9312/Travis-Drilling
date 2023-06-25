@@ -47,15 +47,15 @@ const Services = () => (
           <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
             <div className="flex-auto px-4 py-5">
               <div className="mb-5 inline-flex w-12 items-center justify-center rounded-full bg-red-400  p-3 text-center text-white shadow-lg">
-                <i className="fas fa-screwdriver-wrench"></i>
+                <i className="fas fa-wrench"></i>
               </div>
               <h6 className="text-xl font-semibold">
                 Service, Repair, Testing
               </h6>
               <p className="mb-4 mt-2 text-gray-600">
-                We can repair your well, pump, or pressure system through
-                service calls. We also have water testing services to ensure the
-                safety of your drinking water.
+                For any of your agricultural or residential needs, we offer a
+                journeyman service and repair technician with a variety of
+                replacement parts.
               </p>
             </div>
           </div>
@@ -69,10 +69,12 @@ const Services = () => (
               </div>
               <h6 className="text-xl font-semibold">Abandonment, Shocking</h6>
               <p className="mb-4 mt-2 text-gray-600">
-                If you have an old well that you need abandoned, we can seal it
-                up safely and properly. We also offer well shocking services to
-                help clean out your well and get rid of any bacteria that may be
-                present.
+                Well abandonment and decomissioning services are available for
+                any unproductive wells.
+              </p>
+              <p className="mb-4 mt-2 text-gray-600">
+                Well maintenance and shocking services help to maintain a
+                healthy and productive well.
               </p>
             </div>
           </div>
@@ -82,28 +84,28 @@ const Services = () => (
           <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
             <div className="flex-auto px-4 py-5">
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 p-3 text-center text-white shadow-lg">
-                <i className="fas fa-helmet-safety"></i>
+                <i className="fas fa-shovel"></i>{" "}
+                {/*TODO change to backhoe icon*/}
               </div>
               <h6 className="text-xl font-semibold">Backhoe Services</h6>
               <p className="mb-4 mt-2 text-gray-600">
-                Our backhoe services include trenching, installation and repair
-                of underground water lines, and more. Call us to discuss if we
-                can do what you need.
+                Our backhoe service is available for trenching, installation and
+                repair of underground water lines, and more.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-10 flex flex-wrap items-center">
+      <div className="mt-10 flex flex-wrap items-center ">
         <div className="ml-auto mr-auto w-full px-4 md:w-5/12">
           <h3 className="mb-2 text-3xl font-semibold leading-normal">
             More Information
           </h3>
           <p className="mb-4 mt-4 text-lg font-light leading-relaxed text-gray-700"></p>
           <p className="mb-4 mt-0 text-lg font-light leading-relaxed text-gray-700">
-            To discuss your drilling needs or get an estimate on services, you can
-            contact us at the following:
+            To discuss your drilling needs or to receive an estimate on
+            services, you can contact us at the following:
           </p>
           <p className="flex items-center text-gray-800">
             <EnvelopeIcon className="mr-2 h-5 w-5" />
@@ -145,9 +147,6 @@ const Team = () => (
             />
             <div className="pt-6 text-center">
               <h5 className="text-xl font-bold">Jason Travis</h5>
-              <p className="mt-1 text-sm font-semibold uppercase text-gray-500">
-                Owner
-              </p>
             </div>
           </div>
         </div>
@@ -163,7 +162,6 @@ const Team = () => (
             />
             <div className="pt-6 text-center">
               <h5 className="text-xl font-bold">Christy Travis</h5>
-              <p className="mt-1 text-sm font-semibold uppercase text-gray-500"></p>
             </div>
           </div>
         </div>
@@ -192,45 +190,13 @@ const Finisher = () => (
   <section className="relative block bg-gray-900 pb-20">
     <div className="container mx-auto px-4 pt-20">
       <div className="flex flex-wrap justify-center text-center">
-        <div className="w-full px-4 lg:w-6/12">
+        <div className="w-full px-4 lg:w-7/12">
           <h2 className="text-4xl font-semibold text-white">Why Us?</h2>
           <p className="mb-4 mt-4 text-lg leading-relaxed text-gray-400">
-            We are dedicated to providing the best service to you, we appreciate
-            your business and we hope to continue to work with you for years to
-            come.
-          </p>
-        </div>
-      </div>
-      <div className="mt-12 flex flex-wrap justify-center">
-        <div className="w-full px-4 text-center lg:w-3/12">
-          <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white p-3 text-gray-900 shadow-lg">
-            <i className="fas fa-medal text-xl"></i>
-          </div>
-          <h6 className="mt-5 text-xl font-semibold text-white">
-            Locally Owned
-          </h6>
-          <p className="mb-4 mt-2 text-gray-400">
-            We are a locally operated business working out of Onoway, Alberta.
-          </p>
-        </div>
-        <div className="w-full px-4 text-center lg:w-3/12">
-          <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white p-3 text-gray-900 shadow-lg">
-            <i className="fas fa-poll text-xl"></i>
-          </div>
-          <h5 className="mt-5 text-xl font-semibold text-white">Support</h5>
-          <p className="mb-4 mt-2 text-gray-400">
-            We will support and discuss options with you to produce results that
-            you are looking for.
-          </p>
-        </div>
-        <div className="w-full px-4 text-center lg:w-3/12">
-          <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white p-3 text-gray-900 shadow-lg">
-            <i className="fas fa-lightbulb text-xl"></i>
-          </div>
-          <h5 className="mt-5 text-xl font-semibold text-white">Reputation</h5>
-          <p className="mb-4 mt-2 text-gray-400">
-            Our business has grown through word of mouth, and positive
-            recommendations.
+            Travis Drilling is a locally owned business operating in the Onoway
+            area, dedicated to providing the best service possible. We
+            appreciate your business and hope to continue working with you
+            for years to come.
           </p>
         </div>
       </div>

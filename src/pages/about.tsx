@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 const About: React.FC = () => {
   return (
     <Layout transparent={false}>
-      <div className="flex min-h-screen flex-col bg-white">
+      <div className="flex min-h-screen flex-col bg-sky-500">
         <div className="flex flex-1 flex-col items-center justify-center">
           <h3 className="mb-2 text-center text-3xl font-semibold leading-normal">
             About Travis Drilling

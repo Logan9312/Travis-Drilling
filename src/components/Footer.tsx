@@ -8,9 +8,9 @@ function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap">
           <div className="w-full px-4 lg:w-6/12">
-            <h4 className="text-3xl font-semibold">Get an estimate</h4>
+            <h4 className="text-3xl font-semibold">Inquiries/Estimates</h4>
             <h5 className="mb-2 mt-0 text-lg text-gray-700">
-              Email us:{" "}
+              Email:{" "}
               <Link
                 href="mailto:contact@travisdrilling.ca"
                 className="underline"
@@ -18,33 +18,6 @@ function Footer() {
                 contact@travisdrilling.ca
               </Link>
             </h5>
-          </div>
-          <div className="w-full px-4 lg:w-6/12">
-            <div className="items-top mb-6 flex flex-wrap">
-              <div className="ml-auto w-full px-4 lg:w-4/12">
-                <span className="mb-2 block text-sm font-bold uppercase text-gray-600">
-                  Useful Links
-                </span>
-                <ul className="list-unstyled">
-                  <li>
-                    <Link
-                      className="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
-                      href="/about"
-                    >
-                      About Us
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="block pb-2 text-sm font-semibold text-gray-700 hover:text-gray-900"
-                      href="/contact"
-                    >
-                      Contact Us
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
         <hr className="my-6 border-gray-400" />
