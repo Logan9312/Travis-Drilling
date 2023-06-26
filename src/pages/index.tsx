@@ -50,7 +50,7 @@ const Services = () => (
                 <i className="fas fa-wrench"></i>
               </div>
               <h6 className="text-xl font-semibold">
-                Service, Repair, Testing
+               Drilling, Service, Testing
               </h6>
               <p className="mb-4 mt-2 text-gray-600">
                 For any of your agricultural or residential needs, we offer a
