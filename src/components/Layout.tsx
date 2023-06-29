@@ -11,7 +11,7 @@ interface Props {
 
 const Layout = (props: PropsWithChildren<Props>) => {
   return (
-    <div>
+    <div className="flex h-screen flex-col">
       <Head>
         <title>
           Travis Drilling LTD. | Water Well Drilling and Service | Alberta
@@ -60,7 +60,7 @@ const Layout = (props: PropsWithChildren<Props>) => {
       <header>
         <Navbar transparent={props.transparent} />
       </header>
-      <main>{props.children}</main>
+      <main className="flex-grow">{props.children}</main>
       <Footer />
     </div>
   );
