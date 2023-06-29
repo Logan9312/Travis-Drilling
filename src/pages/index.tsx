@@ -41,6 +41,7 @@ const Hero = () => (
 
 const Services = () => (
   <section className="-mt-12 bg-gray-300 pb-20 lg:-mt-24">
+    {/*TODO Fix these boxes height*/}
     <div className="container mx-auto px-4">
       <div className="flex flex-wrap items-end">
         <div className="w-full px-4 pt-6 text-center md:w-4/12 ">
