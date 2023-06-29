@@ -24,7 +24,7 @@ const Hero = () => (
         className="absolute h-full w-full bg-black opacity-40"
       ></span>
     </div>
-    <div className="container relative mx-auto">
+    <div className="container relative mx-auto my-6 py-6">
       <div className="flex flex-wrap items-center">
         <div className="ml-auto mr-auto w-full px-4 text-center lg:w-6/12">
           <h1 className=" text-4xl font-semibold text-white lg:text-5xl">
