@@ -15,7 +15,7 @@ function Navbar(props: Props) {
         (props.transparent
           ? "absolute top-0 z-50 w-full"
           : "relative bg-white shadow-lg") +
-        " flex flex-wrap items-center justify-between px-2 py-3 "
+        " flex flex-wrap items-center justify-between px-2 py-3 mb-5"
       }
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4">
