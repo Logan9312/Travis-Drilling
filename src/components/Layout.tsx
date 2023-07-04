@@ -11,7 +11,7 @@ interface Props {
 
 const Layout = (props: PropsWithChildren<Props>) => {
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex min-h-screen flex-col">
       <Head>
         <title>
           Travis Drilling LTD. | Water Well Drilling and Service | Alberta
