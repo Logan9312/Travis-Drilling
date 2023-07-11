@@ -5,13 +5,11 @@ import Layout from "~/components/Layout";
 const Contact: React.FC = () => {
   return (
     <Layout transparent={false}>
-      <div className="flex h-full py-10 flex-col items-center justify-center align-middle">
+      <div className="flex flex-col items-center">
         <div className="text-center">
           <h2 className="mb-4 text-2xl font-bold">Contact Information</h2>
-          <p className="text-gray-600">
-            For inquiries, contact us at:
-          </p>
-          <div className="mt-4">
+          <p className="text-gray-600 text-left"><strong>For inquiries, contact us at:</strong></p>
+          <div className="">
             <p className="flex items-center text-gray-800">
               <EnvelopeIcon className="mr-2 h-5 w-5" />
               <Link href="mailto:contact@travisdrilling.ca">

@@ -60,7 +60,9 @@ const Layout = (props: PropsWithChildren<Props>) => {
       <header>
         <Navbar transparent={props.transparent} />
       </header>
-      <main className="flex-grow">{props.children}</main>
+      <main className="flex flex-grow flex-col justify-center">
+        {props.children}
+      </main>
       <Footer />
     </div>
   );

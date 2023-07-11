@@ -81,7 +81,7 @@ const Services = () => (
             </div>
           </div>
         </div>
-
+        {/*TODO Discuss Servicing Area*/}
         <div className="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12 ">
           <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
             <div className="flex flex-auto flex-col items-center justify-center px-4 py-5">
