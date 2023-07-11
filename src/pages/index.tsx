@@ -40,30 +40,31 @@ const Hero = () => (
 );
 
 const Services = () => (
-  <section className="-mt-12 bg-gray-300 pb-20 lg:-mt-24">
-    {/*TODO Fix these boxes height*/}
+  <section className="-mt-12 bg-gray-300 pb-20 md:-mt-24">
     <div className="container mx-auto px-4">
-      <div className="flex flex-wrap items-end">
-        <div className="w-full px-4 pt-6 text-center md:w-4/12 ">
-          <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
-            <div className="flex-auto px-4 py-5">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-400  p-3 text-center text-white shadow-lg">
+      <div className="flex flex-wrap items-stretch">
+        <div className="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12">
+          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
+            <div className="flex flex-auto flex-col items-center justify-center px-4 py-5">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-400 p-3 text-center text-white shadow-lg">
                 <i className="fas fa-wrench"></i>
               </div>
-              <h6 className="text-xl font-semibold">
-                Drilling, Servicing, Testing
-              </h6>
-              <p className="mb-4 mt-2 text-gray-600">
-                For any of your agricultural or residential needs, we offer a
-                journeyman service and repair technician with a variety of
-                replacement parts.
-              </p>
+              <div>
+                <h6 className="text-xl font-semibold">
+                  Drilling, Servicing, Testing
+                </h6>
+                <p className="mb-4 mt-2 text-gray-600">
+                  For any of your agricultural or residential needs, we offer a
+                  journeyman service and repair technician with a variety of
+                  replacement parts.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         <div className=" w-full px-4 pt-6 text-center md:w-4/12">
-          <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
+          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
             <div className="flex-auto px-4 py-5">
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-400 p-3 text-center text-white shadow-lg">
                 <i className="fas fa-droplet"></i>
@@ -81,10 +82,10 @@ const Services = () => (
           </div>
         </div>
 
-        <div className="w-full px-4 pt-6 text-center md:w-4/12 lg:pt-12">
-          <div className="relative mb-8 flex w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
-            <div className="flex-auto px-4 py-5">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 p-3 text-center text-white shadow-lg">
+        <div className="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12 ">
+          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
+            <div className="flex flex-auto flex-col items-center justify-center px-4 py-5">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-400 p-3 text-center text-white shadow-lg">
                 <Image
                   src={"/icons/shovel.png"}
                   alt={""}
@@ -98,7 +99,6 @@ const Services = () => (
                 Our backhoe service is available for trenching, installation and
                 repair of underground water lines, and more.
               </p>
-              <p>{"\u200b"}</p>
             </div>
           </div>
         </div>
