@@ -200,10 +200,9 @@ const Finisher = () => (
         <div className="w-full px-4 lg:w-7/12">
           <h2 className="text-4xl font-semibold text-white">Why Us?</h2>
           <p className="mb-4 mt-4 text-lg leading-relaxed text-gray-400">
-            Travis Drilling is a locally owned business operating in the Onoway
-            area, dedicated to providing the best service possible. We
-            appreciate your business and hope to continue working with you for
-            years to come.
+            Travis Drilling is locally owned and operated in the Onoway area. We
+            are dedicated to providing a professional water well drilling
+            service.
           </p>
         </div>
       </div>
