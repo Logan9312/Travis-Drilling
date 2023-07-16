@@ -34,8 +34,8 @@ const Layout = (props: PropsWithChildren<Props>) => {
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
-        <link rel="icon" type="image/png" href="/T.png" />
-        <link rel="shortcut icon" href="/T.png" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
         {/*<link
           rel="icon"
           type="image/png"
