@@ -29,13 +29,14 @@ const Layout = (props: PropsWithChildren<Props>) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta lang="en" />
-        <link
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
+        {/*<link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-        <link rel="shortcut icon" href="/favicon.png" />
+        TODO FIX THIS later*/}
         {/*<link
           rel="icon"
           type="image/png"
