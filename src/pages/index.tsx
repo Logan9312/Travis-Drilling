@@ -85,7 +85,7 @@ const Services = () => (
         <div className="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12 ">
           <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
             <div className="flex flex-auto flex-col items-center justify-center px-4 py-5">
-              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-400 p-3 text-center text-white shadow-lg">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 p-3 text-center text-white shadow-lg">
                 <Image
                   src={"/icons/shovel.png"}
                   alt={""}
