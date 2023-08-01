@@ -6,8 +6,8 @@ const SchemaOrg = () => (
       {
         "@context": "https://schema.org",
         "@type": "GeneralContractor",
-        "name": "Travis Drilling LTD.",
-        "image": "https://www.travisdrilling.ca/logo.png",
+        "name": "Travis Drilling",
+        "image": "https://www.travisdrilling.ca/favicon.ico",
         "@id": "",
         "url": "https://www.travisdrilling.ca/",
         "telephone": "7809743184",

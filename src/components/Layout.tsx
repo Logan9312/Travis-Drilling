@@ -25,7 +25,7 @@ const Layout = (props: PropsWithChildren<Props>) => {
           property="og:description"
           content="Locally owned water well drilling and servicing. We handle servicing, repairing, and testing wells. We can drill new wells and install pumps or abandon or shock old wells. Travis Drilling is located in Onoway, Alberta, Canada."
         />
-        <meta property="og:site_name" content="Travis Drilling LTD." />
+        <meta property="og:site_name" content="Travis Drilling" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta lang="en" />
