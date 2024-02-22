@@ -19,7 +19,7 @@ const Contact: React.FC = () => {
             </p>
             <p className="flex items-center text-gray-800">
               <PhoneIcon className="mr-2 h-5 w-5" />
-              <Link href="tel:780-887-3498">
+              <Link href="tel:780-974-3184">
                 <span className="mr-1 font-bold">Phone: </span> (780) 974 - 3184{" "}
               </Link>
             </p>
