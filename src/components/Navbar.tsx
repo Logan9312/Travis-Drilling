@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -87,7 +89,7 @@ function Navbar(props: Props) {
                     : "text-gray-800 hover:text-gray-600") +
                   " px-4 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                 }
-                href="/about"
+                href="/About"
               >
                 <i
                   className={
@@ -108,7 +110,7 @@ function Navbar(props: Props) {
                     : "text-gray-800 hover:text-gray-600") +
                   " flex items-center px-4 py-4 text-xs font-bold uppercase lg:py-2"
                 }
-                href="/contact"
+                href="/Contact"
               >
                 <i
                   className={

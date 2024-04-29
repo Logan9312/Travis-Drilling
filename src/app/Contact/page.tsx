@@ -2,7 +2,7 @@ import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import Layout from "~/components/Layout";
 
-const Contact: React.FC = () => {
+export default function Page() {
   return (
     <Layout transparent={false}>
       <div className="flex flex-col items-center">
@@ -28,6 +28,4 @@ const Contact: React.FC = () => {
       </div>
     </Layout>
   );
-};
-
-export default Contact;
+}

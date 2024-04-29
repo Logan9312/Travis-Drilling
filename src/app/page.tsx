@@ -3,17 +3,18 @@ import Layout from "../components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 
-const IndexPage: React.FC = () => (
-  <Layout transparent>
+export default function Page() {
+  return (
+    <Layout transparent>
     <Hero />
     <Services />
 
     <Team />
     <Finisher />
-  </Layout>
-);
+    </Layout>
+  )
 
-export default IndexPage;
+}
 
 /// Page Sections
 const Hero = () => (

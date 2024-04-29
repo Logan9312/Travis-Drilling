@@ -1,6 +1,6 @@
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 
-const About: React.FC = () => {
+export default function Page() {
   return (
     <Layout transparent={false}>
       <div className="flex min-h-screen flex-col bg-sky-500">
@@ -16,6 +16,4 @@ const About: React.FC = () => {
       </div>
     </Layout>
   );
-};
-
-export default About;
+}

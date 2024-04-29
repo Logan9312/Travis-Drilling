@@ -1,5 +1,5 @@
 import Footer from "~/components/Footer";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import Layout from "~/components/Layout";
 
 const Resources: React.FC = () => {
