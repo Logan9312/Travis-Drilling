@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -17,7 +17,7 @@ function Navbar(props: Props) {
         (props.transparent
           ? "absolute top-0 z-50 w-full"
           : "relative bg-white shadow-lg") +
-        " flex flex-wrap items-center justify-between px-2 py-3 mb-5"
+        " mb-5 flex flex-wrap items-center justify-between px-2 py-3"
       }
     >
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4">

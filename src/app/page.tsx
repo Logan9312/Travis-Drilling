@@ -6,14 +6,13 @@ import Link from "next/link";
 export default function Page() {
   return (
     <Layout transparent>
-    <Hero />
-    <Services />
+      <Hero />
+      <Services />
 
-    <Team />
-    <Finisher />
+      <Team />
+      <Finisher />
     </Layout>
-  )
-
+  );
 }
 
 /// Page Sections
