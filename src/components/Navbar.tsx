@@ -4,12 +4,19 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Bars3Icon } from "@heroicons/react/24/solid";
+import { usePathname } from "next/navigation";
 
 interface Props {
   transparent?: boolean;
 }
 
-function Navbar(props: Props) {
+export default function Navbar(props: Props) {
+  if (usePathname().toString() === "/") {
+    props.transparent = true;
+  } else {
+    props.transparent = false;
+  }
+
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav
@@ -175,5 +182,3 @@ function Navbar(props: Props) {
     </nav>
   );
 }
-
-export default Navbar;

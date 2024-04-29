@@ -1,17 +1,16 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import Layout from "../components/Layout";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <Layout transparent>
+    <div>
       <Hero />
       <Services />
 
       <Team />
       <Finisher />
-    </Layout>
+    </div>
   );
 }
 
@@ -28,7 +27,7 @@ const Hero = () => (
       <div className="flex flex-wrap items-center">
         <div className="ml-auto mr-auto w-full px-4 text-center lg:w-6/12">
           <h1 className=" text-4xl font-semibold text-white lg:text-5xl">
-            Travis Drilling Ltd.
+            Travis Drilling LTD.
           </h1>
           <p className="mt-4 text-xl text-gray-300">
             Water Well Drilling and Service
@@ -44,7 +43,7 @@ const Services = () => (
     <div className="container mx-auto px-4">
       <div className="flex flex-wrap items-stretch">
         <div className="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12">
-          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
+          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-xl bg-white shadow-lg">
             <div className="flex flex-auto flex-col items-center justify-center px-4 py-5">
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-400 p-3 text-center text-white shadow-lg">
                 <i className="fas fa-wrench"></i>
@@ -64,7 +63,7 @@ const Services = () => (
         </div>
 
         <div className=" w-full px-4 pt-6 text-center md:w-4/12">
-          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
+          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-xl bg-white shadow-lg">
             <div className="flex-auto px-4 py-5">
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-400 p-3 text-center text-white shadow-lg">
                 <i className="fas fa-droplet"></i>
@@ -83,7 +82,7 @@ const Services = () => (
         </div>
         {/*TODO Discuss Servicing Area*/}
         <div className="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12 ">
-          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-lg bg-white shadow-lg">
+          <div className="relative flex h-full w-full min-w-0 flex-col break-words rounded-xl bg-white shadow-lg">
             <div className="flex flex-auto flex-col items-center justify-center px-4 py-5">
               <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 p-3 text-center text-white shadow-lg">
                 <Image
@@ -198,7 +197,7 @@ const Finisher = () => (
     <div className="container mx-auto px-4 pt-20">
       <div className="flex flex-wrap justify-center text-center">
         <div className="w-full px-4 lg:w-7/12">
-          <h2 className="text-4xl font-semibold text-white">Why Us?</h2>
+          <h2 className="text-4xl font-semibold text-white">About Us</h2>
           <p className="mb-4 mt-4 text-lg leading-relaxed text-gray-400">
             Travis Drilling is locally owned and operated in the Onoway area. We
             are dedicated to providing a professional water well drilling

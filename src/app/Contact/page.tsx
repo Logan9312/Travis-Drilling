@@ -1,10 +1,9 @@
 import Link from "next/link";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import Layout from "~/components/Layout";
 
 export default function Page() {
   return (
-    <Layout transparent={false}>
+    <div>
       <div className="flex flex-col items-center">
         <div className="text-center">
           <h2 className="mb-4 text-2xl font-bold">Contact Information</h2>
@@ -28,6 +27,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
