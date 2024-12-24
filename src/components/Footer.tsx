@@ -23,16 +23,6 @@ function Footer() {
         <hr className="my-6 border-gray-400" />
         <div className="flex flex-wrap items-center justify-center md:justify-between">
           <div className="mx-auto w-full px-4 text-center md:w-4/12">
-            <div className="py-1 text-sm font-semibold text-gray-600">
-              Copyright © {new Date().getFullYear()} by{" "}
-              <Link
-                href="https://github.com/Logan9312/Travis-Drilling"
-                className="text-gray-600 hover:text-gray-900"
-              >
-                Logan Travis
-              </Link>
-              .
-            </div>
             <div className=" py-1 font-semibold text-gray-600 ">
               <Link
                 href="https://github.com/Logan9312/Travis-Drilling"
