@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Footer from '$lib/Footer.svelte';
 	import Navbar from '$lib/Navbar.svelte';
-	import SchemaOrg from '$lib/Schemaorg.svelte';
+	// import SchemaOrg from '$lib/Schemaorg.svelte';
 	import '../app.css';
 	let { children } = $props();
 </script>
@@ -30,7 +30,7 @@
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">
-	<SchemaOrg />
+	<!-- <SchemaOrg /> -->
 	<Navbar />
 
 	<main class="flex flex-grow flex-col justify-center">
