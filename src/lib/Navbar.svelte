@@ -13,7 +13,6 @@
 	}
 </script>
 
-<p>Currently at {page.url.pathname} {transparent}</p>
 <nav
 	class="{transparent
 		? 'absolute top-0 z-50 w-full'
