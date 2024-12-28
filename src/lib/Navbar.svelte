@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { House, Phone } from 'lucide-svelte';
+	import { House, Menu, Phone } from 'lucide-svelte';
 
 	let navbarOpen = $state(false);
 	let { transparent = false } = $props();
@@ -12,6 +12,19 @@
 	function toggleNavbar() {
 		navbarOpen = !navbarOpen;
 	}
+
+	const navItems = [
+		{
+			href: '/',
+			label: 'Home',
+			icon: House
+		},
+		{
+			href: '/Contact',
+			label: 'Contact',
+			icon: Phone
+		}
+	];
 </script>
 
 <nav
@@ -31,32 +44,13 @@
 				/>
 			</a>
 
-			<a
-				class="{transparent
-					? 'text-white'
-					: 'text-gray-800'} title-lg mr-4 inline-block whitespace-nowrap py-2 font-bold uppercase leading-relaxed"
-				href="/"
-				aria-label="Home"
-			></a>
-
 			<button
-				class="block cursor-pointer rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-none focus:outline-none lg:hidden"
+				class="block rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-none focus:outline-none lg:hidden"
 				type="button"
 				onclick={toggleNavbar}
 				aria-label="Toggle navigation"
 			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="currentColor"
-					class="{transparent ? 'text-white' : 'text-gray-800'} h-6 w-6"
-				>
-					<path
-						fill-rule="evenodd"
-						d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-						clip-rule="evenodd"
-					/>
-				</svg>
+				<Menu fill="currentColor" class="{transparent ? 'text-white' : 'text-gray-800'} h-6 w-6" />
 			</button>
 		</div>
 
@@ -67,37 +61,21 @@
 			id="example-navbar-warning"
 		>
 			<ul class="mr-auto flex list-none flex-col lg:flex-row">
-				<li class="flex items-center">
-					<a
-						class="{transparent
-							? 'text-gray-800 lg:text-white lg:hover:text-gray-300'
-							: 'text-gray-800 hover:text-gray-600'} flex items-center px-4 py-4 text-xs font-bold uppercase lg:py-4"
-						href="/"
-					>
-						<House
+				{#each navItems as item}
+					<li class="flex items-center">
+						<a
 							class="{transparent
-								? 'text-gray-500 lg:text-gray-300'
-								: 'text-gray-500'}  leading-lg mr-2 text-lg"
-						/>
-						Home
-					</a>
-				</li>
-
-				<li class="flex items-center">
-					<a
-						class="{transparent
-							? 'text-gray-800 lg:text-white lg:hover:text-gray-300'
-							: 'text-gray-800 hover:text-gray-600'} flex items-center px-4 py-4 text-xs font-bold uppercase lg:py-2"
-						href="/Contact"
-					>
-						<Phone
-							class="{transparent
-								? 'text-gray-500 lg:text-gray-300'
-								: 'text-gray-500'} leading-lg text-lg"
-						/>
-						<span class="ml-2 inline-block">Contact</span>
-					</a>
-				</li>
+								? 'lg:text-white lg:hover:text-gray-300'
+								: 'hover:text-gray-600'} flex items-center px-4 py-4 text-xs font-bold uppercase text-gray-800 lg:py-4"
+							href={item.href}
+						>
+							<item.icon
+								class="{transparent && 'lg:text-gray-300'} leading-lg mr-2 text-lg text-gray-500"
+							/>
+							<span>{item.label}</span>
+						</a>
+					</li>
+				{/each}
 			</ul>
 
 			<ul class="flex list-none flex-col lg:ml-auto lg:flex-row">
