@@ -1,5 +1,11 @@
 <script lang="ts">
 	import { Droplets, Mail, Phone, Shovel, Wrench } from 'lucide-svelte';
+
+	const profiles = [
+		{ name: 'Jason Travis', imgSrc: '/img/blank.png' },
+		{ name: 'Christy Travis', imgSrc: '/img/blank.png' },
+		{ name: 'Hayden Borle', imgSrc: '/img/blank.png' }
+	];
 </script>
 
 <div>
@@ -122,43 +128,20 @@
 				</div>
 			</div>
 			<div class="flex flex-wrap justify-center">
-				<div class="mb-12 w-full px-4 md:w-6/12 lg:mb-0 lg:w-3/12">
-					<div class="px-6">
-						<img
-							alt="..."
-							src={'/img/blank.png'}
-							class="mx-auto w-20 max-w-full rounded-full shadow-lg"
-						/>
-						<div class="pt-6 text-center">
-							<h5 class="text-xl font-bold">Jason Travis</h5>
+				{#each profiles as profile}
+					<div class="mb-12 w-full px-4 md:w-6/12 lg:mb-0 lg:w-3/12">
+						<div class="px-6">
+							<img
+								alt={profile.name}
+								src={profile.imgSrc}
+								class="mx-auto w-20 max-w-full rounded-full shadow-lg"
+							/>
+							<div class="pt-6 text-center">
+								<h5 class="text-xl font-bold">{profile.name}</h5>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="mb-12 w-full px-4 md:w-6/12 lg:mb-0 lg:w-3/12">
-					<div class="px-6">
-						<img
-							alt="..."
-							src={'/img/blank.png'}
-							class="mx-auto w-20 max-w-full rounded-full shadow-lg"
-						/>
-						<div class="pt-6 text-center">
-							<h5 class="text-xl font-bold">Christy Travis</h5>
-						</div>
-					</div>
-				</div>
-				<div class="mb-12 w-full px-4 md:w-6/12 lg:mb-0 lg:w-3/12">
-					<div class="px-6">
-						<img
-							alt="..."
-							src="/img/blank.png"
-							class="mx-auto w-20 max-w-full rounded-full shadow-lg"
-						/>
-						<div class="pt-6 text-center">
-							<h5 class="text-xl font-bold">Hayden Borle</h5>
-							<p class="mt-1 text-sm font-semibold uppercase text-gray-500"></p>
-						</div>
-					</div>
-				</div>
+				{/each}
 			</div>
 		</div>
 	</section>
