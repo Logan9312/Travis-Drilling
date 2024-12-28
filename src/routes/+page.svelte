@@ -127,7 +127,7 @@
 						<img
 							alt="..."
 							src={'/img/blank.png'}
-							class="mx-auto max-w-full rounded-full shadow-lg"
+							class="mx-auto w-20 max-w-full rounded-full shadow-lg"
 						/>
 						<div class="pt-6 text-center">
 							<h5 class="text-xl font-bold">Jason Travis</h5>
@@ -139,7 +139,7 @@
 						<img
 							alt="..."
 							src={'/img/blank.png'}
-							class="mx-auto max-w-full rounded-full shadow-lg"
+							class="mx-auto w-20 max-w-full rounded-full shadow-lg"
 						/>
 						<div class="pt-6 text-center">
 							<h5 class="text-xl font-bold">Christy Travis</h5>
@@ -148,7 +148,11 @@
 				</div>
 				<div class="mb-12 w-full px-4 md:w-6/12 lg:mb-0 lg:w-3/12">
 					<div class="px-6">
-						<img alt="..." src="/img/blank.png" class="mx-auto max-w-full rounded-full shadow-lg" />
+						<img
+							alt="..."
+							src="/img/blank.png"
+							class="mx-auto w-20 max-w-full rounded-full shadow-lg"
+						/>
 						<div class="pt-6 text-center">
 							<h5 class="text-xl font-bold">Hayden Borle</h5>
 							<p class="mt-1 text-sm font-semibold uppercase text-gray-500"></p>

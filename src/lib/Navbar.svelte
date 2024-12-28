@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
+	import { House, Phone } from 'lucide-svelte';
 
 	let navbarOpen = $state(false);
 	let { transparent = false } = $props();
@@ -73,11 +74,11 @@
 							: 'text-gray-800 hover:text-gray-600'} flex items-center px-4 py-4 text-xs font-bold uppercase lg:py-4"
 						href="/"
 					>
-						<i
+						<House
 							class="{transparent
 								? 'text-gray-500 lg:text-gray-300'
-								: 'text-gray-500'} fas fa-house leading-lg mr-2 text-lg"
-						></i>
+								: 'text-gray-500'}  leading-lg mr-2 text-lg"
+						/>
 						Home
 					</a>
 				</li>
@@ -89,11 +90,11 @@
 							: 'text-gray-800 hover:text-gray-600'} flex items-center px-4 py-4 text-xs font-bold uppercase lg:py-2"
 						href="/Contact"
 					>
-						<i
+						<Phone
 							class="{transparent
 								? 'text-gray-500 lg:text-gray-300'
-								: 'text-gray-500'} far fa-address-card leading-lg text-lg"
-						></i>
+								: 'text-gray-500'} leading-lg text-lg"
+						/>
 						<span class="ml-2 inline-block">Contact</span>
 					</a>
 				</li>
