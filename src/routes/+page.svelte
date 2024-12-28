@@ -134,7 +134,7 @@
 							<img
 								alt={profile.name}
 								src={profile.imgSrc}
-								class="mx-auto w-20 max-w-full rounded-full shadow-lg"
+								class="mx-auto w-32 max-w-full rounded-full shadow-lg"
 							/>
 							<div class="pt-6 text-center">
 								<h5 class="text-xl font-bold">{profile.name}</h5>

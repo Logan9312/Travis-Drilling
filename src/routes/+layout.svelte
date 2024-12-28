@@ -30,7 +30,26 @@
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">
-	<!-- <SchemaOrg /> -->
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "LocalBusiness",
+			"name": "Travis Drilling LTD",
+			"image": "https://www.travisdrilling.ca/img/rig.jpg",
+			"address": {
+				"@type": "PostalAddress",
+				"streetAddress": "123 Example Road",
+				"addressLocality": "Onoway",
+				"addressRegion": "AB",
+				"postalCode": "T0E 1V0",
+				"addressCountry": "CA"
+			},
+			"url": "https://www.travisdrilling.ca",
+			"telephone": "+1-780-974-3184",
+			"priceRange": "$$"
+		}
+	</script>
+
 	<Navbar />
 
 	<main class="flex flex-grow flex-col justify-center">
