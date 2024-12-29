@@ -52,7 +52,7 @@
 
 	<Navbar />
 
-	<main class="flex flex-grow flex-col justify-center">
+	<main class="flex grow flex-col justify-center">
 		{@render children()}
 	</main>
 

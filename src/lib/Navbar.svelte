@@ -45,7 +45,7 @@
 			</a>
 
 			<button
-				class="block rounded border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-none focus:outline-none lg:hidden"
+				class="block rounded-sm border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-hidden focus:outline-hidden lg:hidden"
 				type="button"
 				onclick={toggleNavbar}
 				aria-label="Toggle navigation"
@@ -55,8 +55,8 @@
 		</div>
 
 		<div
-			class="flex-grow items-center bg-white lg:flex lg:bg-transparent lg:shadow-none {navbarOpen
-				? 'block rounded shadow-lg'
+			class="grow items-center bg-white lg:flex lg:bg-transparent lg:shadow-none {navbarOpen
+				? 'block rounded-sm shadow-lg'
 				: 'hidden'}"
 			id="example-navbar-warning"
 		>
