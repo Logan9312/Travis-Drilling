@@ -27,6 +27,11 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
 	<link rel="manifest" href="/site.webmanifest" />
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 </svelte:head>
 
 <div class="flex min-h-screen flex-col">
