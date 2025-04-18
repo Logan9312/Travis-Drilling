@@ -91,22 +91,26 @@
 				{#each services as service, i}
 					<div class="w-full px-4 md:w-4/12">
 						<div class="rustic-card h-full px-6 py-5">
-							<div class="flex flex-auto flex-col items-center justify-center">
-								<div
-									class="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-none bg-[var(--color-{service.color})] p-3 text-center text-white"
-								>
-									<service.icon class="h-8 w-8" />
+							<div class="flex h-full flex-col items-center">
+								<div>
+									<div
+										class="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-none bg-[var(--color-{service.color})] p-3 text-center text-white"
+									>
+										<service.icon class="h-8 w-8" />
+									</div>
+									<div class="text-center">
+										<h3 class="rustic-header mb-3 text-2xl text-[var(--color-earth)]">
+											{service.title}
+										</h3>
+										<p class="text-[var(--color-earth)]">
+											{service.description}
+										</p>
+									</div>
 								</div>
-								<div class="text-center">
-									<h3 class="rustic-header mb-3 text-2xl text-[var(--color-earth)]">
-										{service.title}
-									</h3>
-									<p class="mb-4 text-[var(--color-earth)]">
-										{service.description}
-									</p>
+								<div class="mt-auto pt-4">
 									<a
 										href="/Services"
-										class="mt-2 inline-block font-bold text-[var(--color-barn-red)] hover:underline"
+										class="inline-block font-bold text-[var(--color-barn-red)] hover:underline"
 										>Learn More</a
 									>
 								</div>
