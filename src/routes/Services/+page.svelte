@@ -4,7 +4,8 @@
 	const services = [
 		{
 			title: 'Well Drilling',
-			description: 'Professional water well drilling for residential, agricultural and commercial properties.',
+			description:
+				'Professional water well drilling for residential, agricultural and commercial properties.',
 			icon: Wrench,
 			color: 'barn-red',
 			features: [
@@ -16,7 +17,8 @@
 		},
 		{
 			title: 'Well Servicing & Testing',
-			description: 'Complete well servicing by qualified technicians to ensure your water system operates at peak performance.',
+			description:
+				'Complete well servicing by qualified technicians to ensure your water system operates at peak performance.',
 			icon: Gauge,
 			color: 'hay',
 			features: [
@@ -28,7 +30,8 @@
 		},
 		{
 			title: 'Well Maintenance',
-			description: 'Preventative maintenance to extend the life of your well and ensure clean, reliable water.',
+			description:
+				'Preventative maintenance to extend the life of your well and ensure clean, reliable water.',
 			icon: Droplets,
 			color: 'forest',
 			features: [
@@ -40,7 +43,8 @@
 		},
 		{
 			title: 'Abandonment & Shocking',
-			description: 'Professional well abandonment and decommissioning services for old or unproductive wells.',
+			description:
+				'Professional well abandonment and decommissioning services for old or unproductive wells.',
 			icon: Droplets,
 			color: 'rustic-brown',
 			features: [
@@ -52,7 +56,8 @@
 		},
 		{
 			title: 'Backhoe Services',
-			description: 'Professional backhoe services for water line installation, trenching, and more.',
+			description:
+				'Professional backhoe services for water line installation, trenching, and more.',
 			icon: Shovel,
 			color: 'barn-red',
 			features: [
@@ -80,31 +85,36 @@
 <div class="pt-24 pb-16">
 	<div class="container mx-auto px-4">
 		<!-- Services Header -->
-		<div class="text-center mb-16">
-			<h1 class="rustic-header text-4xl lg:text-5xl mb-4 text-[var(--color-earth)]">Our Services</h1>
-			<div class="h-1 w-20 bg-[var(--color-barn-red)] mx-auto mb-6"></div>
-			<p class="max-w-3xl mx-auto text-lg">
-				Travis Drilling offers comprehensive water well services for residential and agricultural properties. 
-				From drilling to maintenance, our experienced team handles all aspects of your water well needs.
+		<div class="mb-16 text-center">
+			<h1 class="rustic-header mb-4 text-4xl text-[var(--color-earth)] lg:text-5xl">
+				Our Services
+			</h1>
+			<div class="mx-auto mb-6 h-1 w-20 bg-[var(--color-barn-red)]"></div>
+			<p class="mx-auto max-w-3xl text-lg">
+				Travis Drilling offers comprehensive water well services for residential and agricultural
+				properties. From drilling to maintenance, our experienced team handles all aspects of your
+				water well needs.
 			</p>
 		</div>
 
 		<!-- Services Grid -->
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+		<div class="mb-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
 			{#each services as service}
 				<div class="rustic-card h-full">
 					<div class="p-6">
-						<div class="flex items-center mb-4">
+						<div class="mb-4 flex items-center">
 							<div class="mr-4 p-3 bg-[var(--color-{service.color})]">
 								<service.icon class="h-6 w-6 text-white" />
 							</div>
 							<h3 class="rustic-header text-xl">{service.title}</h3>
 						</div>
 						<p class="mb-4 text-[var(--color-earth)]">{service.description}</p>
-						<ul class="space-y-2 mb-4">
+						<ul class="mb-4 space-y-2">
 							{#each service.features as feature}
 								<li class="flex items-start">
-									<ArrowRight class="h-4 w-4 text-[var(--color-{service.color})] mr-2 mt-1 flex-shrink-0" />
+									<ArrowRight
+										class="h-4 w-4 text-[var(--color-{service.color})] mt-1 mr-2 flex-shrink-0"
+									/>
 									<span>{feature}</span>
 								</li>
 							{/each}
@@ -116,70 +126,107 @@
 
 		<!-- Service Process -->
 		<div class="mt-24 mb-20">
-			<h2 class="rustic-header text-3xl text-center mb-4 text-[var(--color-earth)]">Our Process</h2>
-			<div class="h-1 w-20 bg-[var(--color-barn-red)] mx-auto mb-10"></div>
+			<h2 class="rustic-header mb-4 text-center text-3xl text-[var(--color-earth)]">Our Process</h2>
+			<div class="mx-auto mb-10 h-1 w-20 bg-[var(--color-barn-red)]"></div>
 
 			<div class="relative">
 				<!-- Process timeline line -->
-				<div class="absolute left-1/2 top-0 bottom-0 w-1 bg-[var(--color-hay)] transform -translate-x-1/2 hidden md:block"></div>
+				<div
+					class="absolute top-0 bottom-0 left-1/2 hidden w-1 -translate-x-1/2 transform bg-[var(--color-hay)] md:block"
+				></div>
 
 				<div class="grid grid-cols-1 gap-12">
 					<!-- Step 1 -->
 					<div class="relative">
-						<div class="md:absolute md:left-1/2 md:top-0 md:transform md:-translate-x-1/2 z-10 w-12 h-12 rounded-none bg-[var(--color-barn-red)] text-white flex items-center justify-center font-bold rustic-header mx-auto md:mx-0 mb-4 md:mb-0">1</div>
+						<div
+							class="rustic-header z-10 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-none bg-[var(--color-barn-red)] font-bold text-white md:absolute md:top-0 md:left-1/2 md:mx-0 md:mb-0 md:-translate-x-1/2 md:transform"
+						>
+							1
+						</div>
 						<div class="md:flex">
-							<div class="md:w-1/2 md:pr-16 text-right hidden md:block"></div>
-							<div class="md:w-1/2 md:pl-16 rustic-card p-6">
-								<h3 class="rustic-header text-xl mb-2">Initial Consultation</h3>
-								<p>We begin with a detailed consultation to understand your specific needs and assess your property's requirements.</p>
+							<div class="hidden text-right md:block md:w-1/2 md:pr-16"></div>
+							<div class="rustic-card p-6 md:w-1/2 md:pl-16">
+								<h3 class="rustic-header mb-2 text-xl">Initial Consultation</h3>
+								<p>
+									We begin with a detailed consultation to understand your specific needs and assess
+									your property's requirements.
+								</p>
 							</div>
 						</div>
 					</div>
 
 					<!-- Step 2 -->
 					<div class="relative">
-						<div class="md:absolute md:left-1/2 md:top-0 md:transform md:-translate-x-1/2 z-10 w-12 h-12 rounded-none bg-[var(--color-rustic-brown)] text-white flex items-center justify-center font-bold rustic-header mx-auto md:mx-0 mb-4 md:mb-0">2</div>
+						<div
+							class="rustic-header z-10 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-none bg-[var(--color-rustic-brown)] font-bold text-white md:absolute md:top-0 md:left-1/2 md:mx-0 md:mb-0 md:-translate-x-1/2 md:transform"
+						>
+							2
+						</div>
 						<div class="md:flex">
-							<div class="md:w-1/2 md:pr-16 text-right rustic-card p-6">
-								<h3 class="rustic-header text-xl mb-2">Site Assessment</h3>
-								<p>Our team conducts a thorough site evaluation to determine the optimal location for your well or identify issues with existing wells.</p>
+							<div class="rustic-card p-6 text-right md:w-1/2 md:pr-16">
+								<h3 class="rustic-header mb-2 text-xl">Site Assessment</h3>
+								<p>
+									Our team conducts a thorough site evaluation to determine the optimal location for
+									your well or identify issues with existing wells.
+								</p>
 							</div>
-							<div class="md:w-1/2 md:pl-16 hidden md:block"></div>
+							<div class="hidden md:block md:w-1/2 md:pl-16"></div>
 						</div>
 					</div>
 
 					<!-- Step 3 -->
 					<div class="relative">
-						<div class="md:absolute md:left-1/2 md:top-0 md:transform md:-translate-x-1/2 z-10 w-12 h-12 rounded-none bg-[var(--color-forest)] text-white flex items-center justify-center font-bold rustic-header mx-auto md:mx-0 mb-4 md:mb-0">3</div>
+						<div
+							class="rustic-header z-10 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-none bg-[var(--color-forest)] font-bold text-white md:absolute md:top-0 md:left-1/2 md:mx-0 md:mb-0 md:-translate-x-1/2 md:transform"
+						>
+							3
+						</div>
 						<div class="md:flex">
-							<div class="md:w-1/2 md:pr-16 text-right hidden md:block"></div>
-							<div class="md:w-1/2 md:pl-16 rustic-card p-6">
-								<h3 class="rustic-header text-xl mb-2">Service Execution</h3>
-								<p>We complete the required work with professional expertise, using quality equipment and materials to ensure lasting results.</p>
+							<div class="hidden text-right md:block md:w-1/2 md:pr-16"></div>
+							<div class="rustic-card p-6 md:w-1/2 md:pl-16">
+								<h3 class="rustic-header mb-2 text-xl">Service Execution</h3>
+								<p>
+									We complete the required work with professional expertise, using quality equipment
+									and materials to ensure lasting results.
+								</p>
 							</div>
 						</div>
 					</div>
 
 					<!-- Step 4 -->
 					<div class="relative">
-						<div class="md:absolute md:left-1/2 md:top-0 md:transform md:-translate-x-1/2 z-10 w-12 h-12 rounded-none bg-[var(--color-hay)] text-white flex items-center justify-center font-bold rustic-header mx-auto md:mx-0 mb-4 md:mb-0">4</div>
+						<div
+							class="rustic-header z-10 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-none bg-[var(--color-hay)] font-bold text-white md:absolute md:top-0 md:left-1/2 md:mx-0 md:mb-0 md:-translate-x-1/2 md:transform"
+						>
+							4
+						</div>
 						<div class="md:flex">
-							<div class="md:w-1/2 md:pr-16 text-right rustic-card p-6">
-								<h3 class="rustic-header text-xl mb-2">Testing & Verification</h3>
-								<p>Upon completion, we thoroughly test all work to ensure everything functions properly and meets our high standards of quality.</p>
+							<div class="rustic-card p-6 text-right md:w-1/2 md:pr-16">
+								<h3 class="rustic-header mb-2 text-xl">Testing & Verification</h3>
+								<p>
+									Upon completion, we thoroughly test all work to ensure everything functions
+									properly and meets our high standards of quality.
+								</p>
 							</div>
-							<div class="md:w-1/2 md:pl-16 hidden md:block"></div>
+							<div class="hidden md:block md:w-1/2 md:pl-16"></div>
 						</div>
 					</div>
 
 					<!-- Step 5 -->
 					<div class="relative">
-						<div class="md:absolute md:left-1/2 md:top-0 md:transform md:-translate-x-1/2 z-10 w-12 h-12 rounded-none bg-[var(--color-barn-red)] text-white flex items-center justify-center font-bold rustic-header mx-auto md:mx-0 mb-4 md:mb-0">5</div>
+						<div
+							class="rustic-header z-10 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-none bg-[var(--color-barn-red)] font-bold text-white md:absolute md:top-0 md:left-1/2 md:mx-0 md:mb-0 md:-translate-x-1/2 md:transform"
+						>
+							5
+						</div>
 						<div class="md:flex">
-							<div class="md:w-1/2 md:pr-16 text-right hidden md:block"></div>
-							<div class="md:w-1/2 md:pl-16 rustic-card p-6">
-								<h3 class="rustic-header text-xl mb-2">Ongoing Support</h3>
-								<p>We provide continued support and maintenance recommendations to ensure your water system remains in optimal condition for years to come.</p>
+							<div class="hidden text-right md:block md:w-1/2 md:pr-16"></div>
+							<div class="rustic-card p-6 md:w-1/2 md:pl-16">
+								<h3 class="rustic-header mb-2 text-xl">Ongoing Support</h3>
+								<p>
+									We provide continued support and maintenance recommendations to ensure your water
+									system remains in optimal condition for years to come.
+								</p>
 							</div>
 						</div>
 					</div>
@@ -188,10 +235,11 @@
 		</div>
 
 		<!-- Service Area -->
-		<div class="mt-20 rustic-card p-8">
-			<h2 class="rustic-header text-3xl text-center mb-4">Service Area</h2>
-			<p class="text-center mb-6">
-				Travis Drilling proudly serves Onoway and surrounding areas throughout Alberta. Contact us to confirm service availability in your location.
+		<div class="rustic-card mt-20 p-8">
+			<h2 class="rustic-header mb-4 text-center text-3xl">Service Area</h2>
+			<p class="mb-6 text-center">
+				Travis Drilling proudly serves Onoway and surrounding areas throughout Alberta. Contact us
+				to confirm service availability in your location.
 			</p>
 			<div class="text-center">
 				<a href="/Contact" class="rustic-button inline-block">Request a Quote</a>

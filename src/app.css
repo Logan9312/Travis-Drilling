@@ -11,44 +11,44 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-  
-  :root {
-    --color-rustic-brown: #8B4513;
-    --color-barn-red: #7C0A02;
-    --color-wheat: #F5DEB3;
-    --color-hay: #D8B863;
-    --color-earth: #5D4037;
-    --color-forest: #2C5545;
-  }
-  
-  body {
-    background-color: var(--color-wheat);
-    font-family: 'Raleway', sans-serif;
-    color: var(--color-earth);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+
+	:root {
+		--color-rustic-brown: #8b4513;
+		--color-barn-red: #7c0a02;
+		--color-wheat: #f5deb3;
+		--color-hay: #d8b863;
+		--color-earth: #5d4037;
+		--color-forest: #2c5545;
+	}
+
+	body {
+		background-color: var(--color-wheat);
+		font-family: 'Raleway', sans-serif;
+		color: var(--color-earth);
+	}
 }
 
 @layer components {
-  .rustic-card {
-    @apply relative bg-white border-2 border-[var(--color-rustic-brown)] rounded-none;
-    background-color: #F8F4E3;
-    box-shadow: 4px 4px 0 0 var(--color-rustic-brown);
-  }
-  
-  .rustic-header {
-    @apply font-bold;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  .rustic-button {
-    @apply bg-[var(--color-barn-red)] hover:bg-[var(--color-rustic-brown)] text-white font-bold py-2 px-4 rounded-none border-2 border-[var(--color-earth)] transform transition-transform duration-200 hover:translate-y-[-2px];
-    box-shadow: 2px 2px 0 0 var(--color-earth);
-  }
+	.rustic-card {
+		@apply relative rounded-none border-2 border-[var(--color-rustic-brown)] bg-white;
+		background-color: #f8f4e3;
+		box-shadow: 4px 4px 0 0 var(--color-rustic-brown);
+	}
+
+	.rustic-header {
+		@apply font-bold;
+		font-family: 'Playfair Display', serif;
+	}
+
+	.rustic-button {
+		@apply transform rounded-none border-2 border-[var(--color-earth)] bg-[var(--color-barn-red)] px-4 py-2 font-bold text-white transition-transform duration-200 hover:translate-y-[-2px] hover:bg-[var(--color-rustic-brown)];
+		box-shadow: 2px 2px 0 0 var(--color-earth);
+	}
 }

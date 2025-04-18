@@ -50,7 +50,7 @@
 					width="60"
 					height="60"
 					alt="Travis Drilling Logo"
-					class="mr-3 inline-block whitespace-nowrap py-2 font-bold uppercase leading-relaxed"
+					class="mr-3 inline-block py-2 leading-relaxed font-bold whitespace-nowrap uppercase"
 				/>
 				<span class="rustic-header text-2xl text-white">Travis Drilling</span>
 			</a>
@@ -61,7 +61,7 @@
 				onclick={toggleNavbar}
 				aria-label="Toggle navigation"
 			>
-				<Menu fill="currentColor" class="text-white h-6 w-6" />
+				<Menu fill="currentColor" class="h-6 w-6 text-white" />
 			</button>
 		</div>
 
@@ -75,12 +75,10 @@
 				{#each navItems as item}
 					<li class="flex items-center border-b border-[var(--color-wheat)] lg:border-b-0">
 						<a
-							class="flex items-center px-4 py-4 text-sm font-bold text-white hover:bg-[var(--color-rustic-brown)] hover:text-[var(--color-wheat)] transition-colors duration-200 w-full lg:py-4"
+							class="flex w-full items-center px-4 py-4 text-sm font-bold text-white transition-colors duration-200 hover:bg-[var(--color-rustic-brown)] hover:text-[var(--color-wheat)] lg:py-4"
 							href={item.href}
 						>
-							<item.icon
-								class="leading-lg mr-2 text-lg text-[var(--color-hay)]"
-							/>
+							<item.icon class="leading-lg mr-2 text-lg text-[var(--color-hay)]" />
 							<span>{item.label}</span>
 						</a>
 					</li>
@@ -88,9 +86,7 @@
 			</ul>
 
 			<div class="flex lg:ml-auto">
-				<a href="/Contact" class="hidden lg:block rustic-button">
-					Get a Quote
-				</a>
+				<a href="/Contact" class="rustic-button hidden lg:block"> Get a Quote </a>
 			</div>
 		</div>
 	</div>
