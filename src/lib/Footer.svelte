@@ -20,19 +20,9 @@
 					Travis Drilling
 				</h4>
 				<p class="mb-4">
-					Locally owned and operated water well drilling services. Providing quality service to the
-					Onoway area and beyond.
+					Locally owned and operated water well drilling services. Providing service to the Onoway
+					area and beyond.
 				</p>
-				<div class="mt-6 flex">
-					<a
-						href="https://github.com/Logan9312/Travis-Drilling"
-						target="_blank"
-						class="mr-2 rounded-none bg-white p-2 transition-colors duration-200 hover:bg-[var(--color-hay)]"
-						aria-label="GitHub Repository"
-					>
-						<SiGithub color="var(--color-earth)" size={20} />
-					</a>
-				</div>
 			</div>
 
 			<div class="text-[var(--color-wheat)]">

@@ -130,8 +130,7 @@
 						</h2>
 						<p class="mb-6 text-lg leading-relaxed">
 							Travis Drilling is locally owned and operated in the Onoway area. We are dedicated to
-							providing professional water well services with the reliability and personal touch
-							that only a family business can deliver.
+							providing professional and reliable water well services.
 						</p>
 
 						<div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
