@@ -1,246 +1,357 @@
 <script lang="ts">
-	import { Droplets, Mail, Phone, Shovel, Wrench, Tractor, Shield } from 'lucide-svelte';
+	import {
+		Droplets,
+		Mail,
+		Phone,
+		Shovel,
+		Wrench,
+		Tractor,
+		Shield,
+		CheckCircle,
+		Star,
+		ChevronRight,
+		Hammer
+	} from 'lucide-svelte';
 
 	const profiles = [
-		{ name: 'Jason Travis', imgSrc: '/img/blank.png', title: 'Owner & Lead Driller' },
-		{ name: 'Christy Travis', imgSrc: '/img/blank.png', title: 'Office Manager' },
-		{ name: 'Hayden Borle', imgSrc: '/img/blank.png', title: 'Field Technician' }
+		{
+			name: 'Jason Travis',
+			imgSrc: '/img/blank.png',
+			title: 'Owner & Lead Driller',
+			role: '20+ Years Experience'
+		},
+		{
+			name: 'Christy Travis',
+			imgSrc: '/img/blank.png',
+			title: 'Office Manager',
+			role: 'Customer Relations Expert'
+		},
+		{
+			name: 'Hayden Borle',
+			imgSrc: '/img/blank.png',
+			title: 'Field Technician',
+			role: 'Equipment Specialist'
+		}
 	];
 
 	const services = [
 		{
-			title: 'Well Drilling & Service',
+			title: 'Well Drilling',
 			description:
-				'Professional water well drilling for agricultural or residential needs, with journeyman service and repair.',
+				'State-of-the-art drilling equipment and techniques for residential and agricultural water wells.',
+			icon: Hammer,
+			features: ['New well installation', 'Deep well drilling', 'Precise location services']
+		},
+		{
+			title: 'Maintenance & Repair',
+			description:
+				'Comprehensive well maintenance to ensure clean, reliable water supply for years to come.',
 			icon: Wrench,
-			color: 'barn-red'
+			features: ['Regular inspections', 'Pump repairs', 'Well rehabilitation']
 		},
 		{
-			title: 'Well Maintenance',
+			title: 'Specialized Services',
 			description:
-				'Well abandonment, decommissioning, maintenance, and shocking services to keep your water source healthy and productive.',
+				'Advanced solutions including water testing, well shocking, and professional abandonment services.',
 			icon: Droplets,
-			color: 'forest'
-		},
-		{
-			title: 'Backhoe Services',
-			description:
-				'Backhoe service for trenching, installation and repair of underground water lines, and more.',
-			icon: Shovel,
-			color: 'rustic-brown'
+			features: ['Water quality testing', 'Well shocking', 'Proper abandonment']
 		}
+	];
+
+	const stats = [
+		{ value: '500+', label: 'Wells Drilled' },
+		{ value: '25+', label: 'Years Experience' },
+		{ value: '100%', label: 'Satisfaction Rate' },
+		{ value: '24/7', label: 'Emergency Service' }
 	];
 
 	const values = [
 		{
-			title: 'Local Experience',
-			description: 'Deep roots in the community with years of trusted service.',
+			title: 'Industry Leaders',
+			description: 'Cutting-edge equipment and proven techniques for superior results.',
 			icon: Tractor
 		},
 		{
-			title: 'Quality Guarantee',
-			description: 'We stand behind our work with professional results every time.',
+			title: 'Licensed & Insured',
+			description: 'Fully certified professionals with comprehensive insurance coverage.',
 			icon: Shield
+		},
+		{
+			title: 'Local Expertise',
+			description: "Deep understanding of Alberta's unique geological conditions.",
+			icon: Star
 		}
 	];
 </script>
 
 <div>
-	<!-- Hero Section -->
-	<div
-		class="relative flex min-h-[60vh] content-center items-center justify-center md:min-h-[80vh]"
-	>
-		<div
-			class="absolute top-0 h-full w-full bg-[url('/img/rig_cropped.jpg')] bg-cover bg-bottom bg-no-repeat lg:bg-[url('/img/rig.jpg')]"
-		>
-			<span id="overlay" class="absolute h-full w-full bg-[var(--color-earth)] opacity-60"></span>
+	<!-- Modern Hero Section with Parallax Effect -->
+	<section class="relative flex min-h-screen items-center justify-center overflow-hidden">
+		<!-- Animated Background -->
+		<div class="absolute inset-0 z-0">
+			<div
+				class="absolute inset-0 bg-[url('/img/rig_cropped.jpg')] bg-cover bg-center bg-no-repeat lg:bg-[url('/img/rig.jpg')]"
+			></div>
+			<div class="backdrop-overlay"></div>
+			<div class="gradient-bg absolute inset-0 opacity-30"></div>
 		</div>
-		<div class="relative container mx-auto my-6 py-6">
-			<div class="flex flex-wrap items-center">
-				<div class="mr-auto ml-auto w-full px-4 text-center lg:w-7/12">
-					<h1 class="rustic-header mb-6 text-4xl text-[var(--color-wheat)] lg:text-6xl">
-						Travis Drilling
-					</h1>
-					<div class="mx-auto mb-6 h-1 w-20 bg-[var(--color-barn-red)]"></div>
-					<p class="mt-4 text-2xl font-light text-[var(--color-hay)]">
-						Water Well Drilling and Service
-					</p>
-					<div class="mt-10">
-						<a href="/Contact" class="rustic-button mr-4 inline-block"> Get a Quote </a>
-						<a
-							href="/Services"
-							class="inline-block border-2 border-[var(--color-wheat)] px-4 py-2 font-bold text-[var(--color-wheat)] transition-colors duration-200 hover:bg-[var(--color-wheat)] hover:text-[var(--color-earth)]"
-						>
-							Our Services
-						</a>
-					</div>
+
+		<!-- Floating particles effect -->
+		<div class="absolute inset-0 overflow-hidden">
+			<div
+				class="float-animation absolute -top-10 -left-10 h-72 w-72 rounded-full bg-[var(--color-primary)] opacity-10 blur-3xl"
+			></div>
+			<div
+				class="float-animation absolute -right-10 -bottom-10 h-96 w-96 rounded-full bg-[var(--color-accent)] opacity-10 blur-3xl"
+				style="animation-delay: 3s;"
+			></div>
+		</div>
+
+		<!-- Hero Content -->
+		<div class="relative z-10 container mx-auto px-4 text-center">
+			<div class="fade-in">
+				<div class="modern-badge mb-6 inline-flex items-center gap-2">
+					<CheckCircle class="h-4 w-4" />
+					<span>Alberta's Trusted Water Well Experts</span>
+				</div>
+
+				<h1 class="mb-6 text-5xl leading-tight font-bold md:text-7xl">
+					<span class="gradient-text-animate">Travis Drilling</span>
+				</h1>
+
+				<p
+					class="mx-auto mb-8 max-w-3xl text-xl font-light text-[var(--color-text-secondary)] md:text-2xl"
+				>
+					Professional water well drilling and services with cutting-edge technology and decades of
+					expertise
+				</p>
+
+				<div class="flex flex-col justify-center gap-4 sm:flex-row">
+					<a href="/Contact" class="modern-button group inline-flex items-center gap-2">
+						Get Free Quote
+						<ChevronRight class="h-5 w-5 transition-transform group-hover:translate-x-1" />
+					</a>
+					<a href="/Services" class="modern-button-secondary inline-flex items-center gap-2">
+						Explore Services
+					</a>
+				</div>
+
+				<!-- Stats Bar -->
+				<div class="mt-16 grid grid-cols-2 gap-6 md:grid-cols-4">
+					{#each stats as stat}
+						<div class="modern-card hover-lift p-6">
+							<div class="modern-header text-3xl font-bold">{stat.value}</div>
+							<div class="mt-1 text-sm text-[var(--color-text-secondary)]">{stat.label}</div>
+						</div>
+					{/each}
 				</div>
 			</div>
 		</div>
 
-		<!-- Wood texture overlay -->
-		<div
-			class="absolute right-0 bottom-0 left-0 h-16 border-t-4 border-[var(--color-rustic-brown)] bg-[url('/img/wood-texture.jpg')] bg-repeat-x opacity-90"
-		></div>
-	</div>
+		<!-- Scroll indicator -->
+		<div class="pulse-animation absolute bottom-8 left-1/2 -translate-x-1/2">
+			<div
+				class="flex h-8 w-5 items-start justify-center rounded-full border-2 border-white/30 p-1"
+			>
+				<div class="h-2 w-0.5 animate-bounce rounded-full bg-white/50"></div>
+			</div>
+		</div>
+	</section>
 
-	<!-- Services Section -->
-	<section class="-mt-12 pb-20 md:-mt-24">
-		<div class="container mx-auto px-4">
-			<div class="flex flex-wrap items-stretch gap-y-6">
+	<!-- Modern Services Section -->
+	<section class="relative overflow-hidden py-24">
+		<!-- Background decoration -->
+		<div class="absolute top-0 left-0 h-full w-full opacity-5">
+			<div class="absolute top-20 left-10 h-64 w-64 rounded-full bg-[var(--color-primary)]"></div>
+			<div
+				class="absolute right-10 bottom-20 h-96 w-96 rounded-full bg-[var(--color-accent)]"
+			></div>
+		</div>
+
+		<div class="relative z-10 container mx-auto px-4">
+			<div class="fade-in mb-16 text-center">
+				<h2 class="mb-4 text-4xl font-bold md:text-5xl">
+					<span class="modern-header">Our Services</span>
+				</h2>
+				<div class="modern-divider mx-auto mb-6 max-w-24"></div>
+				<p class="mx-auto max-w-2xl text-lg text-[var(--color-text-secondary)]">
+					Comprehensive water well solutions tailored to your specific needs
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
 				{#each services as service, i}
-					<div class="w-full px-4 md:w-4/12">
-						<div class="rustic-card h-full px-6 py-5">
-							<div class="flex h-full flex-col items-center">
-								<div>
-									<div
-										class="mb-5 inline-flex h-16 w-16 items-center justify-center rounded-none bg-[var(--color-{service.color})] p-3 text-center text-white"
-									>
-										<service.icon class="h-8 w-8" />
-									</div>
-									<div class="text-center">
-										<h3 class="rustic-header mb-3 text-2xl text-[var(--color-earth)]">
-											{service.title}
-										</h3>
-										<p class="text-[var(--color-earth)]">
-											{service.description}
-										</p>
-									</div>
-								</div>
-								<div class="mt-auto pt-4">
-									<a
-										href="/Services"
-										class="inline-block font-bold text-[var(--color-barn-red)] hover:underline"
-										>Learn More</a
-									>
-								</div>
-							</div>
+					<div class="modern-card hover-lift group p-8" style="animation-delay: {i * 0.1}s">
+						<div class="icon-container mb-6 transition-transform group-hover:scale-110">
+							<service.icon class="h-7 w-7" />
 						</div>
+
+						<h3 class="mb-4 text-2xl font-bold text-white">{service.title}</h3>
+						<p class="mb-6 text-[var(--color-text-secondary)]">{service.description}</p>
+
+						<ul class="mb-6 space-y-2">
+							{#each service.features as feature}
+								<li class="flex items-center gap-2 text-sm text-[var(--color-text-secondary)]">
+									<CheckCircle class="h-4 w-4 flex-shrink-0 text-[var(--color-success)]" />
+									<span>{feature}</span>
+								</li>
+							{/each}
+						</ul>
+
+						<a
+							href="/Services"
+							class="inline-flex items-center gap-2 font-semibold text-[var(--color-accent)] transition-all hover:gap-3"
+						>
+							Learn More
+							<ChevronRight class="h-4 w-4" />
+						</a>
 					</div>
 				{/each}
 			</div>
-
-			<div class="mt-24 flex flex-wrap items-center">
-				<div class="w-full px-4 lg:w-6/12">
-					<div class="relative">
-						<!-- Decorative border element -->
-						<div class="absolute top-0 bottom-0 -left-4 w-1 bg-[var(--color-barn-red)]"></div>
-						<h2 class="rustic-header mb-4 text-4xl text-[var(--color-earth)]">
-							Family-Owned & Trusted
-						</h2>
-						<p class="mb-6 text-lg leading-relaxed">
-							Travis Drilling is locally owned and operated in the Onoway area. We are dedicated to
-							providing professional and reliable water well services.
-						</p>
-
-						<div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
-							{#each values as value}
-								<div class="flex items-start">
-									<div class="mr-4 rounded-none bg-[var(--color-hay)] p-3">
-										<value.icon class="h-6 w-6 text-[var(--color-earth)]" />
-									</div>
-									<div>
-										<h3 class="mb-1 text-xl font-bold">{value.title}</h3>
-										<p>{value.description}</p>
-									</div>
-								</div>
-							{/each}
-						</div>
-
-						<div class="mt-8">
-							<a href="/About" class="rustic-button inline-block">About Our Company</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="mt-12 hidden w-full px-4 lg:mt-0 lg:block lg:w-6/12">
-					<div class="relative mx-auto" style="max-width: 500px;">
-						<!-- Main image with rustic frame effect -->
-						<div
-							class="relative border-8 border-[#F8F4E3] shadow-xl"
-							style="transform: rotate(2deg);"
-						>
-							<img src="/img/rig_original.jpg" alt="Drilling Rig" class="w-full object-cover" />
-						</div>
-						<!-- Decorative element -->
-						<div
-							class="absolute -bottom-6 -left-6 -z-10 h-24 w-24 bg-[var(--color-barn-red)]"
-						></div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
 
-	<!-- CTA Section -->
-	<section class="relative overflow-hidden bg-[var(--color-earth)] py-16">
-		<!-- Decorative wood texture overlay -->
-		<div
-			class="absolute top-0 right-0 left-0 h-8 bg-[url('/img/wood-texture.jpg')] bg-repeat-x opacity-70"
-		></div>
-		<div
-			class="absolute right-0 bottom-0 left-0 h-8 bg-[url('/img/wood-texture.jpg')] bg-repeat-x opacity-70"
-		></div>
-
-		<div class="container mx-auto px-4 py-8">
-			<div class="flex flex-wrap justify-center text-center">
-				<div class="w-full px-4 lg:w-8/12">
-					<h2 class="rustic-header mb-6 text-4xl text-[var(--color-wheat)]">
-						Ready to Start Your Project?
-					</h2>
-					<p class="mx-auto mb-8 max-w-3xl text-lg text-[var(--color-hay)]">
-						Contact us today to discuss your water well needs or to get an estimate for our
-						services.
-					</p>
-					<div
-						class="mx-auto flex flex-col justify-center gap-4 md:flex-row"
-						style="max-width: 500px"
-					>
-						<a href="tel:780-974-3184" class="rustic-button flex items-center justify-center">
-							<Phone class="mr-2 h-5 w-5" />
-							(780) 974-3184
-						</a>
-						<a
-							href="mailto:contact@travisdrilling.ca"
-							class="flex items-center justify-center border-2 border-[var(--color-hay)] bg-[var(--color-wheat)] px-4 py-2 font-bold text-[var(--color-earth)] transition-colors duration-200 hover:bg-[var(--color-hay)]"
-						>
-							<Mail class="mr-2 h-5 w-5" />
-							Email Us
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Team Section -->
-	<section class="py-20">
+	<!-- Modern About Section -->
+	<section class="relative overflow-hidden py-24">
 		<div class="container mx-auto px-4">
-			<div class="mb-16 flex flex-wrap justify-center text-center">
-				<div class="w-full px-4 lg:w-6/12">
-					<h2 class="rustic-header mb-4 text-4xl text-[var(--color-earth)]">Meet Our Team</h2>
-					<div class="mx-auto mb-6 h-1 w-20 bg-[var(--color-barn-red)]"></div>
-					<p class="text-lg">
-						The people behind Travis Drilling are experienced professionals dedicated to quality
-						service.
+			<div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+				<div class="fade-in">
+					<div class="modern-badge mb-6">Family-Owned Since 1998</div>
+
+					<h2 class="mb-6 text-4xl font-bold md:text-5xl">
+						<span class="modern-header">Built on Trust & Excellence</span>
+					</h2>
+
+					<p class="mb-8 text-lg leading-relaxed text-[var(--color-text-secondary)]">
+						Travis Drilling combines traditional values with modern technology to deliver
+						exceptional water well services throughout Alberta. Our commitment to quality and
+						customer satisfaction has made us the region's most trusted drilling company.
 					</p>
-				</div>
-			</div>
-			<div class="flex flex-wrap justify-center">
-				{#each profiles as profile}
-					<div class="mb-12 w-full px-4 md:w-6/12 lg:mb-0 lg:w-3/12">
-						<div class="px-6">
-							<div class="rustic-card mb-3 inline-block p-2">
-								<img alt={profile.name} src={profile.imgSrc} class="w-40 max-w-full" />
+
+					<div class="mb-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+						{#each values as value}
+							<div class="hover-lift flex items-start gap-4">
+								<div class="icon-container flex-shrink-0">
+									<value.icon class="h-6 w-6" />
+								</div>
+								<div>
+									<h3 class="mb-2 text-xl font-bold text-white">{value.title}</h3>
+									<p class="text-sm text-[var(--color-text-secondary)]">{value.description}</p>
+								</div>
 							</div>
-							<div class="pt-2 text-center">
-								<h3 class="rustic-header mb-1 text-xl">{profile.name}</h3>
-								<p class="font-medium text-[var(--color-barn-red)]">{profile.title}</p>
+						{/each}
+					</div>
+
+					<a href="/About" class="modern-button inline-flex items-center gap-2">
+						Discover Our Story
+						<ChevronRight class="h-5 w-5" />
+					</a>
+				</div>
+
+				<div class="relative">
+					<div class="modern-card shimmer overflow-hidden">
+						<img
+							src="/img/rig_original.jpg"
+							alt="Travis Drilling Equipment"
+							class="h-full w-full object-cover"
+						/>
+						<div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+						<div class="absolute right-6 bottom-6 left-6">
+							<div class="modern-badge">
+								<Star class="mr-1 h-4 w-4" />
+								Industry Leaders in Water Well Technology
 							</div>
 						</div>
+					</div>
+
+					<!-- Decorative elements -->
+					<div
+						class="absolute -top-6 -right-6 -z-10 h-24 w-24 rounded-2xl bg-[var(--color-accent)] opacity-20"
+					></div>
+					<div
+						class="absolute -bottom-6 -left-6 -z-10 h-32 w-32 rounded-2xl bg-[var(--color-primary)] opacity-20"
+					></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modern CTA Section -->
+	<section class="relative overflow-hidden py-24">
+		<div class="gradient-bg absolute inset-0 opacity-90"></div>
+		<div class="absolute inset-0 bg-[url('/img/wood-texture.jpg')] opacity-5"></div>
+
+		<div class="relative z-10 container mx-auto px-4 text-center">
+			<h2 class="mb-6 text-4xl font-bold text-white md:text-5xl">
+				Ready to Start Your Water Well Project?
+			</h2>
+			<p class="mx-auto mb-10 max-w-2xl text-xl text-white/80">
+				Get expert consultation and a free quote for your drilling needs
+			</p>
+
+			<div class="flex flex-col justify-center gap-4 sm:flex-row">
+				<a
+					href="tel:780-974-3184"
+					class="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 font-bold text-[var(--color-primary)] shadow-xl transition-transform hover:scale-105"
+				>
+					<Phone class="h-5 w-5" />
+					Call (780) 974-3184
+				</a>
+				<a
+					href="mailto:contact@travisdrilling.ca"
+					class="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-8 py-4 font-bold text-white backdrop-blur-xl transition-all hover:bg-white/20"
+				>
+					<Mail class="h-5 w-5" />
+					Email Us Today
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modern Team Section -->
+	<section class="relative py-24">
+		<div class="container mx-auto px-4">
+			<div class="fade-in mb-16 text-center">
+				<h2 class="mb-4 text-4xl font-bold md:text-5xl">
+					<span class="modern-header">Meet Our Experts</span>
+				</h2>
+				<div class="modern-divider mx-auto mb-6 max-w-24"></div>
+				<p class="mx-auto max-w-2xl text-lg text-[var(--color-text-secondary)]">
+					Dedicated professionals committed to delivering exceptional service
+				</p>
+			</div>
+
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+				{#each profiles as profile, i}
+					<div
+						class="modern-card hover-lift group p-8 text-center"
+						style="animation-delay: {i * 0.1}s"
+					>
+						<div class="relative mb-6 inline-block">
+							<div
+								class="mx-auto h-32 w-32 overflow-hidden rounded-full border-4 border-[var(--color-accent)]/20 transition-colors group-hover:border-[var(--color-accent)]"
+							>
+								<img src={profile.imgSrc} alt={profile.name} class="h-full w-full object-cover" />
+							</div>
+							<div class="icon-container absolute -right-2 -bottom-2 h-10 w-10">
+								<CheckCircle class="h-5 w-5" />
+							</div>
+						</div>
+
+						<h3 class="mb-1 text-xl font-bold text-white">{profile.name}</h3>
+						<p class="mb-2 font-semibold text-[var(--color-accent)]">{profile.title}</p>
+						<p class="text-sm text-[var(--color-text-secondary)]">{profile.role}</p>
 					</div>
 				{/each}
 			</div>
 		</div>
 	</section>
 </div>
+
+<style>
+	/* Custom animations for this page */
+	.fade-in {
+		animation: fadeIn 0.8s ease-out;
+		animation-fill-mode: both;
+	}
+</style>
