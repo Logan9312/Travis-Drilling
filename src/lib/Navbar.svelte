@@ -27,58 +27,45 @@
 	];
 </script>
 
-<nav
-	class="{transparent
-		? 'absolute top-0 z-50 w-full'
-		: 'relative bg-white shadow-lg'} mb-5 flex flex-wrap items-center justify-between px-2 py-3"
->
-	<div class="container mx-auto flex flex-wrap items-center justify-between px-4">
-		<div class="relative flex w-full justify-between lg:static lg:block lg:w-auto lg:justify-start">
+<nav>
+	<div>
+		<div>
 			<a href="/">
 				<img
 					src={transparent ? '/img/logo_white.png' : '/img/logo.png'}
 					width="100"
 					height="100"
 					alt="Travis Drilling Logo"
-					class="mr-4 inline-block whitespace-nowrap py-2 font-bold uppercase leading-relaxed"
-				/>
+					/>
 			</a>
 
 			<button
-				class="block rounded-sm border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-hidden focus:outline-hidden lg:hidden"
 				type="button"
 				onclick={toggleNavbar}
 				aria-label="Toggle navigation"
 			>
-				<Menu fill="currentColor" class="{transparent ? 'text-white' : 'text-gray-800'} h-6 w-6" />
+				<Menu fill="currentColor" />
 			</button>
 		</div>
 
 		<div
-			class="grow items-center bg-white lg:flex lg:bg-transparent lg:shadow-none {navbarOpen
-				? 'block rounded-sm shadow-lg'
-				: 'hidden'}"
+			style="{navbarOpen ? 'display: block;' : 'display: none;'}"
 			id="example-navbar-warning"
 		>
-			<ul class="mr-auto flex list-none flex-col lg:flex-row">
+			<ul>
 				{#each navItems as item}
-					<li class="flex items-center">
+					<li>
 						<a
-							class="{transparent
-								? 'lg:text-white lg:hover:text-gray-300'
-								: 'hover:text-gray-600'} flex items-center px-4 py-4 text-xs font-bold uppercase text-gray-800 lg:py-4"
 							href={item.href}
 						>
-							<item.icon
-								class="{transparent && 'lg:text-gray-300'} leading-lg mr-2 text-lg text-gray-500"
-							/>
+							<item.icon />
 							<span>{item.label}</span>
 						</a>
 					</li>
 				{/each}
 			</ul>
 
-			<ul class="flex list-none flex-col lg:ml-auto lg:flex-row">
+			<ul>
 				<!-- right side navbar items -->
 			</ul>
 		</div>

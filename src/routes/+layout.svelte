@@ -2,7 +2,6 @@
 	import Footer from '$lib/Footer.svelte';
 	import Navbar from '$lib/Navbar.svelte';
 	// import SchemaOrg from '$lib/Schemaorg.svelte';
-	import '../app.css';
 	let { children } = $props();
 </script>
 
@@ -29,7 +28,7 @@
 	<link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 
-<div class="flex min-h-screen flex-col">
+<div>
 	<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
@@ -52,7 +51,7 @@
 
 	<Navbar />
 
-	<main class="flex grow flex-col justify-center">
+	<main>
 		{@render children()}
 	</main>
 
