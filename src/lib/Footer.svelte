@@ -2,12 +2,12 @@
 	import { SiGithub } from '@icons-pack/svelte-simple-icons';
 </script>
 
-<footer class="min-w-full bg-gray-300 pb-6 pt-8">
+<footer class="min-w-full bg-gray-300 pt-8 pb-6">
 	<div class="container mx-auto px-4">
 		<div class="flex flex-wrap">
 			<div class="w-full px-4 lg:w-6/12">
 				<h4 class="text-3xl font-semibold">Inquiries/Estimates</h4>
-				<h5 class="mb-2 mt-0 text-lg text-gray-700">
+				<h5 class="mt-0 mb-2 text-lg text-gray-700">
 					Email:{' '}
 					<a href="mailto:contact@travisdrilling.ca" class="underline">
 						contact@travisdrilling.ca
