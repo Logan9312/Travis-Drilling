@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { House, Menu, Phone } from 'lucide-svelte';
+	import { House, Menu, Phone, X } from 'lucide-svelte';
 
 	let navbarOpen = $state(false);
 	let { transparent = false } = $props();
@@ -30,57 +30,80 @@
 <nav
 	class="{transparent
 		? 'absolute top-0 z-50 w-full'
-		: 'relative bg-white shadow-lg'} mb-5 flex flex-wrap items-center justify-between px-2 py-3"
+		: 'relative bg-white shadow-md'} transition-all duration-300"
 >
-	<div class="container mx-auto flex flex-wrap items-center justify-between px-4">
-		<div class="relative flex w-full justify-between lg:static lg:block lg:w-auto lg:justify-start">
-			<a href="/">
-				<img
-					src={transparent ? '/img/logo_white.png' : '/img/logo.png'}
-					width="100"
-					height="100"
-					alt="Travis Drilling Logo"
-					class="mr-4 inline-block whitespace-nowrap py-2 font-bold uppercase leading-relaxed"
-				/>
-			</a>
+	<div class="container mx-auto flex items-center justify-between px-6 py-3">
+		<!-- Logo -->
+		<a href="/" class="flex items-center">
+			<img
+				src={transparent ? '/img/logo_white.png' : '/img/logo.png'}
+				width="80"
+				height="80"
+				alt="Travis Drilling Logo"
+				class="transition-transform duration-300 hover:scale-105"
+			/>
+		</a>
 
-			<button
-				class="block rounded-sm border border-solid border-transparent bg-transparent px-3 py-1 text-xl leading-none outline-hidden focus:outline-hidden lg:hidden"
-				type="button"
-				onclick={toggleNavbar}
-				aria-label="Toggle navigation"
+		<!-- Desktop Navigation -->
+		<div class="hidden items-center gap-6 lg:flex">
+			{#each navItems as item}
+				<a
+					href={item.href}
+					class="{transparent
+						? 'text-white/90 hover:text-white'
+						: 'text-gray-700 hover:text-gray-900'} flex items-center gap-2 text-sm font-bold uppercase tracking-wide transition-colors"
+				>
+					<item.icon class="h-4 w-4" />
+					{item.label}
+				</a>
+			{/each}
+			<a
+				href="tel:780-974-3184"
+				class="bg-[#00bfff] px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff]"
 			>
-				<Menu fill="currentColor" class="{transparent ? 'text-white' : 'text-gray-800'} h-6 w-6" />
-			</button>
+				(780) 974-3184
+			</a>
 		</div>
 
-		<div
-			class="grow items-center bg-white lg:flex lg:bg-transparent lg:shadow-none {navbarOpen
-				? 'block rounded-sm shadow-lg'
-				: 'hidden'}"
-			id="example-navbar-warning"
+		<!-- Mobile Menu Button -->
+		<button
+			class="{transparent ? 'text-white' : 'text-gray-800'} p-2 lg:hidden"
+			type="button"
+			onclick={toggleNavbar}
+			aria-label="Toggle navigation"
 		>
-			<ul class="mr-auto flex list-none flex-col lg:flex-row">
-				{#each navItems as item}
-					<li class="flex items-center">
-						<a
-							class="{transparent
-								? 'lg:text-white lg:hover:text-gray-300'
-								: 'hover:text-gray-600'} flex items-center px-4 py-4 text-xs font-bold uppercase text-gray-800 lg:py-4"
-							href={item.href}
-						>
-							<item.icon
-								class="{transparent && 'lg:text-gray-300'} leading-lg mr-2 text-lg text-gray-500"
-							/>
-							<span>{item.label}</span>
-						</a>
-					</li>
-				{/each}
-			</ul>
-
-			<ul class="flex list-none flex-col lg:ml-auto lg:flex-row">
-				<!-- right side navbar items -->
-			</ul>
-		</div>
+			{#if navbarOpen}
+				<X class="h-6 w-6" />
+			{:else}
+				<Menu class="h-6 w-6" />
+			{/if}
+		</button>
 	</div>
+
+	<!-- Mobile Navigation -->
+	{#if navbarOpen}
+		<div class="border-t border-gray-200 bg-white lg:hidden">
+			<div class="container mx-auto px-6 py-4">
+				<div class="flex flex-col gap-2">
+					{#each navItems as item}
+						<a
+							href={item.href}
+							class="flex items-center gap-3 px-4 py-3 text-gray-700 transition-colors hover:bg-gray-100"
+							onclick={() => (navbarOpen = false)}
+						>
+							<item.icon class="h-5 w-5 text-[#00bfff]" />
+							<span class="font-bold uppercase tracking-wide">{item.label}</span>
+						</a>
+					{/each}
+					<hr class="my-2 border-gray-200" />
+					<a
+						href="tel:780-974-3184"
+						class="block bg-[#00bfff] px-4 py-3 text-center font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#33ccff]"
+					>
+						(780) 974-3184
+					</a>
+				</div>
+			</div>
+		</div>
+	{/if}
 </nav>

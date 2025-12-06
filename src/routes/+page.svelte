@@ -1,161 +1,154 @@
 <script lang="ts">
-	import { Droplets, Mail, Phone, Shovel, Wrench } from 'lucide-svelte';
+	import { Droplets, Mail, MapPin, Phone, Shovel, Wrench, ChevronDown } from 'lucide-svelte';
 
-	const profiles = [
-		{ name: 'Jason Travis', imgSrc: '/img/blank.png' },
-		{ name: 'Christy Travis', imgSrc: '/img/blank.png' },
-		{ name: 'Hayden Borle', imgSrc: '/img/blank.png' }
+	const services = [
+		{
+			icon: Wrench,
+			title: 'Drilling, Servicing, Testing',
+			description:
+				'For any of your agricultural or residential needs, we offer a journeyman service and repair technician with a variety of replacement parts.',
+			color: 'bg-[#00bfff]'
+		},
+		{
+			icon: Droplets,
+			title: 'Abandonment, Shocking',
+			description:
+				'Well abandonment and decommissioning services are available for any unproductive wells. Well maintenance and shocking services help to maintain a healthy and productive well.',
+			color: 'bg-[#00bfff]'
+		},
+		{
+			icon: Shovel,
+			title: 'Backhoe Services',
+			description:
+				'Our backhoe service is available for trenching, installation and repair of underground water lines, and more.',
+			color: 'bg-[#00bfff]'
+		}
 	];
+
 </script>
 
-<div>
+<!-- Hero Section -->
+<section class="relative min-h-screen overflow-hidden">
 	<div
-		class="relative flex min-h-[50vh] content-center items-center justify-center md:min-h-[75vh]"
+		class="absolute inset-0 bg-[url('/img/rig_cropped.jpg')] bg-cover bg-center bg-no-repeat lg:bg-[url('/img/rig.jpg')]"
 	>
-		<div
-			class="absolute top-0 h-full w-full bg-[url('/img/rig_cropped.jpg')] bg-cover bg-bottom bg-no-repeat lg:bg-[url('/img/rig.jpg')]"
-		>
-			<span id="blackOverlay" class="absolute h-full w-full bg-black opacity-40"></span>
+		<div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80"></div>
+	</div>
+
+	<div class="relative flex min-h-screen flex-col items-center justify-center px-4 text-center">
+		<div class="max-w-4xl">
+			<p class="mb-4 text-sm font-semibold uppercase tracking-widest text-[#00bfff]">
+				Onoway, Alberta
+			</p>
+			<h1 class="mb-6 text-5xl font-black uppercase tracking-tight text-white md:text-7xl">
+				Travis Drilling
+				<span class="block text-[#00bfff]">LTD.</span>
+			</h1>
+			<p class="mx-auto mb-10 max-w-2xl text-xl text-gray-300 md:text-2xl">
+				Water Well Drilling and Service for Agricultural and Residential Properties
+			</p>
+			<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+				<a
+					href="tel:780-974-3184"
+					class="bg-[#00bfff] px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff]"
+				>
+					(780) 974-3184
+				</a>
+				<a
+					href="#services"
+					class="inline-flex items-center gap-2 border-2 border-white/40 px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:border-white hover:bg-white/10"
+				>
+					Our Services
+				</a>
+			</div>
 		</div>
-		<div class="container relative mx-auto my-6 py-6">
-			<div class="flex flex-wrap items-center">
-				<div class="ml-auto mr-auto w-full px-4 text-center lg:w-6/12">
-					<h1 class=" text-4xl font-semibold text-white lg:text-5xl">Travis Drilling LTD.</h1>
-					<p class="mt-4 text-xl text-gray-300">Water Well Drilling and Service</p>
+
+		<a href="#services" class="absolute bottom-10 animate-bounce text-white/60 hover:text-white">
+			<ChevronDown class="h-8 w-8" />
+		</a>
+	</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="bg-gray-100 py-20">
+	<div class="container mx-auto px-4">
+		<div class="mb-12 text-center">
+			<h2 class="text-3xl font-black uppercase text-gray-900 md:text-4xl">Our Services</h2>
+		</div>
+
+		<div class="grid gap-6 md:grid-cols-3">
+			{#each services as service}
+				<div class="bg-white shadow-md">
+					<div class="{service.color} flex h-16 items-center justify-center">
+						<service.icon class="h-8 w-8 text-white" />
+					</div>
+					<div class="p-6">
+						<h3 class="mb-3 text-xl font-bold uppercase text-gray-900">
+							{service.title}
+						</h3>
+						<p class="leading-relaxed text-gray-600">
+							{service.description}
+						</p>
+					</div>
 				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<!-- About Section -->
+<section class="bg-gray-900 py-20">
+	<div class="container mx-auto px-4">
+		<div class="grid items-center gap-12 lg:grid-cols-2">
+			<div>
+				<h2 class="mb-6 text-3xl font-black uppercase text-white md:text-4xl">
+					About Us
+				</h2>
+				<p class="mb-8 text-lg leading-relaxed text-gray-300">
+					Travis Drilling is locally owned and operated in the Onoway area. We are dedicated to
+					providing a professional water well drilling service.
+				</p>
+				<div class="flex items-center gap-3 text-gray-300">
+					<MapPin class="h-5 w-5 text-[#00bfff]" />
+					<span>Onoway, Alberta, Canada</span>
+				</div>
+			</div>
+
+			<div>
+				<img
+					src="/img/Drilling_Pit.png"
+					alt="Water well drilling pit"
+					class="w-full"
+				/>
 			</div>
 		</div>
 	</div>
-	<section class="-mt-12 bg-gray-300 pb-20 md:-mt-24">
-		<div class="container mx-auto px-4">
-			<div class="flex flex-wrap items-stretch">
-				<div class="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12">
-					<div
-						class="relative flex h-full w-full min-w-0 flex-col break-words rounded-xl bg-white shadow-lg"
-					>
-						<div class="flex flex-auto flex-col items-center justify-center px-4 py-5">
-							<div
-								class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-red-400 p-3 text-center text-white shadow-lg"
-							>
-								<Wrench class="h-6 w-6" />
-							</div>
-							<div>
-								<h6 class="text-xl font-semibold">Drilling, Servicing, Testing</h6>
-								<p class="mb-4 mt-2 text-gray-600">
-									For any of your agricultural or residential needs, we offer a journeyman service
-									and repair technician with a variety of replacement parts.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
+</section>
 
-				<div class=" w-full px-4 pt-6 text-center md:w-4/12">
-					<div
-						class="relative flex h-full w-full min-w-0 flex-col break-words rounded-xl bg-white shadow-lg"
-					>
-						<div class="flex-auto px-4 py-5">
-							<div
-								class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-400 p-3 text-center text-white shadow-lg"
-							>
-								<Droplets class="h-6 w-6" />
-							</div>
-							<h6 class="text-xl font-semibold">Abandonment, Shocking</h6>
-							<p class="mb-4 mt-2 text-gray-600">
-								Well abandonment and decomissioning services are available for any unproductive
-								wells.
-							</p>
-							<p class="mb-4 mt-2 text-gray-600">
-								Well maintenance and shocking services help to maintain a healthy and productive
-								well.
-							</p>
-						</div>
-					</div>
-				</div>
-				<!-- {/*TODO Discuss Servicing Area*/} -->
-				<div class="w-full px-4 pt-6 text-center md:w-4/12 md:pt-12">
-					<div
-						class="relative flex h-full w-full min-w-0 flex-col break-words rounded-xl bg-white shadow-lg"
-					>
-						<div class="flex flex-auto flex-col items-center justify-center px-4 py-5">
-							<div
-								class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-yellow-400 p-3 text-center text-white shadow-lg"
-							>
-								<Shovel class="h-6 w-6" />
-							</div>
+<!-- Contact Section -->
+<section class="relative overflow-hidden bg-[#00bfff] py-20">
+	<div class="absolute inset-0 bg-[url('/img/rig.jpg')] bg-cover bg-center opacity-10"></div>
+	<div class="container relative mx-auto px-4">
+		<div class="mx-auto max-w-3xl text-center">
+			<h2 class="mb-6 text-3xl font-black uppercase text-white md:text-4xl">Contact Us</h2>
+			<p class="mb-10 text-xl text-white/80">
+				To discuss your drilling needs or to receive an estimate on services, you can contact us at the following:
+			</p>
 
-							<h6 class="text-xl font-semibold">Backhoe Services</h6>
-							<p class="mb-4 mt-2 text-gray-600">
-								Our backhoe service is available for trenching, installation and repair of
-								underground water lines, and more.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="mt-10 flex flex-wrap items-center">
-				<div class="ml-auto mr-auto w-full px-4 md:w-5/12">
-					<h3 class="mb-2 text-3xl font-semibold leading-normal">More Information</h3>
-					<p class="mb-4 mt-4 text-lg font-light leading-relaxed text-gray-700"></p>
-					<p class="mb-4 mt-0 text-lg font-light leading-relaxed text-gray-700">
-						To discuss your drilling needs or to receive an estimate on services, you can contact us
-						at the following:
-					</p>
-					<p class="flex items-center text-gray-800">
-						<Mail class="mr-2 h-5 w-5" />
-						<a href="mailto:contact@travisdrilling.ca">
-							<span class="mr-1 font-bold">Email: </span>
-							contact@travisdrilling.ca
-						</a>
-					</p>
-					<p class="flex items-center text-gray-800">
-						<Phone class="mr-2 h-5 w-5" />
-						<a href="tel:780-974-3184">
-							<span class="mr-1 font-bold">Phone: </span> (780) 974 - 3184
-						</a>
-					</p>
-				</div>
+			<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+				<a
+					href="tel:780-974-3184"
+					class="bg-white px-8 py-4 font-bold uppercase tracking-wide text-gray-900 transition-all hover:bg-gray-100"
+				>
+					(780) 974-3184
+				</a>
+				<a
+					href="mailto:contact@travisdrilling.ca"
+					class="border-2 border-white px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-white hover:text-gray-900"
+				>
+					contact@travisdrilling.ca
+				</a>
 			</div>
 		</div>
-	</section>
-
-	<section class="pb-20 pt-10">
-		<div class="container mx-auto justify-center px-4">
-			<div class="mb-24 flex flex-wrap justify-center text-center">
-				<div class="w-full px-4 lg:w-6/12">
-					<h2 class="text-4xl font-semibold">Our Team</h2>
-				</div>
-			</div>
-			<div class="flex flex-wrap justify-center">
-				{#each profiles as profile}
-					<div class="mb-12 w-full px-4 md:w-6/12 lg:mb-0 lg:w-3/12">
-						<div class="px-6">
-							<img
-								alt={profile.name}
-								src={profile.imgSrc}
-								class="mx-auto w-32 max-w-full rounded-full shadow-lg"
-							/>
-							<div class="pt-6 text-center">
-								<h5 class="text-xl font-bold">{profile.name}</h5>
-							</div>
-						</div>
-					</div>
-				{/each}
-			</div>
-		</div>
-	</section>
-	<section class="relative block bg-gray-900 pb-20">
-		<div class="container mx-auto px-4 pt-20">
-			<div class="flex flex-wrap justify-center text-center">
-				<div class="w-full px-4 lg:w-7/12">
-					<h2 class="text-4xl font-semibold text-white">About Us</h2>
-					<p class="mb-4 mt-4 text-lg leading-relaxed text-gray-400">
-						Travis Drilling is locally owned and operated in the Onoway area. We are dedicated to
-						providing a professional water well drilling service.
-					</p>4
-				</div>
-			</div>
-		</div>
-	</section>
-</div>
+	</div>
+</section>
