@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Droplets, Mail, MapPin, Phone, Shovel, Wrench, ChevronDown } from 'lucide-svelte';
+	import { Droplets, Mail, MapPin, Shovel, Wrench, ChevronDown } from 'lucide-svelte';
 
 	const services = [
 		{
@@ -49,16 +49,16 @@
 			</p>
 			<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 				<a
-					href="tel:780-974-3184"
+					href="#services"
 					class="bg-[#00bfff] px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff]"
 				>
-					(780) 974-3184
+					Our Services
 				</a>
 				<a
-					href="#services"
+					href="/Contact"
 					class="inline-flex items-center gap-2 border-2 border-white/40 px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:border-white hover:bg-white/10"
 				>
-					Our Services
+					Contact Us
 				</a>
 			</div>
 		</div>
@@ -137,14 +137,8 @@
 
 			<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
-					href="tel:780-974-3184"
-					class="bg-white px-8 py-4 font-bold uppercase tracking-wide text-gray-900 transition-all hover:bg-gray-100"
-				>
-					(780) 974-3184
-				</a>
-				<a
 					href="mailto:contact@travisdrilling.ca"
-					class="border-2 border-white px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-white hover:text-gray-900"
+					class="bg-white px-8 py-4 font-bold uppercase tracking-wide text-gray-900 transition-all hover:bg-gray-100"
 				>
 					contact@travisdrilling.ca
 				</a>

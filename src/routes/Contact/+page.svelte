@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Mail, MapPin, Phone } from 'lucide-svelte';
+	import { Mail, MapPin } from 'lucide-svelte';
 </script>
 
 <div class="min-h-screen bg-gray-100">
@@ -18,22 +18,6 @@
 		<div class="container mx-auto px-6">
 			<div class="mx-auto max-w-3xl">
 				<div class="grid gap-4 md:grid-cols-2">
-					<!-- Phone Card -->
-					<a
-						href="tel:780-974-3184"
-						class="group flex items-start gap-4 bg-white p-6 shadow-md transition-all hover:shadow-lg"
-					>
-						<div class="flex h-12 w-12 shrink-0 items-center justify-center bg-[#00bfff] text-white">
-							<Phone class="h-6 w-6" />
-						</div>
-						<div>
-							<h3 class="mb-1 font-bold uppercase text-gray-900">Phone</h3>
-							<p class="text-xl font-bold leading-none text-[#00bfff] group-hover:text-[#33ccff]">
-								(780) 974-3184
-							</p>
-						</div>
-					</a>
-
 					<!-- Email Card -->
 					<a
 						href="mailto:contact@travisdrilling.ca"
@@ -51,7 +35,7 @@
 					</a>
 
 					<!-- Location Card -->
-					<div class="flex items-start gap-4 bg-white p-6 shadow-md md:col-span-2">
+					<div class="flex items-start gap-4 bg-white p-6 shadow-md">
 						<div class="flex h-12 w-12 shrink-0 items-center justify-center bg-gray-800 text-white">
 							<MapPin class="h-6 w-6" />
 						</div>
