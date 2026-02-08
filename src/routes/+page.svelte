@@ -49,7 +49,7 @@
 			</p>
 			<a
 				href="tel:780-974-3184"
-				class="mb-6 inline-flex items-center gap-3 bg-[#00bfff] px-10 py-5 text-xl font-black uppercase tracking-wide text-white transition-all hover:bg-[#33ccff] sm:text-2xl"
+				class="mb-6 inline-flex items-center gap-3 bg-[#00bfff] px-10 py-5 text-xl font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff] sm:text-2xl"
 			>
 				<Phone class="h-6 w-6 sm:h-7 sm:w-7" />
 				(780) 974-3184
@@ -57,7 +57,7 @@
 			<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 				<a
 					href="#services"
-					class="bg-white/10 px-8 py-4 font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-all hover:bg-white/20"
+					class="bg-[#00bfff] px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff]"
 				>
 					Our Services
 				</a>
