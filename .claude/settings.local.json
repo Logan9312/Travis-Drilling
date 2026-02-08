@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(bun run build:*)"
+      "Bash(bun run build:*)",
+      "Bash(git pull:*)"
     ],
     "deny": [],
     "ask": []

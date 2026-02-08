@@ -57,6 +57,13 @@
 					{item.label}
 				</a>
 			{/each}
+			<a
+				href="tel:780-974-3184"
+				class="flex items-center gap-2 bg-[#00bfff] px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff]"
+			>
+				<Phone class="h-4 w-4" />
+				(780) 974-3184
+			</a>
 		</div>
 
 		<!-- Mobile Menu Button -->
@@ -89,6 +96,15 @@
 							<span class="font-bold uppercase tracking-wide">{item.label}</span>
 						</a>
 					{/each}
+					<hr class="my-2 border-gray-200" />
+					<a
+						href="tel:780-974-3184"
+						class="flex items-center justify-center gap-2 bg-[#00bfff] px-4 py-3 font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#33ccff]"
+						onclick={() => (navbarOpen = false)}
+					>
+						<Phone class="h-5 w-5" />
+						(780) 974-3184
+					</a>
 				</div>
 			</div>
 		</div>

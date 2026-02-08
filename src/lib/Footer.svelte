@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SiGithub } from '@icons-pack/svelte-simple-icons';
-	import { Mail, MapPin } from 'lucide-svelte';
+	import { Mail, MapPin, Phone } from 'lucide-svelte';
 </script>
 
 <footer class="bg-gray-900">
@@ -19,6 +19,13 @@
 			<div>
 				<h4 class="mb-4 text-sm font-bold tracking-wider text-white uppercase">Contact</h4>
 				<div class="space-y-3">
+					<a
+						href="tel:780-974-3184"
+						class="flex items-center gap-3 text-gray-400 transition-colors hover:text-white"
+					>
+						<Phone class="h-5 w-5 shrink-0 text-[#00bfff]" />
+						<span class="leading-none">(780) 974-3184</span>
+					</a>
 					<a
 						href="mailto:contact@travisdrilling.ca"
 						class="flex items-center gap-3 text-gray-400 transition-colors hover:text-white"

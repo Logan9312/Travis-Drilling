@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Droplets, Mail, MapPin, Shovel, Wrench, ChevronDown } from 'lucide-svelte';
+	import { Droplets, Mail, MapPin, Phone, Shovel, Wrench, ChevronDown } from 'lucide-svelte';
 
 	const services = [
 		{
@@ -47,10 +47,17 @@
 			<p class="mx-auto mb-10 max-w-2xl text-xl text-gray-300 md:text-2xl">
 				Water Well Drilling and Service for Agricultural and Residential Properties
 			</p>
+			<a
+				href="tel:780-974-3184"
+				class="mb-6 inline-flex items-center gap-3 bg-[#00bfff] px-10 py-5 text-xl font-black uppercase tracking-wide text-white transition-all hover:bg-[#33ccff] sm:text-2xl"
+			>
+				<Phone class="h-6 w-6 sm:h-7 sm:w-7" />
+				(780) 974-3184
+			</a>
 			<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 				<a
 					href="#services"
-					class="bg-[#00bfff] px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff]"
+					class="bg-white/10 px-8 py-4 font-bold uppercase tracking-wide text-white backdrop-blur-sm transition-all hover:bg-white/20"
 				>
 					Our Services
 				</a>
@@ -137,8 +144,15 @@
 
 			<div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
 				<a
+					href="tel:780-974-3184"
+					class="inline-flex items-center gap-2 bg-white px-8 py-4 font-bold uppercase tracking-wide text-gray-900 transition-all hover:bg-gray-100"
+				>
+					<Phone class="h-5 w-5" />
+					(780) 974-3184
+				</a>
+				<a
 					href="mailto:contact@travisdrilling.ca"
-					class="bg-white px-8 py-4 font-bold uppercase tracking-wide text-gray-900 transition-all hover:bg-gray-100"
+					class="border-2 border-white px-8 py-4 font-bold uppercase tracking-wide text-white transition-all hover:bg-white hover:text-gray-900"
 				>
 					contact@travisdrilling.ca
 				</a>
