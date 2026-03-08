@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Droplets, Mail, MapPin, Phone, Shovel, Wrench, ChevronDown } from 'lucide-svelte';
+	import { Droplets, MapPin, Phone, Shovel, Wrench, ChevronDown } from 'lucide-svelte';
 
 	const services = [
 		{
