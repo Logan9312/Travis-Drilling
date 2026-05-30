@@ -2,6 +2,19 @@
 
 @plugin '@tailwindcss/typography';
 
+@theme {
+	/* Body: humanist + highly legible (older / rural / weak-signal readers). */
+	--font-sans: 'Atkinson Hyperlegible', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+	/* Display: sturdy industrial grotesque, steel-stamped / signage weight. */
+	--font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+	/* Brand identity: Deep Sky Blue from the logo. Fixed. Paired with logo black. */
+	--color-brand: #00bfff; /* logo blue — fills, icons on dark, the call button */
+	--color-brand-deep: #0077a3; /* accessible blue for text/links on light surfaces */
+	--color-ink: #0b1117; /* logo black — dark sections, headings */
+}
+
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -11,11 +24,51 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+
+	html {
+		scroll-behavior: smooth;
+		-webkit-text-size-adjust: 100%;
+	}
+
+	body {
+		font-family: var(--font-sans);
+		color: var(--color-slate-700);
+		background-color: #ffffff;
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	/* Display face carries all headings; balance short lines, tighten only slightly. */
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: var(--font-display);
+		text-wrap: balance;
+		letter-spacing: -0.02em;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	::before,
+	::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
 }

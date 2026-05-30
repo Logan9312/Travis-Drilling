@@ -1,9 +1,12 @@
 <script lang="ts">
+	import { page } from '$app/state';
 	import Footer from '$lib/Footer.svelte';
 	import Navbar from '$lib/Navbar.svelte';
 	// import SchemaOrg from '$lib/Schemaorg.svelte';
 	import '../app.css';
 	let { children } = $props();
+
+	const canonical = $derived(`https://www.travisdrilling.ca${page.url.pathname}`);
 </script>
 
 <svelte:head>
@@ -21,6 +24,20 @@
 		content="Locally owned water well drilling and servicing. We handle servicing, repairing, and testing wells. We can drill new wells and install pumps or abandon or shock old wells. Travis Drilling is located in Onoway, Alberta, Canada."
 	/>
 	<meta property="og:url" content="https://www.travisdrilling.ca" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://www.travisdrilling.ca/android-chrome-512x512.png" />
+
+	<!-- Twitter (small summary card, logo only) -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Travis Drilling LTD." />
+	<meta
+		name="twitter:description"
+		content="Locally owned water well drilling and service in Onoway, Alberta and the surrounding area."
+	/>
+	<meta name="twitter:image" content="https://www.travisdrilling.ca/android-chrome-512x512.png" />
+
+	<!-- Canonical -->
+	<link rel="canonical" href={canonical} />
 
 	<!-- Icons -->
 	<link rel="icon" href="/favicon.ico" />
@@ -34,19 +51,54 @@
 		{
 			"@context": "https://schema.org",
 			"@type": "LocalBusiness",
+			"@id": "https://www.travisdrilling.ca/#business",
 			"name": "Travis Drilling LTD",
+			"description": "Locally owned and operated water well drilling and service for farms and homes around Onoway, Alberta.",
 			"image": "https://www.travisdrilling.ca/img/rig.jpg",
-			"address": {
-				"@type": "PostalAddress",
-				"streetAddress": "123 Example Road",
-				"addressLocality": "Onoway",
-				"addressRegion": "AB",
-				"postalCode": "T0E 1V0",
-				"addressCountry": "CA"
-			},
 			"url": "https://www.travisdrilling.ca",
 			"telephone": "+1-780-974-3184",
-			"priceRange": "$$"
+			"email": "contact@travisdrilling.ca",
+			"priceRange": "$$",
+			"address": {
+				"@type": "PostalAddress",
+				"addressLocality": "Onoway",
+				"addressRegion": "AB",
+				"addressCountry": "CA"
+			},
+			"geo": {
+				"@type": "GeoCoordinates",
+				"latitude": 53.7008,
+				"longitude": -114.1953
+			},
+			"areaServed": [
+				{ "@type": "City", "name": "Onoway" },
+				{ "@type": "City", "name": "Alberta Beach" },
+				{ "@type": "City", "name": "Sangudo" },
+				{ "@type": "City", "name": "Mayerthorpe" },
+				{ "@type": "City", "name": "Gunn" },
+				{ "@type": "City", "name": "Darwell" },
+				{ "@type": "City", "name": "Glenevis" },
+				{ "@type": "City", "name": "Cherhill" },
+				{ "@type": "City", "name": "Rochfort Bridge" },
+				{ "@type": "City", "name": "Lac Ste. Anne" },
+				{ "@type": "City", "name": "Stony Plain" },
+				{ "@type": "City", "name": "Spruce Grove" },
+				{ "@type": "City", "name": "Morinville" },
+				{ "@type": "City", "name": "Westlock" },
+				{ "@type": "City", "name": "Barrhead" }
+			],
+			"hasOfferCatalog": {
+				"@type": "OfferCatalog",
+				"name": "Water well services",
+				"itemListElement": [
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water well drilling" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Well servicing and repair" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pump installation and repair" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water and well testing" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Well abandonment and shocking" } },
+					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backhoe and trenching" } }
+				]
+			}
 		}
 	</script>
 

@@ -51,7 +51,7 @@
 					href={item.href}
 					class="{transparent
 						? 'text-white/90 hover:text-white'
-						: 'text-gray-700 hover:text-gray-900'} flex items-center gap-2 text-sm font-bold uppercase tracking-wide transition-colors"
+						: 'text-gray-700 hover:text-gray-900'} flex items-center gap-2 text-sm font-bold tracking-wide uppercase transition-colors"
 				>
 					<item.icon class="h-4 w-4" />
 					{item.label}
@@ -59,7 +59,7 @@
 			{/each}
 			<a
 				href="tel:780-974-3184"
-				class="flex items-center gap-2 bg-[#00bfff] px-5 py-2.5 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-[#33ccff]"
+				class="bg-brand text-ink flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-bold tracking-wide transition-colors hover:bg-[#33ccff]"
 			>
 				<Phone class="h-4 w-4" />
 				(780) 974-3184
@@ -89,17 +89,17 @@
 					{#each navItems as item}
 						<a
 							href={item.href}
-							class="flex items-center gap-3 px-4 py-3 text-gray-700 transition-colors hover:bg-gray-100"
+							class="flex items-center gap-3 rounded-md px-4 py-3 text-gray-700 transition-colors hover:bg-gray-100"
 							onclick={() => (navbarOpen = false)}
 						>
-							<item.icon class="h-5 w-5 text-[#00bfff]" />
-							<span class="font-bold uppercase tracking-wide">{item.label}</span>
+							<item.icon class="text-brand-deep h-5 w-5" />
+							<span class="font-bold tracking-wide uppercase">{item.label}</span>
 						</a>
 					{/each}
 					<hr class="my-2 border-gray-200" />
 					<a
 						href="tel:780-974-3184"
-						class="flex items-center justify-center gap-2 bg-[#00bfff] px-4 py-3 font-bold uppercase tracking-wide text-white transition-colors hover:bg-[#33ccff]"
+						class="bg-brand text-ink flex items-center justify-center gap-2 rounded-md px-4 py-3 font-bold tracking-wide uppercase transition-colors hover:bg-[#33ccff]"
 						onclick={() => (navbarOpen = false)}
 					>
 						<Phone class="h-5 w-5" />
