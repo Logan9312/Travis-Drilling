@@ -184,10 +184,6 @@
 					Travis Drilling is a local water well business based in Onoway. We drill, service, and
 					maintain wells for farms and homes across the area.
 				</p>
-				<p class="mt-4 text-lg leading-relaxed text-slate-600">
-					Call us and you talk to the people doing the work, not a call centre.
-				</p>
-
 				<div
 					class="mt-8 inline-flex items-center gap-2.5 rounded-md border border-slate-200 bg-white px-4 py-2.5 font-semibold text-slate-700"
 				>
