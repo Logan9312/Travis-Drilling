@@ -34,11 +34,6 @@
 					handling pumps, water testing, well abandonment and shocking, and backhoe work along the
 					way.
 				</p>
-				<p class="mt-5 text-lg leading-relaxed text-slate-600">
-					When you call, you talk to the people doing the work. If you are not sure what your well
-					needs, give us a call and we will talk it through.
-				</p>
-
 				<div class="mt-9 flex flex-col gap-3 sm:flex-row">
 					<a
 						href="tel:780-974-3184"
