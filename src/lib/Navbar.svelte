@@ -47,7 +47,7 @@
 
 		<!-- Desktop Navigation -->
 		<div class="hidden items-center gap-6 lg:flex">
-			{#each navItems as item}
+			{#each navItems as item (item.href)}
 				<a
 					href={item.href}
 					class="{transparent
@@ -87,7 +87,7 @@
 		<div class="border-t border-gray-200 bg-white lg:hidden">
 			<div class="container mx-auto px-6 py-4">
 				<div class="flex flex-col gap-2">
-					{#each navItems as item}
+					{#each navItems as item (item.href)}
 						<a
 							href={item.href}
 							class="flex items-center gap-3 rounded-md px-4 py-3 text-gray-700 transition-colors hover:bg-gray-100"

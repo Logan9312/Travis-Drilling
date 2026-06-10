@@ -29,6 +29,10 @@ export default ts.config(
 			parserOptions: {
 				parser: ts.parser
 			}
+		},
+		rules: {
+			// This rule targets apps with kit.paths.base configured; this site has none.
+			'svelte/no-navigation-without-resolve': 'off'
 		}
 	}
 );

@@ -148,7 +148,7 @@
 		</div>
 
 		<div class="mt-12 grid gap-x-12 border-t border-slate-200 sm:grid-cols-2 lg:grid-cols-3">
-			{#each services as service}
+			{#each services as service (service.title)}
 				<div class="flex gap-5 border-b border-slate-200 py-7">
 					<div class="text-brand-deep mt-0.5 shrink-0">
 						<service.icon class="h-7 w-7" strokeWidth={1.75} />
@@ -208,7 +208,7 @@
 		</div>
 
 		<ul class="mt-9 flex flex-wrap gap-2.5">
-			{#each serviceArea as town}
+			{#each serviceArea as town (town)}
 				<li
 					class="rounded-md border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-700"
 				>

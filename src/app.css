@@ -4,7 +4,8 @@
 
 @theme {
 	/* Body: humanist + highly legible (older / rural / weak-signal readers). */
-	--font-sans: 'Atkinson Hyperlegible', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+	--font-sans:
+		'Atkinson Hyperlegible', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 	/* Display: sturdy industrial grotesque, steel-stamped / signage weight. */
 	--font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
