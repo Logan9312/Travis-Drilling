@@ -61,6 +61,7 @@
 					src="/img/rig.jpg"
 					alt="Travis Drilling's rig set up at a water well job site"
 					class="aspect-[4/3] w-full object-cover shadow-lg"
+					loading="lazy"
 				/>
 			</div>
 		</div>

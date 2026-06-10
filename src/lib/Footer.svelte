@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { SiGithub } from '@icons-pack/svelte-simple-icons';
 	import { Mail, MapPin, Phone } from 'lucide-svelte';
 </script>
 
@@ -59,20 +58,10 @@
 		</div>
 
 		<!-- Bottom Bar -->
-		<div
-			class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 md:flex-row"
-		>
+		<div class="mt-12 border-t border-white/10 pt-6">
 			<p class="text-sm text-slate-500">
 				&copy; {new Date().getFullYear()} Travis Drilling LTD. All rights reserved.
 			</p>
-			<a
-				href="https://github.com/Logan9312/Travis-Drilling"
-				target="_blank"
-				class="text-slate-500 transition-colors hover:text-white"
-				aria-label="GitHub Repository"
-			>
-				<SiGithub size={20} />
-			</a>
 		</div>
 	</div>
 </footer>

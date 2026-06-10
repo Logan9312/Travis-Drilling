@@ -2,7 +2,6 @@
 	import { page } from '$app/state';
 	import Footer from '$lib/Footer.svelte';
 	import Navbar from '$lib/Navbar.svelte';
-	// import SchemaOrg from '$lib/Schemaorg.svelte';
 	import '../app.css';
 	let { children } = $props();
 
@@ -23,7 +22,7 @@
 		property="og:description"
 		content="Locally owned water well drilling and servicing. We handle servicing, repairing, and testing wells. We can drill new wells and install pumps or abandon or shock old wells. Travis Drilling is located in Onoway, Alberta, Canada."
 	/>
-	<meta property="og:url" content="https://www.travisdrilling.ca" />
+	<meta property="og:url" content={canonical} />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="https://www.travisdrilling.ca/android-chrome-512x512.png" />
 
@@ -91,12 +90,30 @@
 				"@type": "OfferCatalog",
 				"name": "Water well services",
 				"itemListElement": [
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water well drilling" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Well servicing and repair" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pump installation and repair" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Water and well testing" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Well abandonment and shocking" } },
-					{ "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Backhoe and trenching" } }
+					{
+						"@type": "Offer",
+						"itemOffered": { "@type": "Service", "name": "Water well drilling" }
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": { "@type": "Service", "name": "Well servicing and repair" }
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": { "@type": "Service", "name": "Pump installation and repair" }
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": { "@type": "Service", "name": "Water and well testing" }
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": { "@type": "Service", "name": "Well abandonment and shocking" }
+					},
+					{
+						"@type": "Offer",
+						"itemOffered": { "@type": "Service", "name": "Backhoe and trenching" }
+					}
 				]
 			}
 		}

@@ -81,7 +81,7 @@
 	></div>
 	<!-- Scrim weighted to the left, where all the text sits; lets the right-side sky stay bright -->
 	<div
-		class="from-ink/75 via-ink/25 to-transparent absolute inset-0 bg-gradient-to-r"
+		class="from-ink/75 via-ink/25 absolute inset-0 bg-gradient-to-r to-transparent"
 		aria-hidden="true"
 	></div>
 	<!-- Light bottom anchor so the buttons stay legible without darkening the whole foreground -->
@@ -125,7 +125,7 @@
 				</a>
 				<a
 					href="#services"
-					class="bg-ink/50 focus-visible:ring-offset-ink inline-flex items-center justify-center gap-2 rounded-md border border-white/45 px-7 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-colors [text-shadow:0_1px_4px_rgb(11_17_23_/_0.5)] hover:border-white/80 hover:bg-ink/70 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none"
+					class="bg-ink/50 focus-visible:ring-offset-ink hover:bg-ink/70 inline-flex items-center justify-center gap-2 rounded-md border border-white/45 px-7 py-4 text-lg font-semibold text-white backdrop-blur-sm transition-colors [text-shadow:0_1px_4px_rgb(11_17_23_/_0.5)] hover:border-white/80 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none"
 				>
 					Services
 					<ArrowRight class="h-5 w-5" />
@@ -169,9 +169,10 @@
 		<div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
 			<div class="order-2 lg:order-1">
 				<img
-					src="/img/Drilling_Pit.png"
+					src="/img/Drilling_Pit.jpg"
 					alt="A Travis Drilling water well drilling pit at a job site"
 					class="aspect-[4/3] w-full object-cover shadow-lg"
+					loading="lazy"
 				/>
 			</div>
 
@@ -208,7 +209,9 @@
 
 		<ul class="mt-9 flex flex-wrap gap-2.5">
 			{#each serviceArea as town}
-				<li class="rounded-md border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-700">
+				<li
+					class="rounded-md border border-slate-200 bg-slate-50 px-4 py-2 font-semibold text-slate-700"
+				>
 					{town}
 				</li>
 			{/each}

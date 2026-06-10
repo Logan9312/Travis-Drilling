@@ -1,13 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { House, Menu, Phone, X } from 'lucide-svelte';
+	import { House, Info, Menu, Phone, X } from 'lucide-svelte';
 
 	let navbarOpen = $state(false);
-	let { transparent = false } = $props();
-
-	$effect(() => {
-		transparent = page.url.pathname === '/';
-	});
+	const transparent = $derived(page.url.pathname === '/');
 
 	function toggleNavbar() {
 		navbarOpen = !navbarOpen;
@@ -18,6 +14,11 @@
 			href: '/',
 			label: 'Home',
 			icon: House
+		},
+		{
+			href: '/About',
+			label: 'About',
+			icon: Info
 		},
 		{
 			href: '/Contact',
