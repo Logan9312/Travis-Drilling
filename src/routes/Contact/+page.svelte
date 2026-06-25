@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { Mail, MapPin, Phone } from 'lucide-svelte';
+	import CopyEmailButton from '$lib/CopyEmailButton.svelte';
+
+	const email = 'travisdrillingltd@gmail.com';
 </script>
 
 <svelte:head>
@@ -46,24 +49,24 @@
 				</a>
 
 				<!-- Email -->
-				<a
-					href="mailto:contact@travisdrilling.ca"
-					class="group hover:border-brand focus-visible:ring-brand-deep flex items-start gap-4 rounded-lg border border-slate-200 bg-white p-6 transition-colors focus-visible:ring-2 focus-visible:outline-none"
-				>
+				<div class="flex items-start gap-4 rounded-lg border border-slate-200 bg-white p-6">
 					<div
 						class="bg-brand text-ink flex h-12 w-12 shrink-0 items-center justify-center rounded-md"
 					>
 						<Mail class="h-6 w-6" />
 					</div>
-					<div>
+					<div class="min-w-0">
 						<h2 class="font-display text-sm font-bold tracking-wider text-slate-500 uppercase">
 							Email
 						</h2>
 						<p class="text-brand-deep mt-1 text-lg leading-tight font-bold break-all">
-							contact@travisdrilling.ca
+							{email}
 						</p>
+						<div class="mt-4">
+							<CopyEmailButton {email} />
+						</div>
 					</div>
-				</a>
+				</div>
 
 				<!-- Location -->
 				<div

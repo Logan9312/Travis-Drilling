@@ -11,6 +11,9 @@
 		Mail,
 		ArrowRight
 	} from 'lucide-svelte';
+	import CopyEmailButton from '$lib/CopyEmailButton.svelte';
+
+	const email = 'travisdrillingltd@gmail.com';
 
 	const services = [
 		{
@@ -237,13 +240,15 @@
 				<Phone class="h-5 w-5" />
 				(780) 974-3184
 			</a>
-			<a
-				href="mailto:contact@travisdrilling.ca"
-				class="focus-visible:ring-offset-ink inline-flex w-full items-center justify-center gap-2.5 rounded-md border border-white/30 px-7 py-4 text-lg font-semibold text-white transition-colors hover:border-white/70 hover:bg-white/5 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:outline-none sm:w-auto"
+			<div
+				class="inline-flex w-full flex-col items-center justify-center gap-3 rounded-md border border-white/30 px-7 py-4 text-lg font-semibold text-white sm:w-auto sm:flex-row"
 			>
-				<Mail class="h-5 w-5" />
-				contact@travisdrilling.ca
-			</a>
+				<span class="inline-flex min-w-0 items-center justify-center gap-2.5 break-all">
+					<Mail class="h-5 w-5 shrink-0" />
+					{email}
+				</span>
+				<CopyEmailButton {email} tone="dark" />
+			</div>
 		</div>
 	</div>
 </section>

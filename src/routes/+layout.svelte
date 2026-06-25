@@ -56,7 +56,7 @@
 			"image": "https://www.travisdrilling.ca/img/rig.jpg",
 			"url": "https://www.travisdrilling.ca",
 			"telephone": "+1-780-974-3184",
-			"email": "contact@travisdrilling.ca",
+			"email": "travisdrillingltd@gmail.com",
 			"priceRange": "$$",
 			"address": {
 				"@type": "PostalAddress",

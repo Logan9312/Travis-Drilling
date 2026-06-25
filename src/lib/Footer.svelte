@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { Mail, MapPin, Phone } from 'lucide-svelte';
+	import CopyEmailButton from '$lib/CopyEmailButton.svelte';
+
+	const email = 'travisdrillingltd@gmail.com';
 </script>
 
 <footer class="bg-ink">
@@ -26,13 +29,13 @@
 						<Phone class="text-brand h-5 w-5 shrink-0" />
 						<span class="leading-none">(780) 974-3184</span>
 					</a>
-					<a
-						href="mailto:contact@travisdrilling.ca"
-						class="flex items-center gap-3 text-slate-300 transition-colors hover:text-white"
-					>
-						<Mail class="text-brand h-5 w-5" />
-						contact@travisdrilling.ca
-					</a>
+					<div class="flex flex-wrap items-center gap-3 text-slate-300">
+						<span class="flex min-w-0 items-center gap-3 break-all">
+							<Mail class="text-brand h-5 w-5 shrink-0" />
+							{email}
+						</span>
+						<CopyEmailButton {email} label="Copy" tone="dark" />
+					</div>
 					<div class="flex items-center gap-3 text-slate-300">
 						<MapPin class="text-brand h-5 w-5" />
 						Onoway, Alberta, Canada
