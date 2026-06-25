@@ -33,12 +33,12 @@
 				<!-- Phone -->
 				<a
 					href="tel:780-974-3184"
-					class="group hover:border-brand focus-visible:ring-brand-deep flex items-start gap-4 rounded-lg border border-slate-200 bg-white p-6 transition-colors focus-visible:ring-2 focus-visible:outline-none"
+					class="group hover:border-brand focus-visible:ring-brand-deep flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-5 transition-colors focus-visible:ring-2 focus-visible:outline-none sm:gap-4 sm:p-6"
 				>
 					<div
-						class="bg-brand text-ink flex h-12 w-12 shrink-0 items-center justify-center rounded-md"
+						class="bg-brand text-ink flex h-11 w-11 shrink-0 items-center justify-center rounded-md sm:h-12 sm:w-12"
 					>
-						<Phone class="h-6 w-6" />
+						<Phone class="h-5 w-5 sm:h-6 sm:w-6" />
 					</div>
 					<div>
 						<h2 class="font-display text-sm font-bold tracking-wider text-slate-500 uppercase">
@@ -49,30 +49,32 @@
 				</a>
 
 				<!-- Email -->
-				<div class="flex items-start gap-4 rounded-lg border border-slate-200 bg-white p-6">
+				<div
+					class="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:gap-4 sm:p-6"
+				>
 					<div
-						class="bg-brand text-ink flex h-12 w-12 shrink-0 items-center justify-center rounded-md"
+						class="bg-brand text-ink flex h-11 w-11 shrink-0 items-center justify-center rounded-md sm:h-12 sm:w-12"
 					>
-						<Mail class="h-6 w-6" />
+						<Mail class="h-5 w-5 sm:h-6 sm:w-6" />
 					</div>
 					<div class="min-w-0">
 						<h2 class="font-display text-sm font-bold tracking-wider text-slate-500 uppercase">
 							Email
 						</h2>
 						<div class="mt-1">
-							<CopyEmailButton {email} />
+							<CopyEmailButton {email} textClass="text-base font-bold sm:text-lg" />
 						</div>
 					</div>
 				</div>
 
 				<!-- Location -->
 				<div
-					class="flex items-start gap-4 rounded-lg border border-slate-200 bg-white p-6 sm:col-span-2"
+					class="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-5 sm:col-span-2 sm:gap-4 sm:p-6"
 				>
 					<div
-						class="bg-ink flex h-12 w-12 shrink-0 items-center justify-center rounded-md text-white"
+						class="bg-ink flex h-11 w-11 shrink-0 items-center justify-center rounded-md text-white sm:h-12 sm:w-12"
 					>
-						<MapPin class="h-6 w-6" />
+						<MapPin class="h-5 w-5 sm:h-6 sm:w-6" />
 					</div>
 					<div>
 						<h2 class="font-display text-sm font-bold tracking-wider text-slate-500 uppercase">

@@ -69,12 +69,12 @@
 <span class="relative inline-flex min-w-0">
 	<button
 		type="button"
-		class="{buttonClass} {textClass} inline-flex min-h-10 min-w-0 items-center gap-2 rounded-md py-1.5 text-left leading-tight transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+		class="{buttonClass} {textClass} relative inline-flex min-h-10 min-w-0 items-center rounded-md py-1.5 text-left leading-tight transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
 		onclick={copyEmail}
 		aria-label={copied ? 'Email copied' : `Copy ${email}`}
 	>
-		<span class="min-w-0 break-all">{email}</span>
-		<span class="relative h-4 w-4 shrink-0" aria-hidden="true">
+		<span class="min-w-0 wrap-anywhere">{email}</span>
+		<span class="absolute right-0 bottom-2 h-4 w-4 translate-x-5" aria-hidden="true">
 			<Copy
 				class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
 					? 'scale-[0.25] opacity-0 blur-[4px]'
