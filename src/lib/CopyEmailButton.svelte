@@ -70,11 +70,11 @@
 	}
 </script>
 
-<span class="relative inline-flex min-w-0">
+<span class="relative inline-flex min-w-0 align-top">
 	{#if variant === 'icon'}
 		<button
 			type="button"
-			class="{buttonClass} inline-flex h-10 w-10 items-center justify-center rounded-md transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+			class="{buttonClass} relative inline-flex h-5 w-5 items-center justify-center rounded-md transition-[color,transform] before:absolute before:inset-[-10px] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
 			onclick={copyEmail}
 			aria-label={copied ? 'Email copied' : `Copy ${email}`}
 		>
@@ -94,7 +94,7 @@
 	{:else}
 		<button
 			type="button"
-			class="{buttonClass} {textClass} relative inline-flex min-h-10 min-w-0 items-center rounded-md py-1.5 text-left leading-tight transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+			class="{buttonClass} {textClass} relative inline-flex min-h-10 min-w-0 items-center justify-start rounded-md py-1.5 text-left leading-tight transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
 			onclick={copyEmail}
 			aria-label={copied ? 'Email copied' : `Copy ${email}`}
 		>

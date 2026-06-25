@@ -58,11 +58,11 @@
 						<Mail class="h-5 w-5 sm:h-6 sm:w-6" />
 					</div>
 					<div class="min-w-0 flex-1">
-						<div class="flex items-center justify-between gap-2">
+						<div class="flex items-center gap-1.5">
 							<h2 class="font-display text-sm font-bold tracking-wider text-slate-500 uppercase">
 								Email
 							</h2>
-							<CopyEmailButton {email} variant="icon" />
+							<CopyEmailButton {email} variant="icon" textClass="text-sm" />
 						</div>
 						<div class="mt-1">
 							<CopyEmailButton {email} showIcon={false} />
