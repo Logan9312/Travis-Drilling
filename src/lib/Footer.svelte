@@ -30,11 +30,8 @@
 						<span class="leading-none">(780) 974-3184</span>
 					</a>
 					<div class="flex flex-wrap items-center gap-3 text-slate-300">
-						<span class="flex min-w-0 items-center gap-3 break-all">
-							<Mail class="text-brand h-5 w-5 shrink-0" />
-							{email}
-						</span>
-						<CopyEmailButton {email} label="Copy" tone="dark" />
+						<Mail class="text-brand h-5 w-5 shrink-0" />
+						<CopyEmailButton {email} tone="dark" textClass="font-normal" />
 					</div>
 					<div class="flex items-center gap-3 text-slate-300">
 						<MapPin class="text-brand h-5 w-5" />

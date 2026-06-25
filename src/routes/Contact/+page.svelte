@@ -59,10 +59,7 @@
 						<h2 class="font-display text-sm font-bold tracking-wider text-slate-500 uppercase">
 							Email
 						</h2>
-						<p class="text-brand-deep mt-1 text-lg leading-tight font-bold break-all">
-							{email}
-						</p>
-						<div class="mt-4">
+						<div class="mt-1">
 							<CopyEmailButton {email} />
 						</div>
 					</div>

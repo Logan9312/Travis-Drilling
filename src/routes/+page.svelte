@@ -241,13 +241,10 @@
 				(780) 974-3184
 			</a>
 			<div
-				class="inline-flex w-full flex-col items-center justify-center gap-3 rounded-md border border-white/30 px-7 py-4 text-lg font-semibold text-white sm:w-auto sm:flex-row"
+				class="inline-flex w-full items-center justify-center gap-2.5 rounded-md border border-white/30 px-7 py-4 text-white sm:w-auto"
 			>
-				<span class="inline-flex min-w-0 items-center justify-center gap-2.5 break-all">
-					<Mail class="h-5 w-5 shrink-0" />
-					{email}
-				</span>
-				<CopyEmailButton {email} tone="dark" />
+				<Mail class="h-5 w-5 shrink-0" />
+				<CopyEmailButton {email} tone="dark" textClass="text-lg font-semibold" />
 			</div>
 		</div>
 	</div>

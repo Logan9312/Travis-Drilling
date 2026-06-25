@@ -24,7 +24,6 @@
 	/>
 	<meta property="og:url" content={canonical} />
 	<meta property="og:type" content="website" />
-	<meta property="og:image" content="https://www.travisdrilling.ca/android-chrome-512x512.png" />
 
 	<!-- Twitter (small summary card, logo only) -->
 	<meta name="twitter:card" content="summary" />
