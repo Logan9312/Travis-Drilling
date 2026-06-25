@@ -4,11 +4,15 @@
 	let {
 		email,
 		tone = 'light',
-		textClass = 'text-lg font-bold'
+		textClass = 'text-lg font-bold',
+		variant = 'text',
+		showIcon = true
 	}: {
 		email: string;
 		tone?: 'light' | 'dark';
 		textClass?: string;
+		variant?: 'text' | 'icon';
+		showIcon?: boolean;
 	} = $props();
 
 	let copied = $state(false);
@@ -67,26 +71,50 @@
 </script>
 
 <span class="relative inline-flex min-w-0">
-	<button
-		type="button"
-		class="{buttonClass} {textClass} relative inline-flex min-h-10 min-w-0 items-center rounded-md py-1.5 text-left leading-tight transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-		onclick={copyEmail}
-		aria-label={copied ? 'Email copied' : `Copy ${email}`}
-	>
-		<span class="min-w-0 wrap-anywhere">{email}</span>
-		<span class="absolute right-0 bottom-2 h-4 w-4 translate-x-5" aria-hidden="true">
-			<Copy
-				class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
-					? 'scale-[0.25] opacity-0 blur-[4px]'
-					: 'scale-100 opacity-70 blur-none'}"
-			/>
-			<Check
-				class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
-					? 'scale-100 opacity-100 blur-none'
-					: 'scale-[0.25] opacity-0 blur-[4px]'}"
-			/>
-		</span>
-	</button>
+	{#if variant === 'icon'}
+		<button
+			type="button"
+			class="{buttonClass} inline-flex h-10 w-10 items-center justify-center rounded-md transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+			onclick={copyEmail}
+			aria-label={copied ? 'Email copied' : `Copy ${email}`}
+		>
+			<span class="relative h-4 w-4" aria-hidden="true">
+				<Copy
+					class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
+						? 'scale-[0.25] opacity-0 blur-[4px]'
+						: 'scale-100 opacity-70 blur-none'}"
+				/>
+				<Check
+					class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
+						? 'scale-100 opacity-100 blur-none'
+						: 'scale-[0.25] opacity-0 blur-[4px]'}"
+				/>
+			</span>
+		</button>
+	{:else}
+		<button
+			type="button"
+			class="{buttonClass} {textClass} relative inline-flex min-h-10 min-w-0 items-center rounded-md py-1.5 text-left leading-tight transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+			onclick={copyEmail}
+			aria-label={copied ? 'Email copied' : `Copy ${email}`}
+		>
+			<span class="min-w-0 wrap-anywhere">{email}</span>
+			{#if showIcon}
+				<span class="absolute right-0 bottom-2 h-4 w-4 translate-x-5" aria-hidden="true">
+					<Copy
+						class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
+							? 'scale-[0.25] opacity-0 blur-[4px]'
+							: 'scale-100 opacity-70 blur-none'}"
+					/>
+					<Check
+						class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
+							? 'scale-100 opacity-100 blur-none'
+							: 'scale-[0.25] opacity-0 blur-[4px]'}"
+					/>
+				</span>
+			{/if}
+		</button>
+	{/if}
 
 	{#if copied}
 		<span
