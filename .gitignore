@@ -24,3 +24,6 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# UX review screenshots (regenerate with `bun run capture`)
+/ux-shots

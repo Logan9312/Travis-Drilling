@@ -8,6 +8,22 @@ Visual system for the Travis Drilling site. See [PRODUCT.md](PRODUCT.md) for str
 - **Plainspoken, not promotional.** No slogans, no marketing eyebrows, no decorative flourish. Headings are short and literal ("What we do", "Where we work", "Get an estimate").
 - **Legible first.** Built for older / rural visitors on phones with weak signal.
 
+## Information architecture
+
+Each concept has one owner, ordered by what visitors come for:
+
+| Job                      | Owner                                                    |
+| ------------------------ | -------------------------------------------------------- |
+| Do they do my job?       | Home `#services`                                         |
+| Do they serve my area?   | Home `#area`                                             |
+| Call them                | `CallButton`, pinned in the header on every page         |
+| Other ways to reach them | `/Contact` (phone, email, location); footer as reference |
+| Who is the company?      | Home `#about`                                            |
+
+- Nav and footer share one link list (`navItems` in `src/lib/site.ts`): Services, Service area, About, Contact. Phone, email, and location also live only in `site.ts`.
+- There is no standalone About page: it repeated Home without adding facts. `/About` (any casing) redirects to `/#about` in `src/hooks.server.ts`; lowercase `/contact` redirects to `/Contact`. If the owner supplies facts that only an About page can hold (who runs it, how long), restore the page and drop the redirect.
+- Unknown URLs get a branded not-found page (`src/routes/+error.svelte`) with the call button and a way home.
+
 ## Color
 
 OKLCH-friendly hex tokens, defined in `src/app.css` under `@theme`.
@@ -37,12 +53,12 @@ Hierarchy: fluid heading sizes via Tailwind responsive steps (`text-3xl sm:text-
 
 ## Layout
 
-- Container: `max-w-7xl` with `px-5 sm:px-6 lg:px-8`. Contact/hero copy narrows to `max-w-2xl/3xl`.
+- Container: the `page-container` utility in `app.css` (`max-w-7xl`, `px-5 sm:px-6 lg:px-8`) for nav, sections, and footer so left edges line up. Hero copy narrows to `max-w-3xl`.
 - Section rhythm: `py-20 sm:py-28`, alternating `white` / `slate-50` / `ink` backgrounds.
-- Each section heading gets a short blue underline rule (`h-1 w-14 bg-brand`) instead of an uppercase eyebrow.
+- Each section heading gets a short blue underline rule (`h-1 w-14 bg-brand`) instead of an uppercase eyebrow. Use `SectionHeading.svelte`; all sections are left-aligned.
 - **Services are a capabilities list, not a card grid** — icon + title + one factual line in a `sm:grid-cols-2 lg:grid-cols-3` grid with hairline `border-slate-200` dividers. (Identical icon-card grids are deliberately avoided.)
-- Service area is a `flex-wrap` row of bordered town chips ending in an "and nearby areas" link-colored item.
-- **Corner radius:** a small, consistent radius softens the hard industrial edges without going soft/pill. Buttons, chips, badges, and icon tiles use `rounded-md` (6px); larger contained surfaces (contact cards) use `rounded-lg` (8px). The square section underline rules (`h-1 w-14 bg-brand`) and full-bleed image blocks stay sharp.
+- Service area is a plain multi-column town list (Onoway first, then alphabetical) followed by one line with a call link for towns not listed. Bordered chips were dropped: they looked like buttons.
+- **Corner radius:** a small, consistent radius softens the hard industrial edges without going soft/pill. Buttons and labels use `rounded-md` (6px). The square section underline rules (`h-1 w-14 bg-brand`) and full-bleed image blocks stay sharp.
 
 ## Imagery
 
@@ -52,10 +68,14 @@ Hierarchy: fluid heading sizes via Tailwind responsive steps (`text-3xl sm:text-
 
 ## Motion
 
-- One orchestrated hero load: badge → h1 → paragraph → buttons rise/fade in via the `.rise` keyframe (staggered `animation-delay`). No fade-on-scroll on every section.
+- One orchestrated hero load: h1 → paragraph → buttons rise/fade in via the `.rise` keyframe (staggered `animation-delay`). No fade-on-scroll on every section.
 - `prefers-reduced-motion: reduce` is honored globally in `app.css` (animations collapse to instant, smooth-scroll off).
 
 ## Components
 
-- `src/lib/Navbar.svelte` — transparent overlay on `/` (white logo), solid white elsewhere (dark logo). Blue call button with ink text.
-- `src/lib/Footer.svelte` — `ink` background, brand-blue contact icons, three columns (brand / contact / quick links).
+- `src/lib/site.ts` — phone, email, location, nav links, canonical paths. The only place they are written.
+- `src/lib/Navbar.svelte` — pinned on every page. Transparent over the Home hero (white logo) until the visitor scrolls or opens the menu, then solid white. Marks the current page (Contact) or the Home section being read. The phone header always shows the call button next to the menu.
+- `src/lib/CallButton.svelte` — the one call-to-action: logo blue with ink text, `sm` (header) and `lg` (page) sizes.
+- `src/lib/CopyEmailButton.svelte` — tapping the address copies it (owner's choice over mailto). A visible "Copy" label turns into "Copied" in place; screen readers get a status message.
+- `src/lib/SectionHeading.svelte` — heading + blue rule + optional lead.
+- `src/lib/Footer.svelte` — `ink` background, brand-blue contact icons, three columns (brand / contact / pages, same list as the nav).
