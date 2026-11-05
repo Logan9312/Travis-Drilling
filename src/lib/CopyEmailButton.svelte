@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { Check, Copy } from 'lucide-svelte';
 
+	// Tapping the address copies it (owner's choice over mailto). The trailing
+	// "Copy" label says so up front and turns into "Copied" in place.
 	let {
 		email,
 		tone = 'light',
@@ -14,16 +16,18 @@
 	let copied = $state(false);
 	let resetTimer: number | undefined = undefined;
 
-	const buttonClass = $derived(
+	const toneClass = $derived(
 		tone === 'dark'
-			? 'text-white hover:text-brand focus-visible:ring-white focus-visible:ring-offset-ink'
-			: 'text-brand-deep hover:text-ink focus-visible:ring-brand-deep focus-visible:ring-offset-white'
+			? 'text-white focus-visible:ring-white focus-visible:ring-offset-ink'
+			: 'text-brand-deep focus-visible:ring-brand-deep focus-visible:ring-offset-white'
 	);
 
-	const toastClass = $derived(
-		tone === 'dark'
-			? 'bg-white text-ink shadow-[0_12px_30px_rgba(0,0,0,0.28)]'
-			: 'bg-ink text-white shadow-[0_12px_30px_rgba(11,17,23,0.22)]'
+	const labelClass = $derived(
+		copied
+			? 'border-brand bg-brand text-ink'
+			: tone === 'dark'
+				? 'border-white/60 text-white group-hover:border-white'
+				: 'border-slate-400 text-slate-700 group-hover:border-brand-deep group-hover:text-brand-deep'
 	);
 
 	function copyWithFallback(text: string) {
@@ -62,38 +66,28 @@
 		copied = true;
 		resetTimer = window.setTimeout(() => {
 			copied = false;
-		}, 1600);
+		}, 2000);
 	}
 </script>
 
-<span class="relative inline-flex min-w-0 align-top">
-	<button
-		type="button"
-		class="{buttonClass} {textClass} relative inline-flex min-h-10 min-w-0 items-center justify-start rounded-md py-1.5 text-left leading-tight transition-[color,transform] active:scale-[0.96] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-		onclick={copyEmail}
-		aria-label={copied ? 'Email copied' : `Copy ${email}`}
+<button
+	type="button"
+	class="group {toneClass} inline-flex min-h-10 max-w-full flex-wrap items-center gap-x-2.5 gap-y-1 rounded-md py-1 text-left leading-tight focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
+	onclick={copyEmail}
+	aria-label="Copy email address {email}"
+>
+	<span class="{textClass} min-w-0 wrap-anywhere">{email}</span>
+	<span
+		class="{labelClass} inline-flex min-w-[5.75rem] shrink-0 items-center justify-center gap-1.5 rounded-md border-2 px-2 py-0.5 text-sm font-bold transition-colors"
+		aria-hidden="true"
 	>
-		<span class="min-w-0 wrap-anywhere">{email}</span>
-		<span class="absolute right-0 bottom-2 h-4 w-4 translate-x-5" aria-hidden="true">
-			<Copy
-				class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
-					? 'scale-[0.25] opacity-0 blur-[4px]'
-					: 'scale-100 opacity-70 blur-none'}"
-			/>
-			<Check
-				class="absolute inset-0 h-4 w-4 transition-[opacity,scale,filter] duration-150 {copied
-					? 'scale-100 opacity-100 blur-none'
-					: 'scale-[0.25] opacity-0 blur-[4px]'}"
-			/>
-		</span>
-	</button>
-
-	{#if copied}
-		<span
-			class="{toastClass} pointer-events-none absolute bottom-full left-1/2 z-10 mb-2 -translate-x-1/2 rounded-md px-3 py-1.5 text-sm font-bold whitespace-nowrap"
-			role="status"
-		>
+		{#if copied}
+			<Check class="h-4 w-4" strokeWidth={2.5} />
 			Copied
-		</span>
-	{/if}
-</span>
+		{:else}
+			<Copy class="h-4 w-4" />
+			Copy
+		{/if}
+	</span>
+</button>
+<span class="sr-only" role="status">{copied ? 'Email address copied' : ''}</span>

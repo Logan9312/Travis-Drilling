@@ -61,6 +61,20 @@
 	}
 }
 
+/* One page gutter for nav, sections, and footer so their left edges line up. */
+@utility page-container {
+	width: 100%;
+	max-width: var(--container-7xl);
+	margin-inline: auto;
+	padding-inline: 1.25rem;
+	@media (width >= 40rem) {
+		padding-inline: 1.5rem;
+	}
+	@media (width >= 64rem) {
+		padding-inline: 2rem;
+	}
+}
+
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;

@@ -39,8 +39,8 @@ Target WCAG 2.1 AA. Body text and the phone CTA must meet contrast minimums agai
 ## Scope Decisions
 
 - **Imagery:** Real job-site photos are in place (`rig.jpg`, `rig_cropped.jpg`, `Drilling_Pit.png` in `static/img/`). More owner-supplied photos (rig setups, trucks, crew) drop in cleanly by swapping the `src`. No glossy stock — real site/equipment photos are the look.
-- **About page:** Keep it short and factual — who runs it, how long, the service area, what they do. No origin-story fluff.
-- **Contact:** Phone and email only. No inquiry form, no backend. The phone call is the conversion.
+- **About:** Lives as the "About" section on Home (`/About` redirects there). Keep it short and factual — who runs it, how long, the service area, what they do. No origin-story fluff. It becomes its own page again only once owner-confirmed facts outgrow a section.
+- **Contact:** Phone and email only. No inquiry form, no backend. The phone call is the conversion. Tapping the email copies it rather than opening a mail app.
 - **Visual direction:** Not modeled on competitor sites. Competitor research is for content gaps only (what services/info a water-well visitor expects), not aesthetic.
 - **Services to showcase (confirmed real):** well drilling; well servicing & repair; pump installation & repair; water testing; well abandonment & shocking/disinfection; backhoe & trenching. (Free on-site consultation is also a real service but is currently not shown on the site.)
 - **Service area:** List the specific towns covered, followed by "and nearby areas." (Final town list to be confirmed by the owner; never claim a town that isn't actually served.)
