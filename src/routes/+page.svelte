@@ -72,9 +72,17 @@
 <section
 	class="bg-ink relative flex min-h-[74svh] flex-col justify-center overflow-hidden lg:min-h-[78svh]"
 >
-	<div
-		class="absolute inset-0 bg-[url('/img/rig_cropped.jpg')] bg-cover bg-center bg-no-repeat lg:bg-[url('/img/rig.jpg')]"
-	></div>
+	<picture class="absolute inset-0">
+		<source media="(min-width: 64rem)" srcset="/img/rig.webp" />
+		<img
+			src="/img/rig_cropped.webp"
+			alt=""
+			width="672"
+			height="921"
+			fetchpriority="high"
+			class="h-full w-full object-cover"
+		/>
+	</picture>
 	<!-- Scrim weighted to the left, where all the text sits; lets the right-side sky stay bright -->
 	<div
 		class="from-ink/85 via-ink/45 absolute inset-0 bg-gradient-to-r to-transparent"
@@ -88,20 +96,18 @@
 	<div class="page-container relative z-10 pt-24 pb-12 lg:pt-28 lg:pb-16">
 		<div class="max-w-3xl">
 			<h1
-				class="rise font-display text-5xl font-extrabold tracking-tight text-white [text-shadow:0_1px_2px_rgb(11_17_23_/_0.6),0_4px_18px_rgb(11_17_23_/_0.4)] sm:text-7xl lg:text-8xl"
-				style="animation-delay: 80ms"
+				class="font-display text-5xl font-extrabold tracking-tight text-white [text-shadow:0_1px_2px_rgb(11_17_23_/_0.6),0_4px_18px_rgb(11_17_23_/_0.4)] sm:text-7xl lg:text-8xl"
 			>
 				Travis Drilling <span class="text-brand">LTD.</span>
 			</h1>
 
 			<p
-				class="rise mt-6 max-w-xl text-lg leading-relaxed text-white [text-shadow:0_1px_8px_rgb(11_17_23_/_0.6)] sm:text-xl"
-				style="animation-delay: 180ms"
+				class="mt-6 max-w-xl text-lg leading-relaxed text-white [text-shadow:0_1px_8px_rgb(11_17_23_/_0.6)] sm:text-xl"
 			>
 				Water well drilling and service for farms and homes around Onoway, Alberta.
 			</p>
 
-			<div class="rise mt-9 flex flex-col gap-3 sm:flex-row" style="animation-delay: 280ms">
+			<div class="mt-9 flex flex-col gap-3 sm:flex-row">
 				<CallButton />
 				<a
 					href="#services"
@@ -208,20 +214,3 @@
 		</div>
 	</div>
 </section>
-
-<style>
-	.rise {
-		animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-	}
-
-	@keyframes rise {
-		from {
-			opacity: 0;
-			transform: translateY(1.25rem);
-		}
-		to {
-			opacity: 1;
-			transform: none;
-		}
-	}
-</style>
