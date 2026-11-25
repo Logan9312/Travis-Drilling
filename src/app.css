@@ -2,6 +2,30 @@
 
 @plugin '@tailwindcss/typography';
 
+@font-face {
+	font-family: 'Archivo';
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('/fonts/archivo-latin-wght-normal.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/fonts/atkinson-hyperlegible-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Atkinson Hyperlegible';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url('/fonts/atkinson-hyperlegible-latin-700-normal.woff2') format('woff2');
+}
+
 @theme {
 	/* Body: humanist + highly legible (older / rural / weak-signal readers). */
 	--font-sans:
